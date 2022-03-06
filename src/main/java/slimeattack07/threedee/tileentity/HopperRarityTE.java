@@ -310,7 +310,6 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
       return item;
    }
 
-   //TODO: Change HopperBlock.FACING to custom facing.
    @Nullable
    private static Container getAttachedContainer(Level level, BlockPos pos, BlockState state) {
       Direction direction = state.getValue(HopperBlock.FACING);

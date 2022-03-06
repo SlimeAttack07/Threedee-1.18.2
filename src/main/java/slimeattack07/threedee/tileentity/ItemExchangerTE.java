@@ -5,14 +5,14 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.objects.items.TokenCard;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class ItemExchangerTE extends BlockEntity {
-	boolean initialized = false;
-	public ItemStack card;
-	public String last_recipe;
+	public ItemStack card = ItemStack.EMPTY;
+	public String last_recipe = "";
 
 	public ItemExchangerTE(BlockPos pos, BlockState state) {
 		super(TDTileEntityTypes.TD_ITEMEXCHANGER.get(), pos, state);
@@ -44,16 +44,7 @@ public class ItemExchangerTE extends BlockEntity {
 		card = ItemStack.EMPTY;
 	}
 	
-	private void init() {
-		initialized = true;
-		card = ItemStack.EMPTY;
-		last_recipe = "";
-	}	
-	
 	public boolean hasCard() {
-		if(card == null)
-			card = ItemStack.EMPTY;
-		
 		return card.getItem() instanceof TokenCard;
 	}
 	
@@ -82,21 +73,17 @@ public class ItemExchangerTE extends BlockEntity {
 	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
-		compound.put("initvalues", NBTHelper.toNBT(this));
-		
+		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
 	}
 	
 	@Override
 	public void load( CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound("initvalues");
+		CompoundTag tag = compound.getCompound(Threedee.MOD_ID);
 		
-		if(initvalues != null) {
-			this.card = (ItemStack) NBTHelper.fromNBT(initvalues.getCompound("card"));
-			this.last_recipe = initvalues.getString("last_recipe");
-			initialized = true;
+		if(tag != null) {
+			card = (ItemStack) NBTHelper.fromNBT(tag.getCompound("card"));
+			last_recipe = tag.getString("last_recipe");
 		}
-		else	
-			init();
 	}
 }

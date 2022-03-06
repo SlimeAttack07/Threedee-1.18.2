@@ -8,19 +8,19 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.util.TdBasicMethods;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class ArtefactAnalyzerTE extends BlockEntity{
-	boolean initialized = false;
 	public boolean running;
-	public boolean item_can_be_sold;
-	public String last_recipe;
-	public String loot_table;
+	public boolean item_can_be_sold = true;
+	public String last_recipe = "";
+	public String loot_table = "";
 	public int ticks_to_craft;
 	public int current_time;
-	public ItemStack result;
+	public ItemStack result = ItemStack.EMPTY;
 
 	public ArtefactAnalyzerTE(BlockPos pos, BlockState state) {
 		super(TDTileEntityTypes.TD_ARTEFACTANALYZER.get(), pos, state);
@@ -53,50 +53,33 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 		result = ItemStack.EMPTY;
 	}
 	
-	private void init() {
-		initialized = true;
-		running = false;
-		item_can_be_sold = true;
-		current_time = 0;
-		ticks_to_craft = 0;
-		last_recipe = "";
-		loot_table = "";
-		result = ItemStack.EMPTY;
-	}	
-	
 	public boolean hasOutput() {
 		return !result.equals(ItemStack.EMPTY);
 	}
 	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
-		compound.put("initvalues", NBTHelper.toNBT(this));
+		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
 	}
 	
 	@Override
 	public void load( CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound("initvalues");
+		CompoundTag tag = compound.getCompound(Threedee.MOD_ID);
 		
-		if(initvalues != null) {
-			this.running = initvalues.getBoolean("running");
-			this.item_can_be_sold = initvalues.getBoolean("item_can_be_sold");
-			this.current_time = initvalues.getInt("currenttime");
-			this.ticks_to_craft = initvalues.getInt("tickstocraft");
-			this.last_recipe = initvalues.getString("lastrecipe");
-			this.loot_table = initvalues.getString("loottable");
-			this.result = (ItemStack) NBTHelper.fromNBT(initvalues.getCompound("result"));
-			initialized = true;
+		if(tag != null) {
+			running = tag.getBoolean("running");
+			item_can_be_sold = tag.getBoolean("item_can_be_sold");
+			current_time = tag.getInt("currenttime");
+			ticks_to_craft = tag.getInt("tickstocraft");
+			last_recipe = tag.getString("lastrecipe");
+			loot_table = tag.getString("loottable");
+			result = (ItemStack) NBTHelper.fromNBT(tag.getCompound("result"));
 		}
-		else	
-			init();
 	}
 	
 	public void tick() {
-		if(!initialized)
-			init();
-		
-		if (!running)
+		if (level.isClientSide() || !running)
 			return;
 		
 		if (current_time >= ticks_to_craft) {

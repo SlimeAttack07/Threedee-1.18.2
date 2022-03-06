@@ -4,13 +4,13 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class BasicInterTE extends BlockEntity {
 	public boolean stackmode;
-	boolean initialized = false;
-	public String last_recipe;
+	public String last_recipe = "";
 
 	public BasicInterTE(BlockPos pos, BlockState state) {
 		super(TDTileEntityTypes.TD_BASICINTER.get(), pos, state);
@@ -33,29 +33,19 @@ public class BasicInterTE extends BlockEntity {
 		return stackmode;
 	}
 	
-	private void init() {
-		initialized = true;
-		stackmode = false;
-		last_recipe = "";
-	}
-	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
-		compound.put("initvalues", NBTHelper.toNBT(this));
+		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
 	}
 	
 	@Override
 	public void load(CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound("initvalues");
+		CompoundTag initvalues = compound.getCompound(Threedee.MOD_ID);
 
 		if(initvalues != null) {
-			this.stackmode = initvalues.getBoolean("stackmode");
-			this.last_recipe = initvalues.getString("lastrecipe");
-			
-			initialized = true;
+			stackmode = initvalues.getBoolean("stackmode");
+			last_recipe = initvalues.getString("lastrecipe");
 		}
-		else
-			init();
 	}
 }

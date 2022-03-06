@@ -4,24 +4,17 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class HeadAssemblerTE extends BlockEntity {
-	boolean initialized_values = false;
 	public boolean stackmode;
 	public int dye_amount;
-	public String last_recipe;
+	public String last_recipe = "";
 
 	public HeadAssemblerTE(BlockPos pos, BlockState state) {
 		super(TDTileEntityTypes.TD_HEADASSEMBLER.get(), pos, state);
-	}
-	
-	private void init_values() {
-		initialized_values = true;
-		dye_amount = 0;
-		stackmode = false;
-		last_recipe = "";
 	}
 	
 	public boolean getMode() {
@@ -63,22 +56,18 @@ public class HeadAssemblerTE extends BlockEntity {
 	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
-		compound.put("initvalues", NBTHelper.toNBT(this));
+		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
 		
 	}
 	
 	@Override
 	public void load(CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound("initvalues");
-		if(initvalues != null) {
-			this.dye_amount = initvalues.getInt("dye");
-			this.stackmode = initvalues.getBoolean("stackmode");
-			this.last_recipe = initvalues.getString("lastrecipe");
-			
-			initialized_values = true;
+		CompoundTag tag = compound.getCompound(Threedee.MOD_ID);
+		if(tag != null) {
+			dye_amount = tag.getInt("dye");
+			stackmode = tag.getBoolean("stackmode");
+			last_recipe = tag.getString("lastrecipe");
 		}
-		else
-			init_values();
 	}
 }

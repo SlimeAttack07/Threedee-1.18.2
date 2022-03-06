@@ -9,11 +9,10 @@ import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class HeadBlockTE extends BlockEntity {
-	public boolean can_be_sold;
+	public boolean can_be_sold = true;
 	public boolean prices_known;
 	public int min;
 	public int max;
-	boolean initialized = false;
 
 	public HeadBlockTE(BlockPos pos, BlockState state) {
 		super(TDTileEntityTypes.TD_HEADBLOCK.get(), pos, state);
@@ -26,35 +25,21 @@ public class HeadBlockTE extends BlockEntity {
 		max = max_value;
 	}
 	
-	private void init() {
-		initialized = true;
-		can_be_sold = true;
-		prices_known = false;
-		min = 0;
-		max = 0;
-	}
-	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
 		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
-
-		
 	}
 	
 	@Override
 	public void load( CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound(Threedee.MOD_ID);
+		CompoundTag tag = compound.getCompound(Threedee.MOD_ID);
 
-		if(initvalues != null) {
-			this.can_be_sold = initvalues.getBoolean("can_be_sold");
-			this.prices_known = initvalues.getBoolean("prices_known");
-			this.min = initvalues.getInt("min");
-			this.max = initvalues.getInt("max");
-			
-			initialized = true;
+		if(tag != null) {
+			this.can_be_sold = tag.getBoolean("can_be_sold");
+			this.prices_known = tag.getBoolean("prices_known");
+			this.min = tag.getInt("min");
+			this.max = tag.getInt("max");
 		}
-		else
-			init();
 	}
 }

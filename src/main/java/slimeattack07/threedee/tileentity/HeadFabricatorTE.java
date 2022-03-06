@@ -11,15 +11,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.util.TdBasicMethods;
 import slimeattack07.threedee.util.helpers.NBTHelper;
 
 public class HeadFabricatorTE extends BlockEntity{
-	boolean initialized = false;
 	public boolean stackmode;
-	public String last_recipe;
-	public String loot_table;
+	public String last_recipe = "";
+	public String loot_table = "";
 	public int catalyst_amount;
 	public int time_per_shot;
 	public int current_time;
@@ -73,15 +73,6 @@ public class HeadFabricatorTE extends BlockEntity{
 		loot_table = loottable;
 	}
 	
-	private void init() {
-		initialized = true;
-		stackmode = false;
-		time_per_shot = 0;
-		current_time = 0;
-		last_recipe = "";
-		loot_table = "";
-	}
-	
 	public Vec3 genRandMotion(Random rand) {
 		double x = ThreadLocalRandom.current().nextDouble(0, 0.2D);
 		double y = ThreadLocalRandom.current().nextDouble(0, 0.2D);
@@ -100,33 +91,26 @@ public class HeadFabricatorTE extends BlockEntity{
 	
 	@Override
 	public void saveAdditional(CompoundTag compound) {
-		compound.put("initvalues", NBTHelper.toNBT(this));
-		
+		compound.put(Threedee.MOD_ID, NBTHelper.toNBT(this));
 	}
 	
 	@Override
 	public void load( CompoundTag compound) {
 		super.load(compound);
-		CompoundTag initvalues = compound.getCompound("initvalues");
+		CompoundTag tag = compound.getCompound(Threedee.MOD_ID);
 		
-		if(initvalues != null) {
-			this.stackmode = initvalues.getBoolean("stackmode");
-			this.catalyst_amount = initvalues.getInt("catalyst_amount");
-			this.time_per_shot = initvalues.getInt("timepershot");
-			this.current_time = initvalues.getInt("currenttime");
-			this.last_recipe = initvalues.getString("lastrecipe");
-			this.loot_table = initvalues.getString("loottable");
-			initialized = true;
+		if(tag != null) {
+			stackmode = tag.getBoolean("stackmode");
+			catalyst_amount = tag.getInt("catalyst_amount");
+			time_per_shot = tag.getInt("timepershot");
+			current_time = tag.getInt("currenttime");
+			last_recipe = tag.getString("lastrecipe");
+			loot_table = tag.getString("loottable");
 		}
-		else	
-			init();
 	}
 	
-	public void tick() {
-		if(!initialized)
-			init();
-		
-		if (catalyst_amount <= 0)
+	public void tick() {		
+		if (level.isClientSide() || catalyst_amount <= 0)
 			return;
 		
 		if (current_time >= time_per_shot) {
