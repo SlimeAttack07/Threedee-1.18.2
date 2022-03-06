@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/animals/352-panda-bear",
+	"textures": {
+		"head": "threedee:heads/head_uncommon_67"
+	}
+}

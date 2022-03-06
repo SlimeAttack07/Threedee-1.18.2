@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "td_catalyst",
+  "ingredients": [
+    {
+      "item": "threedee:catalyst_shard_epic"
+    },
+    {
+      "item": "threedee:catalyst_shard_epic"
+    },
+    {
+      "item": "threedee:catalyst_shard_epic"
+    }
+  ],
+  "result": {
+    "item": "threedee:catalyst_epic",
+    "count": 1
+  }
+}

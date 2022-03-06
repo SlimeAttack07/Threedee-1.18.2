@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:poppy"
+	},
+	"output": {
+		"item": "minecraft:red_dye",
+		"count": 2
+	}
+}

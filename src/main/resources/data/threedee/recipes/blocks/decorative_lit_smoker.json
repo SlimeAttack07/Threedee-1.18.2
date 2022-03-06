@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "td_dec_smoker",
+	"ingredients": [
+
+		{
+			"item": "threedee:decorative_smoker"
+		}
+	],
+
+	"result": {
+		"item": "threedee:decorative_lit_smoker",
+		"count": 1
+	}
+}

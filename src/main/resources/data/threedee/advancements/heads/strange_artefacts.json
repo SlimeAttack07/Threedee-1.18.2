@@ -1,0 +1,101 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.strange_artefacts.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.strange_artefacts.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_ancient_78"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_ancient_6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_6"
+				}]
+			}
+		},
+		"head_ancient_37": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_37"
+				}]
+			}
+		},
+		"head_ancient_43": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_43"
+				}]
+			}
+		},
+		"head_ancient_53": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_53"
+				}]
+			}
+		},
+		"head_ancient_64": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_64"
+				}]
+			}
+		},
+		"head_ancient_65": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_65"
+				}]
+			}
+		},
+		"head_ancient_66": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_66"
+				}]
+			}
+		},
+		"head_ancient_78": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_78"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_ancient_6"],
+		["head_ancient_37"],
+		["head_ancient_43"],
+		["head_ancient_53"],
+		["head_ancient_64"],
+		["head_ancient_65"],
+		["head_ancient_66"],
+		["head_ancient_78"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/cores"
+}

@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "weight": 2,
+          "name": "threedee:common_heads",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 5,
+          "name": "threedee:uncommon_heads",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 8,
+          "name": "threedee:rare_heads",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 35,
+          "name": "threedee:epic_heads",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 50,
+          "name": "threedee:legendary_heads",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

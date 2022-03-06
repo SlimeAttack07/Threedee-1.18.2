@@ -1,0 +1,45 @@
+{
+  "pools": [
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 35,
+          "name": "threedee:catalyst_common",
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 30,
+          "name": "threedee:catalyst_uncommon",
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "threedee:catalyst_rare",
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 9,
+          "name": "threedee:catalyst_epic",
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "threedee:catalyst_legendary",
+          "expand": true
+        },
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "threedee:catalyst_ancient",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "td_catalyst_updown",
+  "ingredients": [
+    {
+      "item": "threedee:catalyst_downgrade"
+    }
+  ],
+  "result": {
+    "item": "threedee:catalyst_upgrade",
+    "count": 1
+  }
+}

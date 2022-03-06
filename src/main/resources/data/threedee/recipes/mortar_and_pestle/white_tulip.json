@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:white_tulip"
+	},
+	"output": {
+		"item": "minecraft:light_gray_dye",
+		"count": 2
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"type": "threedee:handsaw",
+	"input": {
+		"tag": "minecraft:jungle_logs"
+	},
+	"output": {
+		"item": "minecraft:jungle_planks",
+		"count": 5
+	}
+}

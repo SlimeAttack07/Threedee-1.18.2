@@ -1,0 +1,11 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "threedee:catalyst_seeds_legendary"
+	},
+	"output": {
+		"item": "threedee:catalyst_seeds_ancient"
+	},
+	"tokens": 5000000,
+	"consume": true
+}

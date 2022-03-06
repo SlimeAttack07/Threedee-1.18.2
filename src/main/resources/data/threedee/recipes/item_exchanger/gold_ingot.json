@@ -1,0 +1,7 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:gold_ingot"
+	},
+	"tokens": 4000
+}

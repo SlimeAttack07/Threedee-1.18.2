@@ -1,0 +1,7 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:netherite_ingot"
+	},
+	"tokens": 25000
+}

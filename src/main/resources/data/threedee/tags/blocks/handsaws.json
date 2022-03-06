@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "threedee:handsaw_oak",
+	"threedee:handsaw_birch",
+	"threedee:handsaw_spruce",
+	"threedee:handsaw_jungle",
+	"threedee:handsaw_acacia",
+	"threedee:handsaw_dark_oak"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/humanoid/16238-mei-s-snowball",
+	"textures": {
+		"head": "threedee:heads/head_ancient_44"
+	}
+}

@@ -1,0 +1,119 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.gems.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.gems.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_epic_10"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_rare_35": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_35"
+				}]
+			}
+		},
+		"head_rare_36": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_36"
+				}]
+			}
+		},
+		"head_rare_37": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_37"
+				}]
+			}
+		},
+		"head_rare_38": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_38"
+				}]
+			}
+		},
+		"head_rare_39": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_39"
+				}]
+			}
+		},
+		"head_rare_84": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_84"
+				}]
+			}
+		},
+		"head_epic_8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_8"
+				}]
+			}
+		},
+		"head_epic_10": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_10"
+				}]
+			}
+		},
+		"head_ancient_19": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_19"
+				}]
+			}
+		},
+		"head_ancient_23": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_23"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_rare_35"],
+		["head_rare_36"],
+		["head_rare_37"],
+		["head_rare_38"],
+		["head_rare_39"],
+		["head_rare_84"],
+		["head_epic_8"],
+		["head_epic_10"],
+		["head_ancient_19"],
+		["head_ancient_23"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/ingots"
+}

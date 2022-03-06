@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/miscellaneous/18266-missing-texture",
+	"textures": {
+		"head": "threedee:heads/head_legendary_15"
+	}
+}

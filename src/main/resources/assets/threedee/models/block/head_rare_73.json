@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/37729-zombie-piglin-plushie",
+	"textures": {
+		"head": "threedee:heads/head_rare_73"
+	}
+}

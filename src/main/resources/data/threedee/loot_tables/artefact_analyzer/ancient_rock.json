@@ -1,0 +1,646 @@
+{
+	"pools": [{
+		"rolls": 1,
+		"entries": [{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_0",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 10000, max: 25000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_1",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 2000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_2",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 500, max: 850}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_3",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 2500, max: 6000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_4",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 250, max: 300}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_5",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 11000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_6",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 15000, max: 17500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_7",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 450, max: 750}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_8",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3500, max: 6500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_9",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 12000, max: 14500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_10",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 10000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_11",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 150, max: 225}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_12",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3500, max: 7500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_13",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 400, max: 800}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_14",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 125, max: 350}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_15",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 8000, max: 12000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_16",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3500, max: 4500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_17",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 450, max: 600}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_18",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 10000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_19",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 350, max: 500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_20",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 3000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_21",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 150, max: 200}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_22",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1500, max: 3000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_23",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 750, max: 950}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_24",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 75, max: 180}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_25",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 6750, max: 7250}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_26",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 400, max: 700}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_27",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 350, max: 800}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_28",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 180, max: 360}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_29",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 2500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_30",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 2500, max: 3500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_31",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 9500, max: 10500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_32",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 10000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_33",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 800, max: 1100}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_34",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 350, max: 500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_35",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 2000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_36",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 10000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_37",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3000, max: 4000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_38",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 5000, max: 9000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_39",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1200, max: 1400}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_40",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1500, max: 2200}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_41",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 8000, max: 13000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_42",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3500, max: 4000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_43",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 2500, max: 5000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_44",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 2000, max: 3000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_45",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1500, max: 2000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_46",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 9000, max: 14000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_47",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 1250}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_48",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 250, max: 550}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_49",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 80, max: 120}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_50",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 4500, max: 6000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_51",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1000, max: 2500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_52",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1500, max: 1750}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_53",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 15000, max: 20000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_54",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 2500, max: 3000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_55",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 750, max: 950}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_56",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 400, max: 550}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_57",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 80, max: 110}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_58",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1100, max: 1350}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_59",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 850, max: 1150}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_60",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 500, max: 750}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_61",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1450, max: 1800}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_62",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 9500, max: 12500}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_63",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 350, max: 600}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_64",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 10000, max: 12000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_65",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 7500, max: 8000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_66",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 10000, max: 11000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_67",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 100, max: 175}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_68",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 500, max: 750}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_69",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 50, max: 100}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_70",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 6000, max: 9000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_71",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 450, max: 600}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_72",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 1400, max: 1800}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_73",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 5, max: 5}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_74",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 400, max: 450}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_75",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 400, max: 450}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_76",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 8000, max: 8000}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_77",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 360, max: 420}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_78",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 500, max: 550}}"
+				}]
+			},
+			{
+				"type": "minecraft:item",
+				"name": "threedee:head_ancient_79",
+				"functions": [{
+					"function": "minecraft:set_nbt",
+					"tag": "{threedee: {can_be_sold: 1b, prices_known: 0b, min: 3500, max: 7000}}"
+				}]
+			}
+		]
+	}]
+}

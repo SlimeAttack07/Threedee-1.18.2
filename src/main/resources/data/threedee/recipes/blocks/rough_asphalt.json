@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+
+		{
+			"item": "minecraft:bone"
+		},
+
+		{
+			"item": "minecraft:gravel"
+		},
+
+		{
+			"item": "minecraft:gravel"
+		},
+
+		{
+			"item": "minecraft:gravel"
+		},
+
+		{
+			"item": "minecraft:gravel"
+		},
+
+		{
+			"tag": "forge:dusts/coal"
+		}
+
+	],
+
+	"result": {
+		"item": "threedee:rough_asphalt",
+		"count": 4
+	}
+}

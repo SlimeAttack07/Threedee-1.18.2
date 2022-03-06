@@ -1,0 +1,795 @@
+{
+	"__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.all_epic_heads.title",
+			"color": "dark_purple",
+			"bold": true
+		},
+		"description": {
+			"translate": "advancements.threedee.all_epic_heads.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_epic_22"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_epic_0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_0"
+				}]
+			}
+		},
+		"head_epic_1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_1"
+				}]
+			}
+		},
+		"head_epic_2": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_2"
+				}]
+			}
+		},
+		"head_epic_3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_3"
+				}]
+			}
+		},
+		"head_epic_4": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_4"
+				}]
+			}
+		},
+		"head_epic_5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_5"
+				}]
+			}
+		},
+		"head_epic_6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_6"
+				}]
+			}
+		},
+		"head_epic_7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_7"
+				}]
+			}
+		},
+		"head_epic_8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_8"
+				}]
+			}
+		},
+		"head_epic_9": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_9"
+				}]
+			}
+		},
+		"head_epic_10": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_10"
+				}]
+			}
+		},
+		"head_epic_11": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_11"
+				}]
+			}
+		},
+		"head_epic_12": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_12"
+				}]
+			}
+		},
+		"head_epic_13": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_13"
+				}]
+			}
+		},
+		"head_epic_14": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_14"
+				}]
+			}
+		},
+		"head_epic_15": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_15"
+				}]
+			}
+		},
+		"head_epic_16": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_16"
+				}]
+			}
+		},
+		"head_epic_17": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_17"
+				}]
+			}
+		},
+		"head_epic_18": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_18"
+				}]
+			}
+		},
+		"head_epic_19": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_19"
+				}]
+			}
+		},
+		"head_epic_20": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_20"
+				}]
+			}
+		},
+		"head_epic_21": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_21"
+				}]
+			}
+		},
+		"head_epic_22": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_22"
+				}]
+			}
+		},
+		"head_epic_23": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_23"
+				}]
+			}
+		},
+		"head_epic_24": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_24"
+				}]
+			}
+		},
+		"head_epic_25": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_25"
+				}]
+			}
+		},
+		"head_epic_26": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_26"
+				}]
+			}
+		},
+		"head_epic_27": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_27"
+				}]
+			}
+		},
+		"head_epic_28": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_28"
+				}]
+			}
+		},
+		"head_epic_29": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_29"
+				}]
+			}
+		},
+		"head_epic_30": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_30"
+				}]
+			}
+		},
+		"head_epic_31": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_31"
+				}]
+			}
+		},
+		"head_epic_32": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_32"
+				}]
+			}
+		},
+		"head_epic_33": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_33"
+				}]
+			}
+		},
+		"head_epic_34": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_34"
+				}]
+			}
+		},
+		"head_epic_35": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_35"
+				}]
+			}
+		},
+		"head_epic_36": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_36"
+				}]
+			}
+		},
+		"head_epic_37": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_37"
+				}]
+			}
+		},
+		"head_epic_38": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_38"
+				}]
+			}
+		},
+		"head_epic_39": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_39"
+				}]
+			}
+		},
+		"head_epic_40": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_40"
+				}]
+			}
+		},
+		"head_epic_41": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_41"
+				}]
+			}
+		},
+		"head_epic_42": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_42"
+				}]
+			}
+		},
+		"head_epic_43": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_43"
+				}]
+			}
+		},
+		"head_epic_44": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_44"
+				}]
+			}
+		},
+		"head_epic_45": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_45"
+				}]
+			}
+		},
+		"head_epic_46": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_46"
+				}]
+			}
+		},
+		"head_epic_47": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_47"
+				}]
+			}
+		},
+		"head_epic_48": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_48"
+				}]
+			}
+		},
+		"head_epic_49": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_49"
+				}]
+			}
+		},
+		"head_epic_50": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_50"
+				}]
+			}
+		},
+		"head_epic_51": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_51"
+				}]
+			}
+		},
+		"head_epic_52": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_52"
+				}]
+			}
+		},
+		"head_epic_53": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_53"
+				}]
+			}
+		},
+		"head_epic_54": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_54"
+				}]
+			}
+		},
+		"head_epic_55": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_55"
+				}]
+			}
+		},
+		"head_epic_56": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_56"
+				}]
+			}
+		},
+		"head_epic_57": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_57"
+				}]
+			}
+		},
+		"head_epic_58": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_58"
+				}]
+			}
+		},
+		"head_epic_59": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_59"
+				}]
+			}
+		},
+		"head_epic_60": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_60"
+				}]
+			}
+		},
+		"head_epic_61": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_61"
+				}]
+			}
+		},
+		"head_epic_62": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_62"
+				}]
+			}
+		},
+		"head_epic_63": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_63"
+				}]
+			}
+		},
+		"head_epic_64": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_64"
+				}]
+			}
+		},
+		"head_epic_65": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_65"
+				}]
+			}
+		},
+		"head_epic_66": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_66"
+				}]
+			}
+		},
+		"head_epic_67": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_67"
+				}]
+			}
+		},
+		"head_epic_68": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_68"
+				}]
+			}
+		},
+		"head_epic_69": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_69"
+				}]
+			}
+		},
+		"head_epic_70": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_70"
+				}]
+			}
+		},
+		"head_epic_71": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_71"
+				}]
+			}
+		},
+		"head_epic_72": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_72"
+				}]
+			}
+		},
+		"head_epic_73": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_73"
+				}]
+			}
+		},
+		"head_epic_74": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_74"
+				}]
+			}
+		},
+		"head_epic_75": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_75"
+				}]
+			}
+		},
+		"head_epic_76": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_76"
+				}]
+			}
+		},
+		"head_epic_77": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_77"
+				}]
+			}
+		},
+		"head_epic_78": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_78"
+				}]
+			}
+		},
+		"head_epic_79": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_79"
+				}]
+			}
+		},
+		"head_epic_80": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_80"
+				}]
+			}
+		},
+		"head_epic_81": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_81"
+				}]
+			}
+		},
+		"head_epic_82": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_82"
+				}]
+			}
+		},
+		"head_epic_83": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_83"
+				}]
+			}
+		},
+		"head_epic_84": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_84"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_epic_0"],
+		["head_epic_1"],
+		["head_epic_2"],
+		["head_epic_3"],
+		["head_epic_4"],
+		["head_epic_5"],
+		["head_epic_6"],
+		["head_epic_7"],
+		["head_epic_8"],
+		["head_epic_9"],
+		["head_epic_10"],
+		["head_epic_11"],
+		["head_epic_12"],
+		["head_epic_13"],
+		["head_epic_14"],
+		["head_epic_15"],
+		["head_epic_16"],
+		["head_epic_17"],
+		["head_epic_18"],
+		["head_epic_19"],
+		["head_epic_20"],
+		["head_epic_21"],
+		["head_epic_22"],
+		["head_epic_23"],
+		["head_epic_24"],
+		["head_epic_25"],
+		["head_epic_26"],
+		["head_epic_27"],
+		["head_epic_28"],
+		["head_epic_29"],
+		["head_epic_30"],
+		["head_epic_31"],
+		["head_epic_32"],
+		["head_epic_33"],
+		["head_epic_34"],
+		["head_epic_35"],
+		["head_epic_36"],
+		["head_epic_37"],
+		["head_epic_38"],
+		["head_epic_39"],
+		["head_epic_40"],
+		["head_epic_41"],
+		["head_epic_42"],
+		["head_epic_43"],
+		["head_epic_44"],
+		["head_epic_45"],
+		["head_epic_46"],
+		["head_epic_47"],
+		["head_epic_48"],
+		["head_epic_49"],
+		["head_epic_50"],
+		["head_epic_51"],
+		["head_epic_52"],
+		["head_epic_53"],
+		["head_epic_54"],
+		["head_epic_55"],
+		["head_epic_56"],
+		["head_epic_57"],
+		["head_epic_58"],
+		["head_epic_59"],
+		["head_epic_60"],
+		["head_epic_61"],
+		["head_epic_62"],
+		["head_epic_63"],
+		["head_epic_64"],
+		["head_epic_65"],
+		["head_epic_66"],
+		["head_epic_67"],
+		["head_epic_68"],
+		["head_epic_69"],
+		["head_epic_70"],
+		["head_epic_71"],
+		["head_epic_72"],
+		["head_epic_73"],
+		["head_epic_74"],
+		["head_epic_75"],
+		["head_epic_76"],
+		["head_epic_77"],
+		["head_epic_78"],
+		["head_epic_79"],
+		["head_epic_80"],
+		["head_epic_81"],
+		["head_epic_82"],
+		["head_epic_83"],
+		["head_epic_84"]
+	],
+	"rewards": {
+		"experience": 145
+	},
+	"parent": "threedee:threedee/epic_head"
+}

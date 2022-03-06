@@ -1,0 +1,9 @@
+{
+	"type": "threedee:tiny_cauldron",
+	"input": {
+		"item": "minecraft:dead_bubble_coral"
+	},
+	"output": {
+		"item": "minecraft:bubble_coral"
+	}
+}

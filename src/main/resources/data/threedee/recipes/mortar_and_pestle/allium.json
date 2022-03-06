@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:allium"
+	},
+	"output": {
+		"item": "minecraft:magenta_dye",
+		"count": 2
+	}
+}

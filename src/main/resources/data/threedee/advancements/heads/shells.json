@@ -1,0 +1,47 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.shells.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.shells.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_epic_19"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_epic_19": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_19"
+				}]
+			}
+		},
+		"head_ancient_39": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_39"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_epic_19"],
+		["head_ancient_39"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/skulls"
+}

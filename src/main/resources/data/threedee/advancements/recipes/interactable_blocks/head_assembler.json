@@ -1,0 +1,39 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"threedee:interactable_blocks/head_assembler"
+		]
+	},
+	"criteria": {
+		"has_smooth_asphalt": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:smooth_asphalt"
+				}]
+			}
+		},
+		"has_head": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"tag": "threedee:threedee_heads"
+				}]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "threedee:interactable_blocks/head_assembler"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_smooth_asphalt",
+			"has_head",
+			"has_the_recipe"
+		]
+	]
+}

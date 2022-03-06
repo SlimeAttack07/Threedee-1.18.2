@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "threedee:decorative_smoker"
+    ]
+  },
+  "criteria": {
+    "has_smoker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:smoker"
+          }
+        ]
+      }
+    },
+    "has_scaffolding": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:scaffolding"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "threedee:decorative_smoker"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smoker",
+      "has_scaffolding",
+      "has_the_recipe"
+    ]
+  ]
+}

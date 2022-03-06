@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": 
+    {
+		"particle": "threedee:block/hard_pulp_block",
+        "all": "threedee:block/hard_pulp_block"
+    }
+}

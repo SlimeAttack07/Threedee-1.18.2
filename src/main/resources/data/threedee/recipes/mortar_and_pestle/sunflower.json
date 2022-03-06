@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:sunflower"
+	},
+	"output": {
+		"item": "minecraft:yellow_dye",
+		"count": 4
+	}
+}

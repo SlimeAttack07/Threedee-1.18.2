@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SSS",
+		"ICI",
+		"SSS"
+	],
+
+	"key": {
+		"S": {
+			"tag": "forge:seeds/wheat"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"C": {
+			"item": "threedee:catalyst_legendary"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:catalyst_seeds_common",
+			"count": 2
+	}
+}

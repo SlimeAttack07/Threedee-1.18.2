@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_mortar",
+	"textures": {
+		"bowl": "block/polished_andesite"
+	}
+}

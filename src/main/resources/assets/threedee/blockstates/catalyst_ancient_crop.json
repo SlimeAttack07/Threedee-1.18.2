@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "threedee:block/catalyst_crop0" },
+        "age=1": { "model": "threedee:block/catalyst_crop1" },
+        "age=2": { "model": "threedee:block/catalyst_crop2" },
+        "age=3": { "model": "threedee:block/catalyst_crop3" },
+        "age=4": { "model": "threedee:block/catalyst_crop4" },
+        "age=5": { "model": "threedee:block/catalyst_crop5" },
+        "age=6": { "model": "threedee:block/catalyst_ancient_crop6" },
+        "age=7": { "model": "threedee:block/catalyst_ancient_crop7" }
+    }
+}

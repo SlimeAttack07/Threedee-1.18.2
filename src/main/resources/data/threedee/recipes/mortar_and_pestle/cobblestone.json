@@ -1,0 +1,9 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:stone"
+	},
+	"output": {
+		"item": "minecraft:cobblestone"
+	}
+}

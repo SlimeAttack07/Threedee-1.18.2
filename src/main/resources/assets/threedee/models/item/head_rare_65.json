@@ -1,0 +1,9 @@
+{
+	"parent": "threedee:block/head_rare_65",
+	"display": {
+		"firstperson_righthand": {
+			"translation": [0, 2, 0],
+			"scale": [1, 1, 1]
+		}
+	}
+}

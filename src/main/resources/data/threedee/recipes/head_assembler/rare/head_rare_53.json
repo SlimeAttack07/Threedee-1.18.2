@@ -1,0 +1,8 @@
+{
+	"type": "threedee:head_assembler",
+	"input": {
+		"item": "threedee:catalyst_rare"
+	},
+	"amount": 6,
+	"block_on_top": "threedee:head_rare_53"
+}

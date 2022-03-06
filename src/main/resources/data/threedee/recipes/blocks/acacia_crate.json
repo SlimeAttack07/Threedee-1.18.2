@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_crates",
+	"pattern": [
+		"SBS",
+		"SPS"
+	],
+
+	"key": {
+		"S": {
+			"tag": "forge:rods/wooden"
+		},
+		"B": {
+			"item": "minecraft:barrel"
+		},
+		"P": {
+			"item": "minecraft:acacia_planks"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:acacia_crate",
+			"count": 10
+	}
+}

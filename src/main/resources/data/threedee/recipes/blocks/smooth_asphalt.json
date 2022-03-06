@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"RR",
+		"RR"
+	],
+
+	"key": {
+		"R": {
+			"item": "threedee:rough_asphalt"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:smooth_asphalt",
+			"count": 4
+	}
+}

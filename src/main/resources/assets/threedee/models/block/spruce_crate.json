@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": 
+    {
+		"particle": "threedee:block/spruce_crate",
+        "all": "threedee:block/spruce_crate"
+    }
+}

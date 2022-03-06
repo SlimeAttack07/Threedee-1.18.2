@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+
+		{
+			"item": "threedee:coal_powder_block"
+		}
+	],
+
+	"result": {
+		"item": "threedee:coal_powder",
+		"count": 4
+	}
+}

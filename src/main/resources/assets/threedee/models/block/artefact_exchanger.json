@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_exchanger",
+	"textures": {
+		"exchanger": "threedee:block/artefact_exchanger"
+	}
+}

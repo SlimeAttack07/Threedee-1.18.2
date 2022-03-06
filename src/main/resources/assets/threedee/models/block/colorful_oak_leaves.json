@@ -1,0 +1,6 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "threedee:block/colorful_oak_leaves"
+    }
+}

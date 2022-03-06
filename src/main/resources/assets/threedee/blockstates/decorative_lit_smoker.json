@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "threedee:block/decorative_lit_smoker" },
+        "facing=south": { "model": "threedee:block/decorative_lit_smoker", "y": 180 },
+        "facing=west":  { "model": "threedee:block/decorative_lit_smoker", "y": 270 },
+        "facing=east":  { "model": "threedee:block/decorative_lit_smoker", "y": 90 }
+    }
+}

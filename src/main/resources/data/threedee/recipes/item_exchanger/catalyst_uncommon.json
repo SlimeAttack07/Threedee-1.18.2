@@ -1,0 +1,7 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "threedee:catalyst_uncommon"
+	},
+	"tokens": 1000
+}

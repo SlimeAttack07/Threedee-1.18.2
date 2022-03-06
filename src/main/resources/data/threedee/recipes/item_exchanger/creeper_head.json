@@ -1,0 +1,12 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:gunpowder"
+	},
+	"amount_in": 64,
+	"output": {
+		"item": "minecraft:creeper_head"
+	},
+	"tokens": 10000,
+	"consume": true
+}

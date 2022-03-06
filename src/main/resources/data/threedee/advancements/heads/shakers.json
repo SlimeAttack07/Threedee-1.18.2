@@ -1,0 +1,47 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.shakers.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.shakers.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_common_77"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_common_77": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_77"
+				}]
+			}
+		},
+		"head_common_78": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_78"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_common_77"],
+		["head_common_78"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/root"
+}

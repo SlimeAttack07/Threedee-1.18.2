@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:blue_orchid"
+	},
+	"output": {
+		"item": "minecraft:light_blue_dye",
+		"count": 2
+	}
+}

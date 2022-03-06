@@ -1,0 +1,110 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.sundae.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.sundae.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_epic_57"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_epic_57": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_57"
+				}]
+			}
+		},
+		"head_epic_58": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_58"
+				}]
+			}
+		},
+		"head_epic_59": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_59"
+				}]
+			}
+		},
+		"head_epic_60": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_60"
+				}]
+			}
+		},
+		"head_epic_61": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_61"
+				}]
+			}
+		},
+		"head_epic_62": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_62"
+				}]
+			}
+		},
+		"head_epic_63": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_63"
+				}]
+			}
+		},
+		"head_epic_64": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_64"
+				}]
+			}
+		},
+		"head_epic_65": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_65"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_epic_57"],
+		["head_epic_58"],
+		["head_epic_59"],
+		["head_epic_60"],
+		["head_epic_61"],
+		["head_epic_62"],
+		["head_epic_63"],
+		["head_epic_64"],
+		["head_epic_65"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/fish"
+}

@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.legendary_catalyst.title"
+        },
+        "description": {
+            "translate": "advancements.threedee.legendary_catalyst.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:catalyst_legendary"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "catalyst_legendary": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "threedee:catalyst_legendary"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "catalyst_legendary"
+        ]
+    ],
+    "parent": "threedee:threedee/root"
+}

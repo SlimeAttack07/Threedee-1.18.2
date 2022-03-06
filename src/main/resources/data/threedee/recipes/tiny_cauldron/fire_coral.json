@@ -1,0 +1,9 @@
+{
+	"type": "threedee:tiny_cauldron",
+	"input": {
+		"item": "minecraft:dead_fire_coral"
+	},
+	"output": {
+		"item": "minecraft:fire_coral"
+	}
+}

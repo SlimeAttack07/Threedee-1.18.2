@@ -1,0 +1,8 @@
+{
+	"type": "threedee:head_assembler",
+	"input": {
+		"item": "threedee:dye_paste"
+	},
+	"is_dye_filler": true,
+	"amount": 1
+}

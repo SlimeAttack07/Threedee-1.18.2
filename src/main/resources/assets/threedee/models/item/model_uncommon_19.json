@@ -1,0 +1,9 @@
+{
+	"parent": "threedee:block/model_uncommon_19",
+	"display": {
+		"firstperson_righthand": {
+			"translation": [0, 2, 0],
+			"scale": [0.75, 0.75, 0.75]
+		}
+	}
+}

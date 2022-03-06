@@ -1,0 +1,40 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.ancient_rock.title",
+            "color": "dark_gray",
+            "italic": true
+        },
+        "description": {
+            "translate": "advancements.threedee.ancient_rock.description",
+            "color": "gray",
+			"italic": false
+        },
+        "icon": {
+            "item": "threedee:ancient_rock_0"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ancient_rock": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "threedee:ancient_rocks"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "ancient_rock"
+        ]
+    ],
+    "parent": "threedee:threedee/root"
+}

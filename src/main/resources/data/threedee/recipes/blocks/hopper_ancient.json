@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "hoppers",
+  "ingredients": [
+    {
+      "item": "threedee:catalyst_shard_ancient"
+    },
+	{
+	  "item": "minecraft:hopper"
+	}
+  ],
+  "result": {
+    "item": "threedee:hopper_ancient",
+    "count": 1
+  }
+}

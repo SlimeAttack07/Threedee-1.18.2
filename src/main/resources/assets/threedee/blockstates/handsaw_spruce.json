@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "threedee:block/handsaw_spruce" },
+        "facing=south": { "model": "threedee:block/handsaw_spruce", "y": 180 },
+        "facing=west":  { "model": "threedee:block/handsaw_spruce", "y": 270 },
+        "facing=east":  { "model": "threedee:block/handsaw_spruce", "y": 90 }
+    }
+}

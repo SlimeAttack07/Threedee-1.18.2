@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "threedee:block/catalyst_rare_crop_stage_7"
+    }
+}

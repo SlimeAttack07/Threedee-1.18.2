@@ -1,0 +1,39 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"threedee:interactable_blocks/artefact_analyzer"
+		]
+	},
+	"criteria": {
+		"has_smooth_asphalt": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:smooth_asphalt"
+				}]
+			}
+		},
+		"has_rock": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"tag": "threedee:ancient_rocks"
+				}]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "threedee:interactable_blocks/artefact_analyzer"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_smooth_asphalt",
+			"has_rock",
+			"has_the_recipe"
+		]
+	]
+}

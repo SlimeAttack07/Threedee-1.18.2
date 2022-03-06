@@ -1,0 +1,9 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"tag": "forge:gravel"
+	},
+	"output": {
+		"item": "minecraft:flint"
+	}
+}

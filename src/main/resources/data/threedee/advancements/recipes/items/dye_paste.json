@@ -1,0 +1,48 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"threedee:items/dye_paste"
+		]
+	},
+	"criteria": {
+		"has_orange_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"tag": "forge:dyes/orange"
+				}]
+			}
+		},
+		"has_lime_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"tag": "forge:dyes/lime"
+				}]
+			}
+		},
+		"has_purple_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"tag": "forge:dyes/purple"
+				}]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "threedee:items/dye_paste"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_orange_dye",
+			"has_lime_dye",
+			"has_purple_dye",
+			"has_the_recipe"
+		]
+	]
+}

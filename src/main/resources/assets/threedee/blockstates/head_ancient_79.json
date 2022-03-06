@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "threedee:block/head_ancient_79" },
+        "facing=south": { "model": "threedee:block/head_ancient_79", "y": 180 },
+        "facing=west":  { "model": "threedee:block/head_ancient_79", "y": 270 },
+        "facing=east":  { "model": "threedee:block/head_ancient_79", "y": 90 }
+	}
+}

@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.handsaw.title"
+        },
+        "description": {
+            "translate": "advancements.threedee.handsaw.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:handsaw_dark_oak"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "handsaw": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "threedee:handsaws"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "handsaw"
+        ]
+    ],
+    "parent": "threedee:threedee/root"
+}

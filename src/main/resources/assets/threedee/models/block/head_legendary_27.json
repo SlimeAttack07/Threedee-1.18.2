@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/monsters/42593-scp-066",
+	"textures": {
+		"head": "threedee:heads/head_legendary_27"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/37586-enchantment-book",
+	"textures": {
+		"head": "threedee:heads/head_ancient_12"
+	}
+}

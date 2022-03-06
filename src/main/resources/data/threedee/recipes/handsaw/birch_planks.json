@@ -1,0 +1,10 @@
+{
+	"type": "threedee:handsaw",
+	"input": {
+		"tag": "minecraft:birch_logs"
+	},
+	"output": {
+		"item": "minecraft:birch_planks",
+		"count": 5
+	}
+}

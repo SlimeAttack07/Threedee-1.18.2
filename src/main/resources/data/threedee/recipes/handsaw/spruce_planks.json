@@ -1,0 +1,10 @@
+{
+	"type": "threedee:handsaw",
+	"input": {
+		"tag": "minecraft:spruce_logs"
+	},
+	"output": {
+		"item": "minecraft:spruce_planks",
+		"count": 5
+	}
+}

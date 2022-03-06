@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:sugar_cane"
+	},
+	"output": {
+		"item": "minecraft:sugar",
+		"count": 2
+	}
+}

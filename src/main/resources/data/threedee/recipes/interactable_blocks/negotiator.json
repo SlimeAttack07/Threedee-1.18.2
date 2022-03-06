@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		" L ",
+		"AEA",
+		"AAA"
+	],
+
+	"key": {
+		"L": {
+			"tag": "forge:leather"
+		},
+		"E": {
+			"tag": "forge:gems/emerald"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:negotiator",
+			"count": 1
+	}
+}

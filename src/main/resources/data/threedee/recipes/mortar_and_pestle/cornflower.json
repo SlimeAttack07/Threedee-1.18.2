@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:cornflower"
+	},
+	"output": {
+		"item": "minecraft:blue_dye",
+		"count": 2
+	}
+}

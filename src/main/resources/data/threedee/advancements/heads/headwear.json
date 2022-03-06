@@ -1,0 +1,128 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.headwear.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.headwear.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_uncommon_59"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_uncommon_59": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_uncommon_59"
+				}]
+			}
+		},
+		"head_rare_26": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_26"
+				}]
+			}
+		},
+		"head_ancient_0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_0"
+				}]
+			}
+		},
+		"head_ancient_1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_1"
+				}]
+			}
+		},
+		"head_ancient_8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_8"
+				}]
+			}
+		},
+		"head_ancient_9": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_9"
+				}]
+			}
+		},
+		"head_ancient_26": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_26"
+				}]
+			}
+		},
+		"head_ancient_28": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_28"
+				}]
+			}
+		},
+		"head_ancient_51": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_51"
+				}]
+			}
+		},
+		"head_ancient_52": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_52"
+				}]
+			}
+		},
+		"head_ancient_54": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_54"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_uncommon_59"],
+		["head_rare_26"],
+		["head_ancient_0"],
+		["head_ancient_1"],
+		["head_ancient_8"],
+		["head_ancient_9"],
+		["head_ancient_26"],
+		["head_ancient_28"],
+		["head_ancient_51"],
+		["head_ancient_52"],
+		["head_ancient_54"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/root"
+}

@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:orange_tulip"
+	},
+	"output": {
+		"item": "minecraft:orange_dye",
+		"count": 2
+	}
+}

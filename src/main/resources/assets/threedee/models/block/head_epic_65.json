@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/food-drinks/44-sundae-with-cherry",
+	"textures": {
+		"head": "threedee:heads/head_epic_65"
+	}
+}

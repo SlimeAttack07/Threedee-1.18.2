@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": 
+    {
+		"particle": "threedee:block/coal_powder_block",
+        "all": "threedee:block/coal_powder_block"
+    }
+}

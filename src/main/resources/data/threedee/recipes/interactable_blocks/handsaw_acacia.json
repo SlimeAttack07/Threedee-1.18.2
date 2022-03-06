@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_handsaw",
+	"pattern": [
+		" HI",
+		" IS",
+		"IL "
+	],
+
+	"key": {
+		"H": {
+			"tag": "forge:leather"
+		},
+		"I": {
+			"tag": "forge:ingots/iron"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		},
+		"L": {
+			"item": "minecraft:acacia_log"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:handsaw_acacia",
+			"count": 1
+	}
+}

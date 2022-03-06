@@ -1,0 +1,119 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.devices.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.devices.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_rare_20"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_rare_20": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_20"
+				}]
+			}
+		},
+		"head_rare_88": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_88"
+				}]
+			}
+		},
+		"head_epic_55": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_55"
+				}]
+			}
+		},
+		"head_epic_56": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_56"
+				}]
+			}
+		},
+		"head_epic_68": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_68"
+				}]
+			}
+		},
+		"head_legendary_6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_legendary_6"
+				}]
+			}
+		},
+		"head_legendary_7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_legendary_7"
+				}]
+			}
+		},
+		"head_legendary_39": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_legendary_39"
+				}]
+			}
+		},
+		"head_legendary_49": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_legendary_49"
+				}]
+			}
+		},
+		"head_ancient_77": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_77"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_rare_20"],
+		["head_rare_88"],
+		["head_epic_55"],
+		["head_epic_56"],
+		["head_epic_68"],
+		["head_legendary_6"],
+		["head_legendary_7"],
+		["head_legendary_39"],
+		["head_legendary_49"],
+		["head_ancient_77"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/technical"
+}

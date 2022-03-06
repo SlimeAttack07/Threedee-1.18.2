@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "threedee:mortar_and_pestle_andesite",
+	"threedee:mortar_and_pestle_granite",
+	"threedee:mortar_and_pestle_diorite"
+  ]
+}

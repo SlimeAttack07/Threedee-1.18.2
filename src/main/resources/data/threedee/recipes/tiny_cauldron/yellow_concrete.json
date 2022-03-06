@@ -1,0 +1,9 @@
+{
+	"type": "threedee:tiny_cauldron",
+	"input": {
+		"item": "minecraft:yellow_concrete_powder"
+	},
+	"output": {
+		"item": "minecraft:yellow_concrete"
+	}
+}

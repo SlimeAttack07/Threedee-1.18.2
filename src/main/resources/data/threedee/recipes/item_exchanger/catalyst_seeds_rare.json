@@ -1,0 +1,11 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "threedee:catalyst_seeds_uncommon"
+	},
+	"output": {
+		"item": "threedee:catalyst_seeds_rare"
+	},
+	"tokens": 2000000,
+	"consume": true
+}

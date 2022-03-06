@@ -1,0 +1,10 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:rose_bush"
+	},
+	"output": {
+		"item": "minecraft:red_dye",
+		"count": 4
+	}
+}

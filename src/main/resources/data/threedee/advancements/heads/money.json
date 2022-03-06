@@ -1,0 +1,56 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.money.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.money.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_rare_34"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_rare_34": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_34"
+				}]
+			}
+		},
+		"head_legendary_10": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_legendary_10"
+				}]
+			}
+		},
+		"head_ancient_5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_ancient_5"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_rare_34"],
+		["head_legendary_10"],
+		["head_ancient_5"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/root"
+}

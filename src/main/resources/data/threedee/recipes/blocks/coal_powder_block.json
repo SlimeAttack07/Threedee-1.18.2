@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"CC",
+		"CC"
+	],
+
+	"key": {
+		"C": {
+			"tag": "forge:dusts/coal"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:coal_powder_block",
+			"count": 1
+	}
+}

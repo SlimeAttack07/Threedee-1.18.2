@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_handsaw",
+	"textures": {
+		"log": "block/jungle_log",
+		"log_top": "block/jungle_log_top"
+	}
+}

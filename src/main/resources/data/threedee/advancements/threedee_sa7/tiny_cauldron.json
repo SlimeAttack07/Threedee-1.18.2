@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.tiny_cauldron.title"
+        },
+        "description": {
+            "translate": "advancements.threedee.tiny_cauldron.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:tiny_cauldron_spruce"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "tiny_cauldron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "threedee:tiny_cauldrons"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "tiny_cauldron"
+        ]
+    ],
+    "parent": "threedee:threedee/root"
+}

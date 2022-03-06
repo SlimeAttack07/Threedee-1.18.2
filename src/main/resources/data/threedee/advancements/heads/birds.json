@@ -1,0 +1,101 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.birds.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.birds.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_common_17"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_common_17": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_17"
+				}]
+			}
+		},
+		"head_common_113": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_113"
+				}]
+			}
+		},
+		"head_uncommon_3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_uncommon_3"
+				}]
+			}
+		},
+		"head_uncommon_32": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_uncommon_32"
+				}]
+			}
+		},
+		"head_uncommon_106": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_uncommon_106"
+				}]
+			}
+		},
+		"head_rare_82": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_82"
+				}]
+			}
+		},
+		"head_rare_83": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_83"
+				}]
+			}
+		},
+		"head_epic_13": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_13"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_common_17"],
+		["head_common_113"],
+		["head_uncommon_3"],
+		["head_uncommon_32"],
+		["head_uncommon_106"],
+		["head_rare_82"],
+		["head_rare_83"],
+		["head_epic_13"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/hostile"
+}

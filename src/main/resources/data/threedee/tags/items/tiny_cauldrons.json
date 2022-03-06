@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "threedee:tiny_cauldron_oak",
+	"threedee:tiny_cauldron_birch",
+	"threedee:tiny_cauldron_spruce",
+	"threedee:tiny_cauldron_jungle",
+	"threedee:tiny_cauldron_acacia",
+	"threedee:tiny_cauldron_dark_oak"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "td_dec_blastfurnace",
+	"ingredients": [
+
+		{
+			"item": "threedee:decorative_blast_furnace"
+		}
+	],
+
+	"result": {
+		"item": "threedee:decorative_lit_blast_furnace",
+		"count": 1
+	}
+}

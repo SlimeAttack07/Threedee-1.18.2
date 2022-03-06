@@ -1,0 +1,12 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:rotten_flesh"
+	},
+	"amount_in": 64,
+	"output": {
+		"item": "minecraft:zombie_head"
+	},
+	"tokens": 10000,
+	"consume": true
+}

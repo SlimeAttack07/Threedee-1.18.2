@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "td_dec_smoker",
+	"ingredients": [
+
+		{
+			"item": "minecraft:smoker"
+		},
+
+		{
+			"item": "minecraft:scaffolding"
+		},
+		
+		{
+			"tag": "forge:rods/wooden"
+		},
+		
+		{
+			"tag": "forge:string"
+		}
+	],
+
+	"result": {
+		"item": "threedee:decorative_smoker",
+		"count": 16
+	}
+}

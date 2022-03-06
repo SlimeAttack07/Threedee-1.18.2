@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/quartz"
+    },
+    {
+      "item": "threedee:catalyst_corrupted"
+    },
+	{
+      "item": "threedee:catalyst_corrupted"
+    },
+	{
+      "item": "threedee:catalyst_corrupted"
+    }
+  ],
+  "result": {
+    "item": "threedee:catalyst_common",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_liquidbottle",
+	"pattern": [
+		"T",
+		"E"
+	],
+
+	"key": {
+		"T": {
+			"tag": "forge:dyes/cyan"
+		},
+		"E": {
+			"item": "threedee:empty_bottle"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:cyan_water_bottle",
+			"count": 1
+	}
+}

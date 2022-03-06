@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.mortar_and_pestle.title"
+        },
+        "description": {
+            "translate": "advancements.threedee.mortar_and_pestle.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:mortar_and_pestle_diorite"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "mortar_and_pestle": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "threedee:mortar_and_pestles"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "mortar_and_pestle"
+        ]
+    ],
+    "parent": "threedee:threedee/root"
+}

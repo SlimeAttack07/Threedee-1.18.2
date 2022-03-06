@@ -1,0 +1,9 @@
+{
+	"type": "threedee:tiny_cauldron",
+	"input": {
+		"item": "threedee:pulp_block"
+	},
+	"output": {
+		"item": "threedee:wet_pulp_block"
+	}
+}

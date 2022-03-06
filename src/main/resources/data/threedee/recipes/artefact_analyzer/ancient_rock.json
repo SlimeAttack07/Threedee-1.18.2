@@ -1,0 +1,8 @@
+{
+	"type": "threedee:artefact_analyzer",
+	"input": {
+		"tag": "threedee:ancient_rocks"
+	},
+	"loot_table": "threedee:artefact_analyzer/ancient_rock",
+	"ticks_to_craft": 6000
+}

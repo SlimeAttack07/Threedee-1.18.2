@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/23283-city-building",
+	"textures": {
+		"head": "threedee:heads/head_common_14"
+	}
+}

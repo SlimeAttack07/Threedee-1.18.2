@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_mortarpestle",
+	"pattern": [
+		"  S",
+		"DFD",
+		" D "
+	],
+
+	"key": {
+		"S": {
+			"item": "minecraft:stick"
+		},
+		"D": {
+			"item": "minecraft:polished_diorite"
+		},
+		"F": {
+			"item": "minecraft:flint"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:mortar_and_pestle_diorite",
+			"count": 1
+	}
+}

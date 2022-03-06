@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_tinycauldron",
+	"pattern": [
+		" WS",
+		"LCL",
+		" L "
+	],
+
+	"key": {
+		"W": {
+			"item": "minecraft:water_bucket"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		},
+		"L": {
+			"item": "minecraft:dark_oak_log"
+		},
+		"C": {
+			"item": "minecraft:cauldron"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:tiny_cauldron_dark_oak",
+			"count": 1
+	}
+}

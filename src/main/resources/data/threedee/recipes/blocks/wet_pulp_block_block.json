@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"PPP",
+		"PWP",
+		"PPP"
+	],
+
+	"key": {
+		"P": {
+			"item": "threedee:pulp_block"
+		},
+		"W": {
+			"item": "minecraft:water_bucket"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:wet_pulp_block",
+			"count": 8
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"TBR",
+		"ACA",
+		"AAA"
+	],
+
+	"key": {
+		"T": {
+			"item": "minecraft:tnt"
+		},
+		"B": {
+			"item": "minecraft:red_nether_bricks"
+		},
+		"R": {
+			"tag": "forge:dusts/redstone"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		},
+		"C": {
+			"tag": "forge:storage_blocks/coal"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:head_fabricator",
+			"count": 1
+	}
+}

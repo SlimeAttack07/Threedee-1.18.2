@@ -1,0 +1,37 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.negotiator.title"
+        },
+        "description": {
+            "translate": "advancements.threedee.negotiator.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:negotiator"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "negotiator": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "threedee:negotiator"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "negotiator"
+        ]
+    ],
+    "parent": "threedee:threedee/artefact_analyzer"
+}

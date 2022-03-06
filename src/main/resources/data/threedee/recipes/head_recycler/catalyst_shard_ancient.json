@@ -1,0 +1,15 @@
+{
+	"type": "threedee:head_recycler",
+	"input": {
+		"tag": "threedee:ancient_heads"
+	},
+	"output": {
+		"item": "threedee:catalyst_shard_ancient",
+		"count": 1
+	},
+	"corrupted_output": {
+		"item": "threedee:catalyst_corrupted",
+		"count": 6
+	},
+	"ticks_needed": 70
+}

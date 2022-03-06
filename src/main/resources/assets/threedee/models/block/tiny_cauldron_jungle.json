@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_cauldron",
+	"textures": {
+		"log": "block/jungle_log"
+	}
+}

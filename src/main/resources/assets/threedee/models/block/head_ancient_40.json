@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/monsters/21649-stone-cthulhu-idol",
+	"textures": {
+		"head": "threedee:heads/head_ancient_40"
+	}
+}

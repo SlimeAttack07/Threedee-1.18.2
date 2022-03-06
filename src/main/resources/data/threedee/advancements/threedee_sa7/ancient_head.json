@@ -1,0 +1,38 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "translate": "advancements.threedee.ancient_head.title",
+            "color": "red"
+        },
+        "description": {
+            "translate": "advancements.threedee.ancient_head.description",
+            "color": "gray"
+        },
+        "icon": {
+            "item": "threedee:head_ancient_24"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ancient_head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "threedee:ancient_heads"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "ancient_head"
+        ]
+    ],
+    "parent": "threedee:threedee/artefact_analyzer"
+}

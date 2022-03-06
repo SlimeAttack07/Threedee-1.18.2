@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/15456-radium-cell",
+	"textures": {
+		"head": "threedee:heads/head_ancient_42"
+	}
+}

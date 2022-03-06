@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom/decoration/28982-citrine",
+	"textures": {
+		"head": "threedee:heads/head_rare_36"
+	}
+}

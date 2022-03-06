@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:heads/peppers",
+	"#threedee:heads/berries",
+	"threedee:head_common_4",
+	"threedee:head_common_15",
+	"threedee:head_common_51",
+	"threedee:head_common_53",
+	"threedee:head_common_54",
+	"threedee:head_common_56",
+	"threedee:head_common_58",
+	"threedee:head_common_59",
+	"threedee:head_common_60",
+	"threedee:head_common_94",
+	"threedee:head_common_99",
+	"threedee:head_common_100",
+	"threedee:head_common_101",
+	"threedee:head_common_103",
+	"threedee:head_uncommon_11",
+	"threedee:head_uncommon_80",
+	"threedee:head_uncommon_81",
+	"threedee:head_uncommon_82",
+	"threedee:head_uncommon_83",
+	"threedee:head_uncommon_96",
+	"threedee:head_uncommon_97",
+	"threedee:head_uncommon_103",
+	"threedee:head_uncommon_104",
+	"threedee:head_uncommon_105"
+  ]
+}

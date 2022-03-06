@@ -1,0 +1,8 @@
+{
+	"type": "threedee:head_assembler",
+	"input": {
+		"item": "threedee:catalyst_epic"
+	},
+	"amount": 8,
+	"block_on_top": "threedee:head_epic_74"
+}

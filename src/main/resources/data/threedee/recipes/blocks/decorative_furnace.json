@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "td_dec_furnace",
+	"ingredients": [
+
+		{
+			"item": "minecraft:furnace"
+		},
+
+		{
+			"item": "minecraft:scaffolding"
+		},
+		
+		{
+			"tag": "forge:rods/wooden"
+		},
+		
+		{
+			"tag": "forge:string"
+		}
+	],
+
+	"result": {
+		"item": "threedee:decorative_furnace",
+		"count": 16
+	}
+}

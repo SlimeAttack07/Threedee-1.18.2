@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_liquidbottle",
+	"pattern": [
+		"T",
+		"E"
+	],
+
+	"key": {
+		"T": {
+			"tag": "forge:dyes/lime"
+		},
+		"E": {
+			"item": "threedee:empty_bottle"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:lime_water_bottle",
+			"count": 1
+	}
+}

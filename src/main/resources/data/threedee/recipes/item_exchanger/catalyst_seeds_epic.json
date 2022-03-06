@@ -1,0 +1,11 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "threedee:catalyst_seeds_rare"
+	},
+	"output": {
+		"item": "threedee:catalyst_seeds_epic"
+	},
+	"tokens": 3000000,
+	"consume": true
+}

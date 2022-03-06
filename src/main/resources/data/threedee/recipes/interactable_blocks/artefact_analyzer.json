@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"ISI",
+		"RMR",
+		"AAA"
+	],
+
+	"key": {
+		"I": {
+			"tag": "forge:ingots/iron"
+		},
+		"S": {
+			"item": "minecraft:sea_lantern"
+		},
+		"R": {
+			"tag": "forge:dusts/redstone"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		},
+		"M": {
+			"tag": "threedee:ancient_rocks"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:artefact_analyzer",
+			"count": 1
+	}
+}

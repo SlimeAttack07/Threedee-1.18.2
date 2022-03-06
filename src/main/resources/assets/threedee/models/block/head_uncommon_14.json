@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/12838-fruit-basket",
+	"textures": {
+		"head": "threedee:heads/head_uncommon_14"
+	}
+}

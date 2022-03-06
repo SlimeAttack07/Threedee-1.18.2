@@ -1,0 +1,12 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:bone"
+	},
+	"amount_in": 64,
+	"output": {
+		"item": "minecraft:skeleton_skull"
+	},
+	"tokens": 10000,
+	"consume": true
+}

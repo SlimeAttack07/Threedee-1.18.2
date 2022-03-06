@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:heads/birds",
+	"threedee:head_common_80",
+	"threedee:head_common_85",
+	"threedee:head_common_86",
+	"threedee:head_common_87",
+	"threedee:head_common_91",
+	"threedee:head_common_92",
+	"threedee:head_uncommon_27",
+	"threedee:head_uncommon_100",
+	"threedee:head_rare_0",
+	"threedee:head_rare_10",
+	"threedee:head_rare_21",
+	"threedee:head_rare_22",
+	"threedee:head_rare_27",
+	"threedee:head_rare_81",
+	"threedee:head_rare_89",
+	"threedee:head_epic_66",
+	"threedee:head_legendary_50",
+	"threedee:head_legendary_51"
+  ]
+}

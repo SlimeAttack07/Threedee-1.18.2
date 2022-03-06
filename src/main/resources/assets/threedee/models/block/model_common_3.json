@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_present",
+	"textures": {
+		"present": "threedee:heads/head_common_3"
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"HWR",
+		"AEA",
+		"AAA"
+	],
+
+	"key": {
+		"H": {
+			"tag": "threedee:threedee_heads"
+		},
+		"W": {
+			"item": "minecraft:green_wool"
+		},
+		"R": {
+			"tag": "forge:dusts/redstone"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		},
+		"E": {
+			"tag": "forge:gems/emerald"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:head_recycler",
+			"count": 1
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.stone_based.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.stone_based.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_common_1"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_common_1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_1"
+				}]
+			}
+		},
+		"head_common_18": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_18"
+				}]
+			}
+		},
+		"head_common_23": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_23"
+				}]
+			}
+		},
+		"head_common_24": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_common_24"
+				}]
+			}
+		},
+		"head_epic_24": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_24"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_common_1"],
+		["head_common_18"],
+		["head_common_23"],
+		["head_common_24"],
+		["head_epic_24"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/root"
+}

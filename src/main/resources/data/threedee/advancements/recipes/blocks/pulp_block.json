@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "threedee:pulp_block"
+    ]
+  },
+  "criteria": {
+    "has_at_least_4_wood_pulp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "threedee:wood_pulp",
+            "count": {
+              "min": 4
+            }
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "threedee:pulp_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_at_least_4_wood_pulp",
+      "has_the_recipe"
+    ]
+  ]
+}

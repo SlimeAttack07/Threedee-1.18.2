@@ -1,0 +1,7 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:iron_ingot"
+	},
+	"tokens": 2000
+}

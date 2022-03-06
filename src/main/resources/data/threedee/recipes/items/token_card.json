@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PPP",
+		"RGL",
+		"PPP"
+	],
+
+	"key": {
+		"P": {
+			"item": "minecraft:paper"
+		},
+		"B": {
+			"tag": "forge:dyes/red"
+		},
+		"L": {
+			"tag": "forge:dyes/pink"
+		},
+		"G": {
+			"tag": "forge:ingots/gold"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:token_card",
+			"count": 1
+	}
+}

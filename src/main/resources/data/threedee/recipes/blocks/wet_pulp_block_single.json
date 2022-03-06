@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"WW",
+		"WW"
+	],
+
+	"key": {
+		"W": {
+			"item": "threedee:wet_wood_pulp"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:wet_pulp_block",
+			"count": 1
+	}
+}

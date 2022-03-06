@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+
+		{
+			"item": "threedee:wet_pulp_block"
+		}
+	],
+
+	"result": {
+		"item": "threedee:wet_wood_pulp",
+		"count": 4
+	}
+}

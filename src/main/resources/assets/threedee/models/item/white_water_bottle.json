@@ -1,0 +1,9 @@
+{
+	"parent": "threedee:block/white_water_bottle",
+	"display": {
+		"firstperson_righthand": {
+			"translation": [0, 2, 0],
+			"scale": [0.75, 0.75, 0.75]
+		}
+	}
+}

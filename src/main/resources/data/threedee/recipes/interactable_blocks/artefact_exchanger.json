@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "td_exchangers",
+
+	"pattern": [
+		"DLD",
+		"AAA"
+	],
+
+	"key": {
+		"D": {
+			"tag": "forge:gems/diamond"
+		},
+		"L": {
+			"tag": "forge:storage_blocks/lapis"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:artefact_exchanger",
+			"count": 1
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/34496-stack-of-cds-vertical",
+	"textures": {
+		"head": "threedee:heads/head_uncommon_25"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/26345-coffee-maker",
+	"textures": {
+		"head": "threedee:heads/head_rare_20"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "td_catalyst",
+  "ingredients": [
+    {
+      "item": "minecraft:bone_block"
+    },
+	{
+      "item": "minecraft:bone_block"
+    },
+    {
+      "item": "threedee:catalyst_shard_common"
+    }
+  ],
+  "result": {
+    "item": "threedee:catalyzed_bone_meal",
+    "count": 1
+  }
+}

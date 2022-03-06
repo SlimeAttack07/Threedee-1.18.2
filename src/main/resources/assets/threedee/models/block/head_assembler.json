@@ -1,0 +1,8 @@
+{
+	"parent": "threedee:block/template_ass_rec",
+	"textures": {
+		"bottem": "threedee:block/head_assembler_bottem",
+		"side": "threedee:block/head_assembler_side",
+		"top": "threedee:block/head_assembler_top"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"B",
+		"G"
+	],
+
+	"key": {
+		"B": {
+			"item": "minecraft:glass_bottle"
+		},
+		"G": {
+			"item": "minecraft:glass"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:empty_bottle",
+			"count": 1
+	}
+}

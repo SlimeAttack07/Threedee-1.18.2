@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/humanoid/23418-scp-173-the-statue",
+	"textures": {
+		"head": "threedee:heads/head_legendary_36"
+	}
+}

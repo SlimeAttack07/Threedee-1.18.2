@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/33761-cobalt-ingots",
+	"textures": {
+		"head": "threedee:heads/head_epic_1"
+	}
+}

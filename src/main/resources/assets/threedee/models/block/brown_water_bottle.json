@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_filled_bottle",
+	"textures": {
+		"fluid": "threedee:fluid/brown_water_still"
+	}
+}

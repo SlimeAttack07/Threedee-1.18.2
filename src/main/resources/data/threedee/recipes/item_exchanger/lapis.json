@@ -1,0 +1,7 @@
+{
+	"type": "threedee:item_exchanger",
+	"input": {
+		"item": "minecraft:lapis_lazuli"
+	},
+	"tokens": 500
+}

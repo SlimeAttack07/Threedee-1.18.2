@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "td_catalyst",
+  "ingredients": [
+    {
+      "item": "threedee:catalyst_legendary"
+    },
+    {
+      "tag": "forge:storage_blocks/redstone"
+    },
+    {
+      "tag": "forge:storage_blocks/redstone"
+    }
+  ],
+  "result": {
+    "item": "threedee:catalyst_ancient",
+    "count": 1
+  }
+}

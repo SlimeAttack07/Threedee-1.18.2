@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"PP",
+		"PP"
+	],
+
+	"key": {
+		"P": {
+			"item": "threedee:wood_pulp"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:pulp_block",
+			"count": 1
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_head",
+	"credit_texture": "https://minecraft-heads.com/custom-heads/decoration/31768-basket-of-creeper-plushies",
+	"textures": {
+		"head": "threedee:heads/head_epic_39"
+	}
+}

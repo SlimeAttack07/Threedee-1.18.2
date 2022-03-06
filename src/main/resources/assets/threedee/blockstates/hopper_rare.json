@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=down": { "model": "threedee:block/hopper_rare" },
+        "facing=north": { "model": "threedee:block/hopper_rare_side" },
+        "facing=south": { "model": "threedee:block/hopper_rare_side", "y": 180 },
+        "facing=west": { "model": "threedee:block/hopper_rare_side", "y": 270 },
+        "facing=east": { "model": "threedee:block/hopper_rare_side", "y": 90 }
+    }
+}

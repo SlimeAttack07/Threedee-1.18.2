@@ -1,0 +1,65 @@
+{
+	"display": {
+		"title": {
+			"translate": "advancements.threedee.mob_drops.title"
+		},
+		"description": {
+			"translate": "advancements.threedee.mob_drops.description",
+			"color": "gray",
+			"bold": false
+		},
+		"icon": {
+			"item": "threedee:head_uncommon_84"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"head_uncommon_84": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_uncommon_84"
+				}]
+			}
+		},
+		"head_rare_15": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_15"
+				}]
+			}
+		},
+		"head_rare_16": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_rare_16"
+				}]
+			}
+		},
+		"head_epic_19": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{
+					"item": "threedee:head_epic_19"
+				}]
+			}
+		}
+	},
+	"requirements": [
+		["head_uncommon_84"],
+		["head_rare_15"],
+		["head_rare_16"],
+		["head_epic_19"]
+	],
+	"rewards": {
+		"loot": [
+			"threedee:advancements/catalyst_one"
+		]
+	},
+	"parent": "threedee:heads/root"
+}
