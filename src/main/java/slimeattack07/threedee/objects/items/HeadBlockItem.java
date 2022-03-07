@@ -19,7 +19,7 @@ import slimeattack07.threedee.objects.blocks.Head;
 import slimeattack07.threedee.util.TdBasicMethods;
 
 public class HeadBlockItem extends BlockItem{
-	public DropRarity rarity;
+	private DropRarity rarity;
 	private ChatFormatting color;
 
 	public HeadBlockItem(Block blockIn, Properties prop) {
@@ -36,6 +36,10 @@ public class HeadBlockItem extends BlockItem{
 		case ANCIENT: color = ChatFormatting.RED; break;
 		default: color = ChatFormatting.BLACK;
 		}
+	}
+	
+	public DropRarity getRarity() {
+		return rarity;
 	}
 	
 	public int getHeadNumber() {

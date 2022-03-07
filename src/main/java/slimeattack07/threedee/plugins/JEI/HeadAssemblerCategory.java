@@ -81,8 +81,8 @@ public class HeadAssemblerCategory implements IRecipeCategory<HeadAssemblerRecip
 	private void drawPaintCost(Minecraft minecraft, PoseStack posestack, String text, int mainColor) {
 		int shadowColor = 0xFF000000 | (mainColor & 0xFCFCFC) >> 2;
 		int width = minecraft.font.width(text);
-		int x = background.getWidth() - 2 - width;
-		int y = 27;
+		int x = background.getWidth() - 2 - width + 1;
+		int y = 28;
 
 		minecraft.font.draw(posestack, text, x + 1, y, shadowColor);
 		minecraft.font.draw(posestack, text, x, y + 1, shadowColor);

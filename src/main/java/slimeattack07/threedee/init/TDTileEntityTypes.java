@@ -12,9 +12,14 @@ import slimeattack07.threedee.tileentity.HeadAssemblerTE;
 import slimeattack07.threedee.tileentity.HeadBlockTE;
 import slimeattack07.threedee.tileentity.HeadFabricatorTE;
 import slimeattack07.threedee.tileentity.HeadRecyclerTE;
-import slimeattack07.threedee.tileentity.HopperRarityTE;
 import slimeattack07.threedee.tileentity.ItemExchangerTE;
 import slimeattack07.threedee.tileentity.NegotiatorTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperAncientTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperCommonTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperEpicTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperLegendaryTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperRareTE;
+import slimeattack07.threedee.tileentity.hoppers.HopperUncommonTE;
 
 public class TDTileEntityTypes {
 	// public static BlockEntityType<?> HEAD;
@@ -65,9 +70,27 @@ public class TDTileEntityTypes {
 					.of(ItemExchangerTE::new, TDBlocks.ITEM_EXCHANGER.get()).build(null));
 
 	
-	public static final RegistryObject<BlockEntityType<HopperRarityTE>> TD_HOPPERRARITY = TILE_ENTITY_TYPES.register(
-			"td_hopperrarity",
-			() -> BlockEntityType.Builder.of(HopperRarityTE::new, TDBlocks.HOPPER_COMMON.get(),
-					TDBlocks.HOPPER_UNCOMMON.get(), TDBlocks.HOPPER_RARE.get(), TDBlocks.HOPPER_EPIC.get(),
-					TDBlocks.HOPPER_LEGENDARY.get(), TDBlocks.HOPPER_ANCIENT.get()).build(null));
+	public static final RegistryObject<BlockEntityType<HopperCommonTE>> COMMON_HOPPER = TILE_ENTITY_TYPES
+			.register("common_hopper", () -> BlockEntityType.Builder
+					.of(HopperCommonTE::new, TDBlocks.HOPPER_COMMON.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<HopperUncommonTE>> UNCOMMON_HOPPER = TILE_ENTITY_TYPES
+			.register("uncommon_hopper", () -> BlockEntityType.Builder
+					.of(HopperUncommonTE::new, TDBlocks.HOPPER_UNCOMMON.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<HopperRareTE>> RARE_HOPPER = TILE_ENTITY_TYPES
+			.register("rare_hopper", () -> BlockEntityType.Builder
+					.of(HopperRareTE::new, TDBlocks.HOPPER_RARE.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<HopperEpicTE>> EPIC_HOPPER = TILE_ENTITY_TYPES
+			.register("epic_hopper", () -> BlockEntityType.Builder
+					.of(HopperEpicTE::new, TDBlocks.HOPPER_EPIC.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<HopperLegendaryTE>> LEGENDARY_HOPPER = TILE_ENTITY_TYPES
+			.register("legendary_hopper", () -> BlockEntityType.Builder
+					.of(HopperLegendaryTE::new, TDBlocks.HOPPER_LEGENDARY.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<HopperAncientTE>> ANCIENT_HOPPER = TILE_ENTITY_TYPES
+			.register("ancient_hopper", () -> BlockEntityType.Builder
+					.of(HopperAncientTE::new, TDBlocks.HOPPER_ANCIENT.get()).build(null));
 }

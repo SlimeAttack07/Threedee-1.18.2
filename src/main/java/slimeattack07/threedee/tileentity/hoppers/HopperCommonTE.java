@@ -1,4 +1,4 @@
-package slimeattack07.threedee.tileentity;
+package slimeattack07.threedee.tileentity.hoppers;
 
 import java.util.List;
 import java.util.function.BooleanSupplier;
@@ -30,6 +30,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.HopperBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.entity.Hopper;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -37,22 +38,35 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraftforge.items.IItemHandler;
+import slimeattack07.threedee.DropRarity;
 import slimeattack07.threedee.init.TDTileEntityTypes;
+import slimeattack07.threedee.objects.blocks.HopperRarity;
+import slimeattack07.threedee.objects.items.HeadBlockItem;
+import slimeattack07.threedee.util.HopperRarityItemHandler;
 
 /**
  * 
  * @author Mojang, with small changes by SlimeAttack07 to only filter specific rarity items.
  *
  */
-public class HopperRarityTE extends RandomizableContainerBlockEntity implements Hopper {
+public class HopperCommonTE extends RandomizableContainerBlockEntity implements Hopper {
    public static final int MOVE_ITEM_SPEED = 8;
    public static final int HOPPER_CONTAINER_SIZE = 5;
    private NonNullList<ItemStack> items = NonNullList.withSize(5, ItemStack.EMPTY);
    private int cooldownTime = -1;
    private long tickedGameTime;
 
-   public HopperRarityTE(BlockPos pos, BlockState state) {
-      super(TDTileEntityTypes.TD_HOPPERRARITY.get(), pos, state);
+   public HopperCommonTE(BlockPos pos, BlockState state) {
+      super(TDTileEntityTypes.COMMON_HOPPER.get(), pos, state);
+   }
+   
+   public HopperCommonTE(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+	   super(type, pos, state);
+   }
+   
+   protected DropRarity getFilter() {
+	   return DropRarity.COMMON;
    }
 
    public void load(CompoundTag tag) {
@@ -96,7 +110,7 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
       return new TranslatableComponent("container.hopper");
    }
 
-   public static void pushItemsTick(Level level, BlockPos pos, BlockState state, HopperRarityTE te) {
+   public static void pushItemsTick(Level level, BlockPos pos, BlockState state, HopperCommonTE te) {
       --te.cooldownTime;
       te.tickedGameTime = level.getGameTime();
       if (!te.isOnCooldown()) {
@@ -108,11 +122,11 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
 
    }
 
-   private static boolean tryMoveItems(Level level, BlockPos pos, BlockState state, HopperRarityTE te, BooleanSupplier supplier) {
+   private static boolean tryMoveItems(Level level, BlockPos pos, BlockState state, HopperCommonTE te, BooleanSupplier supplier) {
       if (level.isClientSide) {
          return false;
       } else {
-         if (!te.isOnCooldown() && state.getValue(HopperBlock.ENABLED)) {
+         if (!te.isOnCooldown() && state.getValue(HopperRarity.ENABLED)) {
             boolean flag = false;
             if (!te.isEmpty()) {
                flag = ejectItems(level, pos, state, te);
@@ -143,12 +157,12 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
       return true;
    }
 
-   private static boolean ejectItems(Level level, BlockPos pos, BlockState state, HopperRarityTE te) {
+   private static boolean ejectItems(Level level, BlockPos pos, BlockState state, HopperCommonTE te) {
       Container container = getAttachedContainer(level, pos, state);
       if (container == null) {
          return false;
       } else {
-         Direction direction = state.getValue(HopperBlock.FACING).getOpposite();
+         Direction direction = state.getValue(HopperRarity.FACING).getOpposite();
          if (isFullContainer(container, direction)) {
             return false;
          } else {
@@ -194,8 +208,8 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
       Container container = getSourceContainer(level, hopper);
       if (container != null) {
          Direction direction = Direction.DOWN;
-         return isEmptyContainer(container, direction) ? false : getSlots(container, direction).anyMatch((p_59363_) -> {
-            return tryTakeInItemFromSlot(hopper, container, p_59363_, direction);
+         return isEmptyContainer(container, direction) ? false : getSlots(container, direction).anyMatch((slot) -> {
+            return tryTakeInItemFromSlot(hopper, container, slot, direction);
          });
       } else {
          for(ItemEntity itementity : getItemsAtAndAbove(level, hopper)) {
@@ -210,6 +224,7 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
 
    private static boolean tryTakeInItemFromSlot(Hopper hopper, Container container, int index, Direction dir) {
       ItemStack itemstack = container.getItem(index);
+      
       if (!itemstack.isEmpty() && canTakeItemFromContainer(container, itemstack, index, dir)) {
          ItemStack itemstack1 = itemstack.copy();
          ItemStack itemstack2 = addItem(container, hopper, container.removeItem(index, 1), (Direction)null);
@@ -237,6 +252,16 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
 
       return flag;
    }
+   
+   public boolean canFilter(ItemStack stack) {
+	   if(stack.getItem() instanceof HeadBlockItem) {
+		   HeadBlockItem item = (HeadBlockItem) stack.getItem();
+			  
+		   return item.getRarity().equals(getFilter());
+	   }
+	   
+	   return false;
+   }
 
    public static ItemStack addItem(@Nullable Container container1, Container container2, ItemStack item, @Nullable Direction dir) {
       if (container2 instanceof WorldlyContainer && dir != null) {
@@ -256,20 +281,42 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
 
       return item;
    }
+   
+   @Override
+	public boolean canPlaceItem(int slot, ItemStack stack) {
+		return canFilter(stack);
+	}
+   
+   
 
    private static boolean canPlaceItemInContainer(Container container, ItemStack item, int index, @Nullable Direction dir) {
       if (!container.canPlaceItem(index, item)) {
          return false;
       } else {
-         return !(container instanceof WorldlyContainer) || ((WorldlyContainer)container).canPlaceItemThroughFace(index, item, dir);
+    	  boolean filter = true;
+    	  
+    	  if(container instanceof HopperCommonTE) {
+    		  HopperCommonTE te = (HopperCommonTE) container;
+    		  filter = te.canFilter(item);
+    	  }
+    	  
+         return (!(container instanceof WorldlyContainer) || ((WorldlyContainer)container).canPlaceItemThroughFace(index, item, dir))
+        		 && filter;
       }
    }
 
    private static boolean canTakeItemFromContainer(Container container, ItemStack item, int index, Direction dir) {
-      return !(container instanceof WorldlyContainer) || ((WorldlyContainer)container).canTakeItemThroughFace(index, item, dir);
+	  boolean filter = true;
+ 	  
+ 	  if(container instanceof HopperCommonTE) {
+ 		  HopperCommonTE te = (HopperCommonTE) container;
+ 		  filter = te.canFilter(item);
+ 	  }
+ 	  
+      return (!(container instanceof WorldlyContainer) || ((WorldlyContainer)container).canTakeItemThroughFace(index, item, dir))
+    		  && filter;
    }
 
-   //TODO: This probably blocks moving items from my custom hoppers to vanilla hoppers... Remember to check if this is the case or not!
    private static ItemStack tryMoveInItem(@Nullable Container container1, Container container2, ItemStack item, int index, @Nullable Direction dir) {
       ItemStack itemstack = container2.getItem(index);
       if (canPlaceItemInContainer(container2, item, index, dir)) {
@@ -288,12 +335,12 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
          }
 
          if (flag) {
-            if (flag1 && container2 instanceof HopperRarityTE) {
-               HopperRarityTE hopperblockentity1 = (HopperRarityTE)container2;
+            if (flag1 && container2 instanceof HopperCommonTE) {
+               HopperCommonTE hopperblockentity1 = (HopperCommonTE)container2;
                if (!hopperblockentity1.isOnCustomCooldown()) {
                   int k = 0;
-                  if (container1 instanceof HopperRarityTE) {
-                	  HopperRarityTE hopperblockentity = (HopperRarityTE)container1;
+                  if (container1 instanceof HopperCommonTE) {
+                	  HopperCommonTE hopperblockentity = (HopperCommonTE)container1;
                      if (hopperblockentity1.tickedGameTime >= hopperblockentity.tickedGameTime) {
                         k = 1;
                      }
@@ -406,11 +453,12 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
       items = itemlist;
    }
 
-   public static void entityInside(Level level, BlockPos pos, BlockState state, Entity entity, HopperRarityTE hopper) {
+   public static void entityInside(Level level, BlockPos pos, BlockState state, Entity entity, HopperCommonTE hopper) {
       if (entity instanceof ItemEntity && Shapes.joinIsNotEmpty(Shapes.create(entity.getBoundingBox().
     		  move((double)(-pos.getX()), (double)(-pos.getY()), (double)(-pos.getZ()))), hopper.getSuckShape(), BooleanOp.AND)) {
          tryMoveItems(level, pos, state, hopper, () -> {
-            return addItem(hopper, (ItemEntity)entity);
+        	 
+            return addItem(hopper, (ItemEntity) entity);
          });
       }
 
@@ -419,11 +467,11 @@ public class HopperRarityTE extends RandomizableContainerBlockEntity implements 
    protected AbstractContainerMenu createMenu(int id, Inventory inventory) {
       return new HopperMenu(id, inventory, this);
    }
-
-//   @Override
-//   protected net.minecraftforge.items.IItemHandler createUnSidedHandler() {
-//      return new net.minecraftforge.items.VanillaHopperItemHandler(this);
-//   }
+   
+   @Override
+   protected IItemHandler createUnSidedHandler() {
+	   return new HopperRarityItemHandler(this, getFilter());
+	}
 
    public long getLastUpdateTime() {
       return tickedGameTime;
