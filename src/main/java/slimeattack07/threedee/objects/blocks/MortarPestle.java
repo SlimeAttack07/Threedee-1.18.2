@@ -13,12 +13,10 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.recipes.MortarPestleRecipe;
 import slimeattack07.threedee.tileentity.BasicInterTE;
 import slimeattack07.threedee.util.TdBasicMethods;
@@ -27,19 +25,13 @@ public class MortarPestle extends BasicIntBlock {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	
 	public MortarPestle() {
-		super(Properties.of(Material.STONE).strength(0.4f, 2.0f).sound(SoundType.STONE).
-				requiresCorrectToolForDrops());
+		super(2, -1);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 
 	@Override
 	public void playEffects(Level level, BlockPos pos) {
 		TdBasicMethods.playSound(level, pos, SoundEvents.AXE_STRIP);
-	}
-
-	@Override
-	public int getType() {
-		return 2;
 	}
 	
 	@Override

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "threedee:hard_pulp_block",
+	"threedee:oak_crate",
+	"threedee:birch_crate",
+	"threedee:spruce_crate",
+	"threedee:jungle_crate",
+	"threedee:dark_oak_crate",
+	"threedee:acacia_crate",
+	"threedee:crimson_crate",
+	"threedee:warped_crate"
+  ]
+}

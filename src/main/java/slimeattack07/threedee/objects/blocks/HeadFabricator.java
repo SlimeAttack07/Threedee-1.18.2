@@ -9,12 +9,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.recipes.HeadFabricatorRecipe;
 import slimeattack07.threedee.tileentity.HeadFabricatorTE;
@@ -23,13 +21,12 @@ import slimeattack07.threedee.util.TdBasicMethods;
 public class HeadFabricator extends InteractBlock {
 
 	public HeadFabricator() {
-		super(Properties.of(Material.STONE).strength(0.4f, 2.0f).sound(SoundType.STONE).
-				requiresCorrectToolForDrops());
+		super(5, -1);
 	}
 	
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return TDTileEntityTypes.TD_HEADFABRICATOR.get().create(pos, state);
+		return TDTileEntityTypes.HEAD_FABRICATOR.get().create(pos, state);
 	}
 	
 	@Override
@@ -122,11 +119,6 @@ public class HeadFabricator extends InteractBlock {
 				level.removeBlockEntity(pos);
 			}
 		}
-	}
-	
-	@Override
-	public int getType() {
-		return 5;
 	}
 	
 	@Nullable

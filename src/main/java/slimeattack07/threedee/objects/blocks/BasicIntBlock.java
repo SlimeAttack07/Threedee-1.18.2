@@ -12,8 +12,8 @@ import slimeattack07.threedee.util.TdBasicMethods;
 
 public abstract class BasicIntBlock extends InteractBlock {
 	
-	public BasicIntBlock(Properties prop) {
-		super(prop);
+	public BasicIntBlock(int shape_type, int prop_type) {
+		super(shape_type, prop_type);
 	}
 	
 	@Override

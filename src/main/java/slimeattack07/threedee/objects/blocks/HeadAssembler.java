@@ -15,10 +15,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
@@ -28,8 +26,7 @@ import slimeattack07.threedee.util.TdBasicMethods;
 public class HeadAssembler extends InteractBlock {
 
 	public HeadAssembler() {
-		super(Properties.of(Material.STONE).strength(0.4f, 2.0f).sound(SoundType.STONE).
-				requiresCorrectToolForDrops());
+		super(6, -1);
 	}
 	
 //TODO: Check
@@ -40,7 +37,7 @@ public class HeadAssembler extends InteractBlock {
 	
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return TDTileEntityTypes.TD_HEADASSEMBLER.get().create(pos, state);
+		return TDTileEntityTypes.HEAD_ASSEMBLER.get().create(pos, state);
 	}
 	
 	@Override
@@ -148,11 +145,6 @@ public class HeadAssembler extends InteractBlock {
 			
 			super.onRemove(state, level, pos, newState, isMoving);
 		}
-	}
-	
-	@Override
-	public int getType() {
-		return 6;
 	}
 	
 	@Nullable

@@ -8,11 +8,16 @@ import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
-public abstract class CustomBlockBaseRotatable extends CustomBlockBase {
+public class CustomBlockBaseRotatable extends CustomBlockBase {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-	public CustomBlockBaseRotatable(Properties properties) {
-		super(properties);
+	public CustomBlockBaseRotatable(int shape_type, int prop_type) {
+		super(shape_type, prop_type);
+		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+	}
+	
+	public CustomBlockBaseRotatable(int shape_type, int prop_type, boolean tool) {
+		super(shape_type, prop_type, tool);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 	
@@ -23,5 +28,10 @@ public abstract class CustomBlockBaseRotatable extends CustomBlockBase {
 
 	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
 		builder.add(FACING);
+	}
+	
+	@Override
+	public Direction getDirection(BlockState state) {
+		return state.getValue(FACING);
 	}
 }

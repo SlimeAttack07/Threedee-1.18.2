@@ -42,7 +42,6 @@ import slimeattack07.threedee.objects.blocks.ArtefactAnalyzer;
 import slimeattack07.threedee.objects.blocks.ArtefactExchanger;
 import slimeattack07.threedee.objects.blocks.CatalystCrop;
 import slimeattack07.threedee.objects.blocks.CustomBlockBase;
-import slimeattack07.threedee.objects.blocks.GlassBottle;
 import slimeattack07.threedee.objects.blocks.Handsaw;
 import slimeattack07.threedee.objects.blocks.Head;
 import slimeattack07.threedee.objects.blocks.HeadAssembler;
@@ -374,15 +373,9 @@ public class Threedee {
 			
 
 			// set cut-out models
-			if (block instanceof GlassBottle || block instanceof Head
-					|| block instanceof MortarPestle || block instanceof TinyCauldron
-					|| block instanceof Handsaw || block instanceof CatalystCrop)
+			if (block instanceof CustomBlockBase || block instanceof CatalystCrop)
 				ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
 		});
-
-		ItemBlockRenderTypes.setRenderLayer(TDBlocks.HEAD_FABRICATOR.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(TDBlocks.ARTEFACT_ANALYZER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(TDBlocks.NEGOTIATOR.get(), RenderType.cutout());
 	}
 	
 	@SubscribeEvent

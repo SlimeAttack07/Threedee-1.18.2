@@ -14,8 +14,8 @@ import slimeattack07.threedee.init.TDTileEntityTypes;
 
 public abstract class InteractBlock extends CustomBlockBase implements EntityBlock {
 	
-	public InteractBlock (Properties prop) {
-		super(prop);
+	public InteractBlock (int shape_type, int prop_type) {
+		super(shape_type, prop_type, true);
 	}
 	
 	public abstract int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);
@@ -30,7 +30,7 @@ public abstract class InteractBlock extends CustomBlockBase implements EntityBlo
 	
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return TDTileEntityTypes.TD_BASICINTER.get().create(pos, state);
+		return TDTileEntityTypes.BASIC_INTERACT.get().create(pos, state);
 	}
 	
 	public void inform(Player player, BlockEntity tile) {

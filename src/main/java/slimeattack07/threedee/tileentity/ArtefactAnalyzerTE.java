@@ -23,7 +23,7 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 	public ItemStack result = ItemStack.EMPTY;
 
 	public ArtefactAnalyzerTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_ARTEFACTANALYZER.get(), pos, state);
+		super(TDTileEntityTypes.ARTEFACT_ANALYZER.get(), pos, state);
 	}
 	
 	public void setRunning(boolean is_running) {

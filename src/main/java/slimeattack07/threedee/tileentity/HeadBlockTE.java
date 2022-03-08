@@ -15,7 +15,7 @@ public class HeadBlockTE extends BlockEntity {
 	public int max;
 
 	public HeadBlockTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_HEADBLOCK.get(), pos, state);
+		super(TDTileEntityTypes.HEAD_BLOCK.get(), pos, state);
 	}
 	
 	public void setData(boolean item_can_be_sold, boolean item_prices_known, int min_value, int max_value) {

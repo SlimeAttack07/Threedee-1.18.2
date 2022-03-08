@@ -25,7 +25,7 @@ public class HeadRecyclerTE extends BlockEntity{
 	public static final int BUFFER_SIZE = 5;
 	
 	public HeadRecyclerTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_HEADRECYCLER.get(), pos, state);
+		super(TDTileEntityTypes.HEAD_RECYCLER.get(), pos, state);
 	}
 	
 	public boolean getMode() {

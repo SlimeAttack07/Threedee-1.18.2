@@ -9,12 +9,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.recipes.HeadRecyclerRecipe;
 import slimeattack07.threedee.tileentity.HeadRecyclerTE;
@@ -23,13 +21,12 @@ import slimeattack07.threedee.util.TdBasicMethods;
 public class HeadRecycler extends InteractBlock {
 
 	public HeadRecycler() {
-		super(Properties.of(Material.STONE).strength(0.4f, 2.0f).sound(SoundType.STONE).
-				requiresCorrectToolForDrops());
+		super(6, -1);
 	}
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return TDTileEntityTypes.TD_HEADRECYCLER.get().create(pos, state);
+		return TDTileEntityTypes.HEAD_RECYCLER.get().create(pos, state);
 	}
 	
 	@Override
@@ -141,11 +138,6 @@ public class HeadRecycler extends InteractBlock {
 				level.removeBlockEntity(pos);
 			}
 		}
-	}
-	
-	@Override
-	public int getType() {
-		return 6;
 	}
 	
 	@Nullable

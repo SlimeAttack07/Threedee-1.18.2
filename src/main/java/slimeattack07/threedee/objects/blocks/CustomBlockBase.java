@@ -9,15 +9,21 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import slimeattack07.threedee.util.helpers.PropertiesHelper;
 import slimeattack07.threedee.util.helpers.VoxelShapesHelper;
 
 public abstract class CustomBlockBase extends Block {
+	private final int SHAPE_TYPE;
 
-	public CustomBlockBase(Properties properties) {
-		super(properties);
+	public CustomBlockBase(int shape_type, int prop_type) {
+		super(PropertiesHelper.create(prop_type, false));
+		SHAPE_TYPE = shape_type;
 	}
-
-	public abstract int getType();
+	
+	public CustomBlockBase(int shape_type, int prop_type, boolean tool) {
+		super(PropertiesHelper.create(prop_type, tool));
+		SHAPE_TYPE = shape_type;
+	}
 	
 	public Direction getDirection(BlockState state) {
 		return Direction.NORTH;
@@ -49,6 +55,6 @@ public abstract class CustomBlockBase extends Block {
 	}
 	
 	public VoxelShape getVoxelShape(BlockState state) {
-		return VoxelShapesHelper.getVoxelFromType(getType(), getDirection(state));
+		return VoxelShapesHelper.getVoxelFromType(SHAPE_TYPE, getDirection(state));
 	}
 }

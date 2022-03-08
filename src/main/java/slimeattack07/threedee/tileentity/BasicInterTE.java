@@ -13,7 +13,7 @@ public class BasicInterTE extends BlockEntity {
 	public String last_recipe = "";
 
 	public BasicInterTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_BASICINTER.get(), pos, state);
+		super(TDTileEntityTypes.BASIC_INTERACT.get(), pos, state);
 	}
 	
 	public boolean getMode() {

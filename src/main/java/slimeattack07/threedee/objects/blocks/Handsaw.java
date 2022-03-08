@@ -13,12 +13,10 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.recipes.HandsawRecipe;
 import slimeattack07.threedee.tileentity.BasicInterTE;
 import slimeattack07.threedee.util.TdBasicMethods;
@@ -27,8 +25,7 @@ public class Handsaw extends BasicIntBlock {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	
 	public Handsaw() {
-		super(Properties.of(Material.STONE).strength(0.4f, 2.0f).sound(SoundType.STONE).
-				requiresCorrectToolForDrops());
+		super(4, -1);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 	
@@ -44,11 +41,6 @@ public class Handsaw extends BasicIntBlock {
 
 	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
 		builder.add(FACING);
-	}
-
-	@Override
-	public int getType() {
-		return 4;
 	}
 	
 	@Override

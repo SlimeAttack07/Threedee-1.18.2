@@ -5,12 +5,9 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import slimeattack07.threedee.DropRarity;
 import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
@@ -21,12 +18,12 @@ public class Head extends CustomBlockBaseRotatable implements EntityBlock{
 	private DropRarity rarity;
 	
 	public Head(DropRarity rar) {
-		super(Block.Properties.of(Material.BAMBOO).strength(0.4f, 2.0f).sound(SoundType.WOOL));
+		super(1, 1);
 		rarity = rar;
 	}
 	
 	public Head(int type) {
-		super(Block.Properties.of(Material.BAMBOO).strength(0.4f, 2.0f).sound(SoundType.WOOL));
+		super(1, 1);
 		
 		switch (type) {
 		case 0: rarity = DropRarity.COMMON; break;
@@ -40,11 +37,6 @@ public class Head extends CustomBlockBaseRotatable implements EntityBlock{
 	
 	public DropRarity getRarity() {
 		return rarity;
-	}
-
-	@Override
-	public int getType() {
-		return 1;
 	}
 	
 	@Override
@@ -73,6 +65,6 @@ public class Head extends CustomBlockBaseRotatable implements EntityBlock{
 	
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return TDTileEntityTypes.TD_HEADBLOCK.get().create(pos, state);
+		return TDTileEntityTypes.HEAD_BLOCK.get().create(pos, state);
 	}
 }

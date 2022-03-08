@@ -28,7 +28,7 @@ public class HeadFabricatorTE extends BlockEntity{
 	private final int MAX_TIME = 20 + INC_TIME_STEP;
 
 	public HeadFabricatorTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_HEADFABRICATOR.get(), pos, state);
+		super(TDTileEntityTypes.HEAD_FABRICATOR.get(), pos, state);
 	}
 	
 	public boolean getMode() {

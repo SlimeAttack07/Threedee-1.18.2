@@ -15,7 +15,7 @@ public class ItemExchangerTE extends BlockEntity {
 	public String last_recipe = "";
 
 	public ItemExchangerTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_ITEMEXCHANGER.get(), pos, state);
+		super(TDTileEntityTypes.ITEM_EXCHANGER.get(), pos, state);
 	}
 	
 	public ItemStack getCard() {

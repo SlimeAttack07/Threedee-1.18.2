@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "threedee:pulp_block",
+	"threedee:wet_pulp_block",
+	"threedee:coal_powder_block"
+  ]
+}

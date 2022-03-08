@@ -26,8 +26,8 @@ public class TDTileEntityTypes {
 	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister
 			.create(ForgeRegistries.BLOCK_ENTITIES, Threedee.MOD_ID);
 
-	public static final RegistryObject<BlockEntityType<BasicInterTE>> TD_BASICINTER = TILE_ENTITY_TYPES.register(
-			"td_basicinter",
+	public static final RegistryObject<BlockEntityType<BasicInterTE>> BASIC_INTERACT = TILE_ENTITY_TYPES.register(
+			"basic_interact",
 			() -> BlockEntityType.Builder.of(BasicInterTE::new, TDBlocks.MORTAR_AND_PESTLE_DIORITE.get(),
 					TDBlocks.MORTAR_AND_PESTLE_ANDESITE.get(), TDBlocks.MORTAR_AND_PESTLE_GRANITE.get(),
 					TDBlocks.TINY_CAULDRON_OAK.get(), TDBlocks.TINY_CAULDRON_BIRCH.get(),
@@ -37,36 +37,36 @@ public class TDTileEntityTypes {
 					TDBlocks.HANDSAW_JUNGLE.get(), TDBlocks.HANDSAW_ACACIA.get(),
 					TDBlocks.HANDSAW_DARK_OAK.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadAssemblerTE>> TD_HEADASSEMBLER = TILE_ENTITY_TYPES.register(
-			"td_headassembler",
+	public static final RegistryObject<BlockEntityType<HeadAssemblerTE>> HEAD_ASSEMBLER = TILE_ENTITY_TYPES.register(
+			"head_assembler",
 			() -> BlockEntityType.Builder.of(HeadAssemblerTE::new, TDBlocks.HEAD_ASSEMBLER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadFabricatorTE>> TD_HEADFABRICATOR = TILE_ENTITY_TYPES
-			.register("td_headfabricator", () -> BlockEntityType.Builder
+	public static final RegistryObject<BlockEntityType<HeadFabricatorTE>> HEAD_FABRICATOR = TILE_ENTITY_TYPES
+			.register("head_fabricator", () -> BlockEntityType.Builder
 					.of(HeadFabricatorTE::new, TDBlocks.HEAD_FABRICATOR.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadRecyclerTE>> TD_HEADRECYCLER = TILE_ENTITY_TYPES.register(
-			"td_headrecycler",
+	public static final RegistryObject<BlockEntityType<HeadRecyclerTE>> HEAD_RECYCLER = TILE_ENTITY_TYPES.register(
+			"head_recycler",
 			() -> BlockEntityType.Builder.of(HeadRecyclerTE::new, TDBlocks.HEAD_RECYCLER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<ArtefactAnalyzerTE>> TD_ARTEFACTANALYZER = TILE_ENTITY_TYPES
-			.register("td_artefactanalyzer", () -> BlockEntityType.Builder
+	public static final RegistryObject<BlockEntityType<ArtefactAnalyzerTE>> ARTEFACT_ANALYZER = TILE_ENTITY_TYPES
+			.register("artefact_analyzer", () -> BlockEntityType.Builder
 					.of(ArtefactAnalyzerTE::new, TDBlocks.ARTEFACT_ANALYZER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadBlockTE>> TD_HEADBLOCK = TILE_ENTITY_TYPES.register(
-			"td_headblock",
+	public static final RegistryObject<BlockEntityType<HeadBlockTE>> HEAD_BLOCK = TILE_ENTITY_TYPES.register(
+			"head_block",
 			() -> BlockEntityType.Builder.of(HeadBlockTE::new, TDBlocks.ANCIENT_HEADS.get(0).get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<NegotiatorTE>> TD_NEGOTIATOR = TILE_ENTITY_TYPES.register(
-			"td_negotiator",
+	public static final RegistryObject<BlockEntityType<NegotiatorTE>> NEGOTIATOR = TILE_ENTITY_TYPES.register(
+			"negotiator",
 			() -> BlockEntityType.Builder.of(NegotiatorTE::new, TDBlocks.NEGOTIATOR.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<ArtefactExchangerTE>> TD_ARTEFACTEXCHANGER = TILE_ENTITY_TYPES
-			.register("td_artefactexchanger", () -> BlockEntityType.Builder
+	public static final RegistryObject<BlockEntityType<ArtefactExchangerTE>> ARTEFACT_EXCHANGER = TILE_ENTITY_TYPES
+			.register("artefact_exchanger", () -> BlockEntityType.Builder
 					.of(ArtefactExchangerTE::new, TDBlocks.ARTEFACT_EXCHANGER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<ItemExchangerTE>> TD_ITEMEXCHANGER = TILE_ENTITY_TYPES
-			.register("td_itemexchanger", () -> BlockEntityType.Builder
+	public static final RegistryObject<BlockEntityType<ItemExchangerTE>> ITEM_EXCHANGER = TILE_ENTITY_TYPES
+			.register("item_exchanger", () -> BlockEntityType.Builder
 					.of(ItemExchangerTE::new, TDBlocks.ITEM_EXCHANGER.get()).build(null));
 
 	

@@ -14,7 +14,7 @@ public class HeadAssemblerTE extends BlockEntity {
 	public String last_recipe = "";
 
 	public HeadAssemblerTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_HEADASSEMBLER.get(), pos, state);
+		super(TDTileEntityTypes.HEAD_ASSEMBLER.get(), pos, state);
 	}
 	
 	public boolean getMode() {

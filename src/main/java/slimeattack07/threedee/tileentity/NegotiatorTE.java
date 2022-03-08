@@ -20,7 +20,7 @@ public class NegotiatorTE extends BlockEntity{
 	public static final int NEG_TIME = 3600;
 
 	public NegotiatorTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_NEGOTIATOR.get(), pos, state);
+		super(TDTileEntityTypes.NEGOTIATOR.get(), pos, state);
 	}
 	
 	public void activate(ItemStack stack) {

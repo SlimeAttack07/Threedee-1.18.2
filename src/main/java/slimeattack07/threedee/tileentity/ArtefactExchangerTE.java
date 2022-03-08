@@ -14,7 +14,7 @@ public class ArtefactExchangerTE extends BlockEntity {
 	public ItemStack card = ItemStack.EMPTY;
 
 	public ArtefactExchangerTE(BlockPos pos, BlockState state) {
-		super(TDTileEntityTypes.TD_ARTEFACTEXCHANGER.get(), pos, state);
+		super(TDTileEntityTypes.ARTEFACT_EXCHANGER.get(), pos, state);
 	}
 	
 	public ItemStack getCard() {
