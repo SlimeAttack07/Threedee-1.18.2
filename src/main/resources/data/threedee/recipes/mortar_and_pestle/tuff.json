@@ -1,0 +1,9 @@
+{
+	"type": "threedee:mortar_and_pestle",
+	"input": {
+		"item": "minecraft:deepslate"
+	},
+	"output": {
+		"item": "minecraft:tuff"
+	}
+}

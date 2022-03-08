@@ -1,0 +1,10 @@
+{
+	"type": "threedee:handsaw",
+	"input": {
+		"tag": "minecraft:warped_stems"
+	},
+	"output": {
+		"item": "minecraft:warped_stems",
+		"count": 5
+	}
+}
