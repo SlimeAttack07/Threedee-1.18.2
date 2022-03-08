@@ -62,6 +62,7 @@ import slimeattack07.threedee.objects.items.HeadFabricatorItem;
 import slimeattack07.threedee.objects.items.HeadRecyclerItem;
 import slimeattack07.threedee.objects.items.ItemExchangerItem;
 import slimeattack07.threedee.objects.items.NegotiatorItem;
+import slimeattack07.threedee.world.gen.OreGen;
 
 @Mod("threedee")
 @Mod.EventBusSubscriber(modid = Threedee.MOD_ID, bus = Bus.MOD)
@@ -253,6 +254,7 @@ public class Threedee {
 		TDRecipeSerializer.SERIALIZERS.register(modEventBus);
 
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, this::lootLoad);
+		MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, OreGen::onBiomeLoadingEvent);
 		
 		modEventBus.addListener(this::setup);
 		modEventBus.addListener(this::clientRegistries);
@@ -344,27 +346,15 @@ public class Threedee {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
-//		for (Biome biome : ForgeRegistries.BIOMES) {
-//			if (biome.equals(Biomes.FOREST)) {
-//				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-//						Feature.TREE.withConfiguration(DarkwoodTree.DARKWOOD_TREE_CONFIG)
-//								.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP
-//										.configure(new AtSurfaceWithExtraConfig(1, 0.0001f, 1))));
-//				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-//						Feature.TREE.withConfiguration(ColorfulOakTree.COLORFUL_OAK_TREE_CONFIG)
-//								.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP
-//										.configure(new AtSurfaceWithExtraConfig(1, 0.00001f, 1))));
-//			}
-//		}
-		// TODO: This will be deprecated later on, so change this once a replacement has been made by forge
-//		DeferredWorkQueue.runLater(TdOreGen::genOres);
-		
-		LOGGER.info("setup method registered"); // remove in final version
+		event.enqueueWork(() -> {
+			OreGen.registerConfiguredFeatures();
+		});
 	}
 
 	private void clientRegistries(final FMLClientSetupEvent event) {
-		setRenderLayers();
-		LOGGER.info("clientRegistries method registered"); // remove in final version
+		event.enqueueWork(() -> {
+			setRenderLayers();
+		});
 	}
 
 	public static void setRenderLayers() {

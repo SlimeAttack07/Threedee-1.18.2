@@ -59,7 +59,7 @@ public class TDBlocks {
 	public static final RegistryObject<Block> DECORATIVE_LIT_BLAST_FURNACE = TD_BLOCKS.register("decorative_lit_blast_furnace", () -> BlockBaseRotatable.create(Blocks.COBBLESTONE, true));
 	public static final RegistryObject<Block> DECORATIVE_LIT_SMOKER = TD_BLOCKS.register("decorative_lit_smoker", () -> BlockBaseRotatable.create(Blocks.COBBLESTONE, true));
 	
-	public static final RegistryObject<Block> ANCIENT_STONE = TD_BLOCKS.register("ancient_stone", () -> blockBase(Material.STONE, 1f, 5f, SoundType.STONE, true));
+	public static final RegistryObject<Block> ANCIENT_STONE = TD_BLOCKS.register("ancient_stone", () -> blockBase(Material.STONE, 5f, 1000f, SoundType.STONE, true));
 	
 	// crops
 	public static final RegistryObject<Block> CATALYST_COMMON_CROP = TD_BLOCKS.register("catalyst_common_crop", () -> new CatalystCrop(TDItems.CATALYST_SEED_COMMON));
