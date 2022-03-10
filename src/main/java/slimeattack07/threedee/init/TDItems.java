@@ -29,8 +29,6 @@ public class TDItems {
 	
 	public static final RegistryObject<Item> DYE_PASTE = TD_ITEMS.register("dye_paste", () -> basicItem());
 	
-	public static final RegistryObject<Item> GREEN_DYE = TD_ITEMS.register("green_dye", () -> basicItem());
-	
 	public static final RegistryObject<Item> CATALYST_COMMON = TD_ITEMS.register("catalyst_common", () ->  new CatalystItem(DropRarity.COMMON));
 	public static final RegistryObject<Item> CATALYST_UNCOMMON = TD_ITEMS.register("catalyst_uncommon", () ->  new CatalystItem(DropRarity.UNCOMMON));
 	public static final RegistryObject<Item> CATALYST_RARE = TD_ITEMS.register("catalyst_rare", () ->  new CatalystItem(DropRarity.RARE));

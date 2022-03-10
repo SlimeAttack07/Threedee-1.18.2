@@ -27,6 +27,6 @@ public class VoxelShapesHelper {
 //		default: return VoxelShapes.fullCube();
 //		}
 		
-		return Block.box(0, 0, 0, 16, 16, 16);
+		return Block.box(0.1, 0, 0.1, 15.9, 15, 15.9);
 	}
 }

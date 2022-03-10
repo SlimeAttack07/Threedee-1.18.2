@@ -3,6 +3,7 @@ package slimeattack07.threedee.recipes;
 import javax.annotation.Nullable;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
@@ -108,22 +109,27 @@ public class ItemExchangerRecipe implements Recipe<RecipeWrapper>{
 
     	@Override
     	public ItemExchangerRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
-    		ItemStack output = input.getItems()[0];
-    		
-    		if(json.has("output"))
-    			output = CraftingHelper.getItemStack(json.getAsJsonObject("output"), true);
-    		
-    		int count = json.has("amount_in") ? json.get("amount_in").getAsInt() : 1;
-    		Item item =  input.getItems()[0].getItem();
-    		
-    		if(count < 1 || count > item.getMaxDamage(new ItemStack(item)))
-    			count = 1;
-    		
-    		int tokens = json.has("tokens") ? json.get("tokens").getAsInt() : 1;
-    		boolean consume = json.has("consume") && json.get("consume").getAsBoolean();
-    		
-    		return new ItemExchangerRecipe(recipeId, input, count, output, tokens, consume);
+    		try {
+	    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
+	    		ItemStack output = input.getItems()[0];
+	    		
+	    		if(json.has("output"))
+	    			output = CraftingHelper.getItemStack(json.getAsJsonObject("output"), true);
+	    		
+	    		int count = json.has("amount_in") ? json.get("amount_in").getAsInt() : 1;
+	    		Item item =  input.getItems()[0].getItem();
+	    		
+	    		if(count < 1 || count > item.getMaxDamage(new ItemStack(item)))
+	    			count = 1;
+	    		
+	    		int tokens = json.has("tokens") ? json.get("tokens").getAsInt() : 1;
+	    		boolean consume = json.has("consume") && json.get("consume").getAsBoolean();
+	    		
+	    		return new ItemExchangerRecipe(recipeId, input, count, output, tokens, consume);
+    		} catch (ClassCastException | IllegalStateException | JsonSyntaxException e) {
+				Threedee.LOGGER.error("Can't process malformed recipe! Recipe id is " + recipeId + ". Error: " + e.getMessage());
+				return null;
+			}
     	}
 
     	@Override

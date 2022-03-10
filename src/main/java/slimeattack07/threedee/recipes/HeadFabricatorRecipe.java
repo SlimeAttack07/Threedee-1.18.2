@@ -3,6 +3,7 @@ package slimeattack07.threedee.recipes;
 import javax.annotation.Nullable;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
@@ -89,10 +90,15 @@ public class HeadFabricatorRecipe implements Recipe<RecipeWrapper>{
         
     	@Override
     	public HeadFabricatorRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
-    		String loot_table = json.get("loot_table").getAsString();
-    		
-    		return new HeadFabricatorRecipe(recipeId, input, loot_table);
+    		try {
+	    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
+	    		String loot_table = json.get("loot_table").getAsString();
+	    		
+	    		return new HeadFabricatorRecipe(recipeId, input, loot_table);
+    		} catch (ClassCastException | IllegalStateException | JsonSyntaxException e) {
+				Threedee.LOGGER.error("Can't process malformed recipe! Recipe id is " + recipeId + ". Error: " + e.getMessage());
+				return null;
+			}
     	}
 
     	@Override

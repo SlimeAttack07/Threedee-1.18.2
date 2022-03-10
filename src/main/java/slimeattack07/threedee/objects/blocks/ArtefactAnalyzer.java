@@ -63,7 +63,7 @@ public class ArtefactAnalyzer extends InteractBlock {
 	}
 	
 	@Override
-	public int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		ArtefactAnalyzerTE te = (ArtefactAnalyzerTE) tile;
 		ArtefactAnalyzerRecipe recipe = getRecipe(player, main, level, te.last_recipe);
 		
@@ -101,10 +101,6 @@ public class ArtefactAnalyzer extends InteractBlock {
 	@Override
 	public void playEffects(Level level, BlockPos pos) {
 		TdBasicMethods.playSound(level, pos, SoundEvents.BEACON_ACTIVATE);
-	}
-
-	@Override
-	public void craft(int amount, BlockEntity tile, Player player, BlockPos pos, Level level) {
 	}
 
 	@Override

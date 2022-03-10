@@ -1,5 +1,6 @@
 package slimeattack07.threedee.objects.items;
 
+import java.util.Iterator;
 import java.util.List;
 
 import net.minecraft.ChatFormatting;
@@ -8,7 +9,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -51,7 +55,7 @@ public class HeadBlockItem extends BlockItem{
 			int number = Integer.parseInt(regname);
 			return number;
 		} catch (NumberFormatException e) {
-			System.out.println("Error parsing: " + e);
+			Threedee.LOGGER.info("Error parsing: " + e.getMessage());
 			return -1;
 		}
 	}
@@ -114,21 +118,20 @@ public class HeadBlockItem extends BlockItem{
 				tooltip.add(TdBasicMethods.createGrayText("instruction.threedee.general.hold_shift"));
 		}
 		if(!stack.getItem().getRegistryName().toString().contains("model")) {
-//TODO: Fix set showing
-//			Iterator<ResourceLocation> it = stack.getItem().
+			Iterator<TagKey<Item>> it = stack.getTags().iterator();
 			
 			boolean has_sets = false;
-//			while(it.hasNext()) {
-//				ResourceLocation loc = it.next();
-//	
-//				if(loc.toString().contains(Threedee.MOD_ID + ":" + "heads/")) {
-//					if(!has_sets) {
-//						has_sets = true;
-//						tooltip.add(TdBasicMethods.createDGreenText("misc.threedee.has_sets"));
-//					}
-//					tooltip.add(TdBasicMethods.createGreenText("tags." + loc.toString().replace(":", ".").replace("/", ".")));
-//				}
-//			}
+			while(it.hasNext()) {
+				ResourceLocation loc = it.next().location();
+	
+				if(loc.toString().contains(Threedee.MOD_ID + ":" + "heads/")) {
+					if(!has_sets) {
+						has_sets = true;
+						tooltip.add(TdBasicMethods.createDGreenText("misc.threedee.has_sets"));
+					}
+					tooltip.add(TdBasicMethods.createGreenText("tags." + loc.toString().replace(":", ".").replace("/", ".")));
+				}
+			}
 			
 			if(!has_sets)
 				tooltip.add(TdBasicMethods.createDGreenText("misc.threedee.has_no_sets"));

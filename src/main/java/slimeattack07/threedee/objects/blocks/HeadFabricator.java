@@ -42,7 +42,7 @@ public class HeadFabricator extends InteractBlock {
 	}
 	
 	@Override
-	public int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		HeadFabricatorTE te = (HeadFabricatorTE) tile;
 		boolean stackmode = te.getMode();
 		HeadFabricatorRecipe recipe = getRecipe(player, main, level, te.last_recipe);
@@ -71,10 +71,6 @@ public class HeadFabricator extends InteractBlock {
 
 	@Override
 	public void playEffects(Level level, BlockPos pos) {
-	}
-
-	@Override
-	public void craft(int amount, BlockEntity tile, Player player, BlockPos pos, Level level) {
 	}
 
 	@Override

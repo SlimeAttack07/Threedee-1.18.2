@@ -81,7 +81,7 @@ public class Negotiator extends InteractBlock {
 	}
 	
 	@Override
-	public int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		NegotiatorTE te = (NegotiatorTE) tile;
 	
 		if(te.running) {
@@ -95,6 +95,7 @@ public class Negotiator extends InteractBlock {
 			TdBasicMethods.addOrSpawn(player, te.input, level, pos);
 			te.clearInput();
 			retrieved_output = true;
+			TdBasicMethods.playSound(level, pos, SoundEvents.ITEM_PICKUP);
 		}
 		
 		CompoundTag nbt = main.getTag();
@@ -142,10 +143,6 @@ public class Negotiator extends InteractBlock {
 	@Override
 	public void playEffects(Level level, BlockPos pos) {
 		TdBasicMethods.playSound(level, pos, SoundEvents.VILLAGER_YES);
-	}
-
-	@Override
-	public void craft(int amount, BlockEntity tile, Player player, BlockPos pos, Level level) {
 	}
 
 	@Override

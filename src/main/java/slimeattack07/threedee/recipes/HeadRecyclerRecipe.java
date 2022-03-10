@@ -3,6 +3,7 @@ package slimeattack07.threedee.recipes;
 import javax.annotation.Nullable;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
@@ -98,14 +99,19 @@ public class HeadRecyclerRecipe implements Recipe<RecipeWrapper>{
 
     	@Override
     	public HeadRecyclerRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
-    		ItemStack output = CraftingHelper.getItemStack(json.getAsJsonObject("output"), true);
-    		ItemStack cor_output = CraftingHelper.getItemStack(json.getAsJsonObject("corrupted_output"), true);
-    		float ticks_needed = json.get("ticks_needed").getAsFloat();
-    		if (ticks_needed < 0)
-    			ticks_needed = 0;
-    		
-    		return new HeadRecyclerRecipe(recipeId, input, output, cor_output, ticks_needed);
+    		try {
+	    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
+	    		ItemStack output = CraftingHelper.getItemStack(json.getAsJsonObject("output"), true);
+	    		ItemStack cor_output = CraftingHelper.getItemStack(json.getAsJsonObject("corrupted_output"), true);
+	    		float ticks_needed = json.get("ticks_needed").getAsFloat();
+	    		if (ticks_needed < 0)
+	    			ticks_needed = 0;
+	    		
+	    		return new HeadRecyclerRecipe(recipeId, input, output, cor_output, ticks_needed);
+    		} catch (ClassCastException | IllegalStateException | JsonSyntaxException e) {
+				Threedee.LOGGER.error("Can't process malformed recipe! Recipe id is " + recipeId + ". Error: " + e.getMessage());
+				return null;
+			}
     	}
 
     	@Override

@@ -3,6 +3,7 @@ package slimeattack07.threedee.recipes;
 import javax.annotation.Nullable;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
@@ -106,18 +107,23 @@ public class HeadAssemblerRecipe implements Recipe<RecipeWrapper>{
 
     	@Override
     	public HeadAssemblerRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
-    		boolean is_dye_filler = json.has("is_dye_filler") && json.get("is_dye_filler").getAsBoolean();
-    		String output = "minecraft:air";
-    		int amount = json.get("amount").getAsInt();
-    		
-    		
-    		if(!is_dye_filler)
-    			output = json.get("block_on_top").getAsString();	
-    		
-    		Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(output));
-    		
-    		return new HeadAssemblerRecipe(recipeId, input, block, is_dye_filler, amount);
+    		try {
+	    		Ingredient input = Ingredient.fromJson(json.getAsJsonObject("input"));
+	    		boolean is_dye_filler = json.has("is_dye_filler") && json.get("is_dye_filler").getAsBoolean();
+	    		String output = "minecraft:air";
+	    		int amount = json.get("amount").getAsInt();
+	    		
+	    		
+	    		if(!is_dye_filler)
+	    			output = json.get("block_on_top").getAsString();	
+	    		
+	    		Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(output));
+	    		
+	    		return new HeadAssemblerRecipe(recipeId, input, block, is_dye_filler, amount);
+    		} catch (ClassCastException | IllegalStateException | JsonSyntaxException e) {
+				Threedee.LOGGER.error("Can't process malformed recipe! Recipe id is " + recipeId + ". Error: " + e.getMessage());
+				return null;
+			}
     	}
 
     	@Override

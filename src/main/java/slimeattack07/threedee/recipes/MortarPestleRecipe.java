@@ -3,6 +3,7 @@ package slimeattack07.threedee.recipes;
 import javax.annotation.Nullable;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
@@ -94,10 +95,15 @@ public class MortarPestleRecipe implements Recipe<RecipeWrapper>{
 
     	@Override
     	public MortarPestleRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
-    		ItemStack output = buffer.readItem();
-    		Ingredient input = Ingredient.fromNetwork(buffer);
-    		
-    		return new MortarPestleRecipe(recipeId, input, output);
+    		try {
+	    		ItemStack output = buffer.readItem();
+	    		Ingredient input = Ingredient.fromNetwork(buffer);
+	    		
+	    		return new MortarPestleRecipe(recipeId, input, output);
+    		} catch (ClassCastException | IllegalStateException | JsonSyntaxException e) {
+				Threedee.LOGGER.error("Can't process malformed recipe! Recipe id is " + recipeId + ". Error: " + e.getMessage());
+				return null;
+			}
     	}
 
     	@Override

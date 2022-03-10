@@ -249,7 +249,6 @@ public class Threedee {
 		TDTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 		TDItems.TD_ITEMS.register(modEventBus);
 		TDBlocks.TD_BLOCKS.register(modEventBus);
-//		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, TdOreGen::genOres);
 				
 		TDRecipeSerializer.SERIALIZERS.register(modEventBus);
 

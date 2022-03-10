@@ -18,11 +18,9 @@ public abstract class InteractBlock extends CustomBlockBase implements EntityBlo
 		super(shape_type, prop_type, true);
 	}
 	
-	public abstract int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);
+	public abstract int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);
 	
 	public abstract void playEffects(Level level, BlockPos pos);
-	
-	public abstract void craft(int amount, BlockEntity tile, Player player, BlockPos pos, Level level);
 	
 	public abstract boolean checkTileEnt(BlockEntity tile);
 	
@@ -69,12 +67,8 @@ public abstract class InteractBlock extends CustomBlockBase implements EntityBlo
 			return InteractionResult.SUCCESS;
 		}
 		
-		int amount = valAndCalc(player, main, off, tile, level, pos);
-		
-		if (amount > 0) {
-			craft(amount, tile, player, pos, level);
+		if (validateAndCraft(player, main, off, tile, level, pos) > 0) 
 			playEffects(level, pos);
-		}
 
 		return InteractionResult.SUCCESS;
 	}

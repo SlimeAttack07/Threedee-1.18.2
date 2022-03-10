@@ -49,7 +49,7 @@ public class HeadAssembler extends InteractBlock {
 	}
 
 	@Override
-	public int valAndCalc(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		HeadAssemblerTE te = (HeadAssemblerTE) tile;
 		boolean stackmode = te.getMode();
 		HeadAssemblerRecipe recipe = getRecipe(player, main, level, te.last_recipe, level.getBlockState(pos.offset(0, 1, 0)).getBlock());
@@ -85,12 +85,17 @@ public class HeadAssembler extends InteractBlock {
 			
 			TdBasicMethods.reduceStack(main, amount * amount_in);
 			te.decDyeAmount(used_paste);
+			
+			for(int i = 0; i < amount; i++)
+				TdBasicMethods.addOrSpawn(player, recipe.getResultItem(), level, pos);
+			
 			inform(player, tile);
 			return amount;
 		}
 		
 		TdBasicMethods.reduceStack(main, amount_in);
 		te.decDyeAmount(recipe.getAmount());
+		TdBasicMethods.addOrSpawn(player, recipe.getResultItem(), level, pos);
 		inform(player, tile);
 		return 1;
 	}
@@ -98,19 +103,6 @@ public class HeadAssembler extends InteractBlock {
 	@Override
 	public void playEffects(Level level, BlockPos pos) {
 		TdBasicMethods.playSound(level, pos, SoundEvents.BEACON_POWER_SELECT);
-	}
-
-	@Override
-	public void craft(int amount, BlockEntity tile, Player player, BlockPos pos, Level level) {
-		HeadAssemblerTE te = (HeadAssemblerTE) tile;
-		HeadAssemblerRecipe recipe = (HeadAssemblerRecipe) TdBasicMethods.getRecipe(te.last_recipe, level);
-		
-		ItemStack output = recipe.getResultItem();
-		
-		while (amount > 0) {
-			TdBasicMethods.addOrSpawn(player, output, level, pos);
-			amount--;
-		}
 	}
 
 	@Override
