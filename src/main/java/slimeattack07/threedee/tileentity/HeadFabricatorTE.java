@@ -67,6 +67,7 @@ public class HeadFabricatorTE extends BlockEntity{
 	
 	public void setLastRecipe(String recipe) {
 		last_recipe = recipe;
+		setChanged();
 	}
 	
 	public boolean toggleMode() {
@@ -76,6 +77,7 @@ public class HeadFabricatorTE extends BlockEntity{
 	
 	public void setLootTable(String loottable) {
 		loot_table = loottable;
+		setChanged();
 	}
 	
 	public Vec3 genRandMotion(Random rand) {
@@ -94,7 +96,7 @@ public class HeadFabricatorTE extends BlockEntity{
 	}
 	
 	public void decreaseCatalyst() {
-		itemhandler.extractItem(0, 1, false);
+		itemhandler.extractItem(-1, 1, false);
 	}
 	
 	public boolean addedCatalyst(ItemStack input) {
@@ -194,6 +196,11 @@ public class HeadFabricatorTE extends BlockEntity{
 			@Override
 			public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate){
 				return isItemValid(slot, stack) && canInsertItem(stack, simulate) ? super.insertItem(slot, stack, simulate) : stack;
+			}
+			
+			@Override
+			public ItemStack extractItem(int slot, int amount, boolean simulate) {
+				return slot < 0 ? super.extractItem(0, amount, simulate) : ItemStack.EMPTY;
 			}
 		};
 	}
