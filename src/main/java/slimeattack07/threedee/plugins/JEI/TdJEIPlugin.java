@@ -143,13 +143,6 @@ public class TdJEIPlugin implements IModPlugin {
 				TdBasicMethods.createBlueText("description.threedee.cat_bone_meal"),
 				TdBasicMethods.createRedText("description.threedee.cat_bone_meal_issues"));
 		
-		registration.addIngredientInfo(new ItemStack(TDItems.CATALYZATION_UPGRADE.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.cat_upgrade"),
-				TdBasicMethods.createRedText("description.threedee.cat_upgrade_limited"));
-		
-		registration.addIngredientInfo(new ItemStack(TDItems.CATALYZATION_DOWNGRADE.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.cat_downgrade"));
-		
 		registration.addIngredientInfo(new ItemStack(TDItems.CATALYST_CORRUPTED.get()), VanillaTypes.ITEM, 
 				TdBasicMethods.createBlueText("jei.threedee.descriptions.catalyst_corrupted"));
 		

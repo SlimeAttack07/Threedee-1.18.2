@@ -1,6 +1,7 @@
 package slimeattack07.threedee.init;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.world.item.ItemStack;
@@ -186,33 +187,84 @@ public class TDBlocks {
 //		return tool ? new Block(prop.requiresCorrectToolForDrops()) : new Block(prop);
 //	}
 	
+	// This is temporary to not register heads I've removed. Once I've implemented the new registry system, I'll be able to remove this again.
+	private static boolean skip(String rarity, int i) {
+		switch(rarity) {
+		
+		case "c":{
+			Integer[] a = new Integer[] {1, 18, 23, 24, 29, 32, 33, 34, 35, 61, 62, 63, 64, 65, 66, 67, 68, 69, 113};
+			List<Integer> l = Arrays.asList(a);
+			return l.contains(i);
+		}
+		case "u":{
+			Integer[] a = new Integer[] {30, 34, 35, 61, 62, 63, 64, 65, 66};
+			List<Integer> l = Arrays.asList(a);
+			return l.contains(i);
+		}
+		case "r":{
+			Integer[] a = new Integer[] {28, 32, 33, 40, 41, 42, 43, 44, 45, 46, 47, 48};
+			List<Integer> l = Arrays.asList(a);
+			return l.contains(i);
+		}
+		case "e":{
+			Integer[] a = new Integer[] {30, 34};
+			List<Integer> l = Arrays.asList(a);
+			return l.contains(i);
+		}
+		case "l":{
+			Integer[] a = new Integer[] {23};
+			List<Integer> l = Arrays.asList(a);
+			return l.contains(i);
+		}
+		default: return false;
+		}
+	}
+	
 	public static void registerHeads() {
 		for(int i = 0; i < Threedee.COMMON_HEADS; i++) {
+			if(skip("c", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_common_" + i, () -> new Head(0));
 			COMMON_HEADS.add(HEAD);
 		}
 		
 		for(int i = 0; i < Threedee.UNCOMMON_HEADS; i++) {
+			if(skip("u", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_uncommon_" + i, () -> new Head(1));
 			UNCOMMON_HEADS.add(HEAD);
 		}
 		
 		for(int i = 0; i < Threedee.RARE_HEADS; i++) {
+			if(skip("r", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_rare_" + i, () -> new Head(2));
 			RARE_HEADS.add(HEAD);
 		}
 		
 		for(int i = 0; i < Threedee.EPIC_HEADS; i++) {
+			if(skip("e", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_epic_" + i, () -> new Head(3));
 			EPIC_HEADS.add(HEAD);
 		}
 		
 		for(int i = 0; i < Threedee.LEGENDARY_HEADS; i++) {
+			if(skip("l", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_legendary_" + i, () -> new Head(4));
 			LEGENDARY_HEADS.add(HEAD);
 		}
 		
 		for(int i = 0; i < Threedee.ANCIENT_HEADS; i++) {
+			if(skip("a", i))
+				continue;
+			
 			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_ancient_" + i, () -> new Head(5));
 			ANCIENT_HEADS.add(HEAD);
 		}

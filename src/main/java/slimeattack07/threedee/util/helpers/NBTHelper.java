@@ -88,11 +88,12 @@ public class NBTHelper {
 		CompoundTag compound = new CompoundTag();
 		
 		compound = safePutBoolean("stackmode", o.stackmode, compound);
-		compound = safePutInt("catalyst_amount", o.catalyst_amount, compound);
 		compound = safePutInt("timepershot", o.time_per_shot, compound);
 		compound = safePutInt("currenttime", o.current_time, compound);
 		compound = safePutString("lastrecipe", o.last_recipe, compound);
 		compound = safePutString("loottable", o.loot_table, compound);
+		
+		compound.put("inventory", o.getHandler().serializeNBT());
 		
 		return compound;
 	}

@@ -13,8 +13,6 @@ import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.objects.items.AncientRock;
 import slimeattack07.threedee.objects.items.CatSeedItem;
 import slimeattack07.threedee.objects.items.CatalystItem;
-import slimeattack07.threedee.objects.items.CatalyzationDowngrade;
-import slimeattack07.threedee.objects.items.CatalyzationUpgrade;
 import slimeattack07.threedee.objects.items.CatalyzedBoneMeal;
 import slimeattack07.threedee.objects.items.TokenCard;
 
@@ -53,9 +51,6 @@ public class TDItems {
 	public static final RegistryObject<Item> CATALYST_SEED_ANCIENT = TD_ITEMS.register("catalyst_seeds_ancient", () -> new CatSeedItem(TDBlocks.CATALYST_ANCIENT_CROP.get(), DropRarity.ANCIENT));
 	
 	public static final RegistryObject<Item> CATALYZED_BONE_MEAL = TD_ITEMS.register("catalyzed_bone_meal", () -> new CatalyzedBoneMeal());
-	
-	public static final RegistryObject<Item> CATALYZATION_UPGRADE = TD_ITEMS.register("catalyst_upgrade", () -> new CatalyzationUpgrade());
-	public static final RegistryObject<Item> CATALYZATION_DOWNGRADE = TD_ITEMS.register("catalyst_downgrade", () -> new CatalyzationDowngrade());
 	
 	public static final RegistryObject<Item> ANCIENT_ROCK_0 = TD_ITEMS.register("ancient_rock_0", () -> new AncientRock());
 	public static final RegistryObject<Item> ANCIENT_ROCK_1 = TD_ITEMS.register("ancient_rock_1", () -> new AncientRock());
