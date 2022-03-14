@@ -67,7 +67,6 @@ public class HeadFabricatorTE extends BlockEntity{
 	
 	public void setLastRecipe(String recipe) {
 		last_recipe = recipe;
-		setChanged();
 	}
 	
 	public boolean toggleMode() {
@@ -77,7 +76,6 @@ public class HeadFabricatorTE extends BlockEntity{
 	
 	public void setLootTable(String loottable) {
 		loot_table = loottable;
-		setChanged();
 	}
 	
 	public Vec3 genRandMotion(Random rand) {
@@ -99,7 +97,7 @@ public class HeadFabricatorTE extends BlockEntity{
 		itemhandler.extractItem(-1, 1, false);
 	}
 	
-	public boolean addedCatalyst(ItemStack input) {
+	public boolean addedInput(ItemStack input) {
 		HeadFabricatorRecipe recipe = getRecipe(input);
 		
 		// Recipe not null and either no stored catalyst or current recipe matches last recipe.
@@ -120,6 +118,7 @@ public class HeadFabricatorTE extends BlockEntity{
 		TdBasicMethods.reduceStack(input, amount_in * times);
 		copy.setCount(times);
 		itemhandler.insertItem(0, copy, false);
+		setChanged();
 		
 		return true;
 	}
@@ -133,9 +132,10 @@ public class HeadFabricatorTE extends BlockEntity{
 		if(!can_craft)
 			return false;
 		
-		if(simulate) {
+		if(!simulate) {
 			setLastRecipe(recipe.getId().toString());
 			setLootTable(recipe.getLootTable());
+			setChanged();
 		}
 		
 		return true;

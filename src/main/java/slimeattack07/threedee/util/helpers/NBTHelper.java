@@ -137,7 +137,8 @@ public class NBTHelper {
 		compound = safePutInt("currenttime", o.current_time, compound);
 		compound = safePutString("lastrecipe", o.last_recipe, compound);
 		compound = safePutString("loottable", o.loot_table, compound);
-		compound = safePutItemStack("result", o.result, compound);
+		
+		compound.put("inventory", o.getHandler().serializeNBT());
 		
 		return compound;
 	}

@@ -38,7 +38,7 @@ public class HeadFabricator extends InteractBlock {
 	@Override
 	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		HeadFabricatorTE te = (HeadFabricatorTE) tile;		
-		boolean message = !te.addedCatalyst(main) && te.getCatalystAmount() > 0;
+		boolean message = !te.addedInput(main) && te.getCatalystAmount() > 0;
 		
 		if (message) {
 			TdBasicMethods.messagePlayerBack(player, "message.threedee.still_firing", " " + te.getCatalystAmount() + "x (" + te.last_recipe + ")");
