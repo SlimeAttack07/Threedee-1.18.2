@@ -159,7 +159,8 @@ public class NBTHelper {
 		
 		compound = safePutInt("currenttime", o.current_time, compound);
 		compound = safePutBoolean("running", o.running, compound);
-		compound = safePutItemStack("input", o.input, compound);
+		
+		compound.put("inventory", o.getHandler().serializeNBT());
 		
 		return compound;
 	}

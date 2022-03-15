@@ -13,6 +13,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -79,6 +80,7 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 			setLastRecipe(recipe.getId().toString());
 			setLootTable(recipe.getLootTable());
 			setTicksToCraft(recipe.ticksToCraft());
+			TdBasicMethods.playSound(level, worldPosition, SoundEvents.BEACON_ACTIVATE);
 			setChanged();
 		}
 		
@@ -205,7 +207,7 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 			            
 			        validateSlotIndex(slot);
 
-			        ItemStack existing = this.stacks.get(slot);
+			        ItemStack existing = stacks.get(slot);
 
 			        int limit = getStackLimit(slot, stack);
 
@@ -223,7 +225,7 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 
 			        if (!simulate) {
 			            if (existing.isEmpty()) {
-			                this.stacks.set(slot, reachedLimit ? ItemHandlerHelper.copyStackWithSize(stack, limit) : stack);
+			                stacks.set(slot, reachedLimit ? ItemHandlerHelper.copyStackWithSize(stack, limit) : stack);
 			            }
 			            else {
 			                existing.grow(reachedLimit ? limit : stack.getCount());
@@ -293,6 +295,6 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 		}
 		
 		setChanged();
-		level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+		level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
 	}
 }

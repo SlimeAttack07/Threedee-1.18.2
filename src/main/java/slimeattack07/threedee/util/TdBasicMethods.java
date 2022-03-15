@@ -7,6 +7,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -41,33 +43,36 @@ public class TdBasicMethods {
 	}
 
 	public static boolean tryAdding(Player player, ItemStack item_in) {
+		if(item_in.isEmpty())
+			return false;
+		
 		return player.getInventory().add(item_in.copy());
 	}
 	
-	public static void spawn(ItemStack item_in, Level level, BlockPos pos, double xoff,
-			double yoff, double zoff, Vec3 motion) {
-			ItemEntity ent = new ItemEntity(level, pos.getX() + xoff, pos.getY() + yoff, pos.getZ() + zoff,
-					item_in.copy());
-			ent.setDeltaMovement(motion);
-			level.addFreshEntity(ent);
+	public static void spawn(ItemStack item_in, Level level, BlockPos pos, double xoff, double yoff, double zoff, Vec3 motion) {
+		if(item_in.isEmpty())
+			return;
+		
+		ItemEntity ent = new ItemEntity(level, pos.getX() + xoff, pos.getY() + yoff, pos.getZ() + zoff, item_in.copy());
+		ent.setDeltaMovement(motion);
+		level.addFreshEntity(ent);
 	}
 	
-	public static void spawn(ItemStack item_in, Level level, BlockPos pos, double xoff,
-			double yoff, double zoff) {
-			ItemEntity ent = new ItemEntity(level, pos.getX() + xoff, pos.getY() + yoff, pos.getZ() + zoff,
-					item_in.copy());
-			level.addFreshEntity(ent);
+	public static void spawn(ItemStack item_in, Level level, BlockPos pos, double xoff, double yoff, double zoff) {
+		if(item_in.isEmpty())
+			return;
+	
+		ItemEntity ent = new ItemEntity(level, pos.getX() + xoff, pos.getY() + yoff, pos.getZ() + zoff, item_in.copy());
+		level.addFreshEntity(ent);
 	}
 
-	public static void addOrSpawn(Player player, ItemStack item_in, Level level, BlockPos pos, double xoff,
-			double yoff, double zoff, Vec3 motion) {
+	public static void addOrSpawn(Player player, ItemStack item_in, Level level, BlockPos pos, double xoff, double yoff, double zoff, Vec3 motion) {
 		if (!tryAdding(player, item_in)) {
 			spawn(item_in, level, pos, xoff, yoff, zoff, motion);
 		}
 	}
 
-	public static void addOrSpawn(Player player, ItemStack item_in, Level level, BlockPos pos, double xoff,
-			double yoff, double zoff) {
+	public static void addOrSpawn(Player player, ItemStack item_in, Level level, BlockPos pos, double xoff, double yoff, double zoff) {
 		if (!tryAdding(player, item_in)) {
 			spawn(item_in, level, pos, xoff, yoff, zoff);
 		}
@@ -91,12 +96,14 @@ public class TdBasicMethods {
 				new TextComponent(front + new TranslatableComponent(translation).getString()), Util.NIL_UUID);
 	}
 
-	public static void messagePlayer(Player player, String translation) {
-		player.sendMessage(new TextComponent(new TranslatableComponent(translation).getString()), Util.NIL_UUID);
+	public static void messagePlayer(@Nullable Player player, String translation) {
+		if(player != null)
+			player.sendMessage(new TextComponent(new TranslatableComponent(translation).getString()), Util.NIL_UUID);
 	}
 	
-	public static void messagePlayerCustom(Player player, String message) {
-		player.sendMessage(new TextComponent(message), Util.NIL_UUID);
+	public static void messagePlayerCustom(@Nullable Player player, String message) {
+		if(player != null)
+			player.sendMessage(new TextComponent(message), Util.NIL_UUID);
 	}
 	
 	public static String getTranslation(String translation) {
