@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.crafting.Recipe;
@@ -49,8 +48,8 @@ public class Handsaw extends BasicIntBlock {
 	}
 	
 	@Override
-	protected int getAmountPossible(BasicInterTE te, Player player, ItemStack main, Level level) {
-		HandsawRecipe recipe = getRecipe(player, main, level, te.last_recipe);
+	protected int getAmountPossible(BasicInterTE te, ItemStack main, Level level) {
+		HandsawRecipe recipe = getRecipe(main, level, te.last_recipe);
 		
 		if(recipe != null) {
 			if (ItemStack.isSame(recipe.getResultItem(), ItemStack.EMPTY)) 
@@ -65,7 +64,7 @@ public class Handsaw extends BasicIntBlock {
 	}
 	
 	@Nullable
-	private HandsawRecipe getRecipe(Player player, ItemStack stack, Level level, String last_recipe) {
+	private HandsawRecipe getRecipe(ItemStack stack, Level level, String last_recipe) {
 		if (stack == null) {
 			return null;
 		}

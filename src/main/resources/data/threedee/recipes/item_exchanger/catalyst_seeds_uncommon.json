@@ -6,6 +6,6 @@
 	"output": {
 		"item": "threedee:catalyst_seeds_uncommon"
 	},
-	"tokens": 1000000,
+	"tokens": 10000,
 	"consume": true
 }

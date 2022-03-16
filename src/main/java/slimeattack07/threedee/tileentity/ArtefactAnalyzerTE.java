@@ -87,11 +87,11 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 		return true;
 	}
 	
-	public boolean addedInput(ItemStack stack, Player player) {
+	public void addInput(ItemStack stack, Player player) {
 		ArtefactAnalyzerRecipe recipe = getRecipe(stack);
 		
 		if(recipe == null)
-			return false;
+			return;
 		
 		setLastRecipe(recipe.getId().toString());
 		setLootTable(recipe.getLootTable());
@@ -109,9 +109,10 @@ public class ArtefactAnalyzerTE extends BlockEntity{
 		message = message.replace("MARKER2", seconds + "");
 		
 		TdBasicMethods.messagePlayerCustom(player, message);
+		TdBasicMethods.playSound(level, worldPosition, SoundEvents.BEACON_ACTIVATE);
 		setChanged();
 		
-		return true;
+		return;
 	}
 	
 	public void retreiveOutput() {

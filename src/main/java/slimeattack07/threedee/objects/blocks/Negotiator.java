@@ -2,7 +2,6 @@ package slimeattack07.threedee.objects.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -83,20 +82,15 @@ public class Negotiator extends InteractBlock {
 	}
 	
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		NegotiatorTE te = (NegotiatorTE) tile;
 	
 		if(te.running) {
 			TdBasicMethods.messagePlayer(player, "message.threedee.machine_full");
-			return 0;
+			return;
 		}
 		
-		return te.canInsertItem(main, player) ? 1 : 0;
-	}
-
-	@Override
-	public void playEffects(Level level, BlockPos pos) {
-		TdBasicMethods.playSound(level, pos, SoundEvents.VILLAGER_YES);
+		te.addInput(main, player);
 	}
 
 	@Override

@@ -49,13 +49,13 @@ public class HeadAssembler extends InteractBlock {
 	}
 
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		HeadAssemblerTE te = (HeadAssemblerTE) tile;
 		boolean stackmode = te.getMode();
 		HeadAssemblerRecipe recipe = getRecipe(player, main, level, te.last_recipe, level.getBlockState(pos.offset(0, 1, 0)).getBlock());
 		
 		if(recipe == null)
-			return 0;
+			return;
 		
 		int amount_in = TdBasicMethods.getMatchingStack(recipe.getInput(), main).getCount();
 		int times_possible = main.getCount() / amount_in;
@@ -71,12 +71,12 @@ public class HeadAssembler extends InteractBlock {
 				TdBasicMethods.reduceStack(main, amount_in);
 			}
 			
-			return 0;
+			return;
 		}
 		
 		if(recipe.getAmount() > te.getDyeAmount()) {
 			TdBasicMethods.messagePlayerBack(player, "message.threedee.no_paste", " (" + te.dye_amount + "/" + recipe.getAmount() + ")");
-			return 0;
+			return;
 		}
 		
 		if(stackmode) {
@@ -90,18 +90,15 @@ public class HeadAssembler extends InteractBlock {
 				TdBasicMethods.addOrSpawn(player, recipe.getResultItem(), level, pos);
 			
 			inform(player, tile);
-			return amount;
+			TdBasicMethods.playSound(level, pos, SoundEvents.BEACON_POWER_SELECT);
+			
+			return;
 		}
 		
 		TdBasicMethods.reduceStack(main, amount_in);
 		te.decDyeAmount(recipe.getAmount());
 		TdBasicMethods.addOrSpawn(player, recipe.getResultItem(), level, pos);
 		inform(player, tile);
-		return 1;
-	}
-
-	@Override
-	public void playEffects(Level level, BlockPos pos) {
 		TdBasicMethods.playSound(level, pos, SoundEvents.BEACON_POWER_SELECT);
 	}
 

@@ -62,7 +62,7 @@ public class NegotiatorTE extends BlockEntity{
 		TdBasicMethods.playSound(level, worldPosition, SoundEvents.VILLAGER_CELEBRATE);
 	}
 	
-	public boolean canInsertItem(ItemStack input, Player player) {
+	public void addInput(ItemStack input, Player player) {
 		if(canInsertItem(input, player, false)) {
 			
 			ItemStack result = itemhandler.insertItem(-2, input.copy(), false);
@@ -70,12 +70,8 @@ public class NegotiatorTE extends BlockEntity{
 			if(!(result.equals(input, false))) {
 				TdBasicMethods.reduceStack(input, 1);
 				running = true;
-				
-				return true;
 			}
 		}
-		
-		return false;
 	}
 	
 	private boolean canInsertItem(ItemStack input, @Nullable Player player, boolean simulate) {

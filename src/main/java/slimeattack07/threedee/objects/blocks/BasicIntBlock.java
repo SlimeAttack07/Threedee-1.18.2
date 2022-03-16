@@ -16,15 +16,17 @@ public abstract class BasicIntBlock extends InteractBlock {
 		super(shape_type, prop_type);
 	}
 	
+	public abstract void playEffects(Level level, BlockPos pos);
+	
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		BasicInterTE te = (BasicInterTE) tile;
 		boolean stackmode = te.getMode();
 
-		int amount_in = getAmountPossible(te, player, main, level);
+		int amount_in = getAmountPossible(te, main, level);
 		
 		if(amount_in < 1)
-			return 0;
+			return;
 		
 		ItemStack output = getResultItem(te.getLastRecipe(), level);
 		
@@ -35,15 +37,16 @@ public abstract class BasicIntBlock extends InteractBlock {
 			for(int i = 0; i < times_possible; i++)
 				TdBasicMethods.addOrSpawn(player, output, level, pos);
 			
-			return times_possible;
+			playEffects(level, pos);
+			return;
 		}
 		
 		TdBasicMethods.reduceStack(main, amount_in);
 		TdBasicMethods.addOrSpawn(player, output, level, pos);
-		return 1;
+		playEffects(level, pos);
 	}
 	
-	protected abstract int getAmountPossible(BasicInterTE te, Player player, ItemStack main, Level level);
+	protected abstract int getAmountPossible(BasicInterTE te, ItemStack main, Level level);
 	@Nullable protected abstract ItemStack getResultItem(String last_recipe, Level level);
 	
 	@Override

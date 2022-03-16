@@ -18,9 +18,7 @@ public abstract class InteractBlock extends CustomBlockBase implements EntityBlo
 		super(shape_type, prop_type, true);
 	}
 	
-	public abstract int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);
-	
-	public abstract void playEffects(Level level, BlockPos pos);
+	public abstract void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);
 	
 	public abstract boolean checkTileEnt(BlockEntity tile);
 	
@@ -64,11 +62,11 @@ public abstract class InteractBlock extends CustomBlockBase implements EntityBlo
 		
 		if (main.isEmpty()) {
 			inform(player, tile);
+			
 			return InteractionResult.SUCCESS;
 		}
 		
-		if (validateAndCraft(player, main, off, tile, level, pos) > 0) 
-			playEffects(level, pos);
+		validateAndCraft(player, main, off, tile, level, pos);
 
 		return InteractionResult.SUCCESS;
 	}

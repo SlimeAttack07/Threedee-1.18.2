@@ -1,14 +1,11 @@
 package slimeattack07.threedee.objects.blocks;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.objects.items.TokenCard;
 import slimeattack07.threedee.tileentity.ArtefactExchangerTE;
@@ -54,63 +51,24 @@ public class ArtefactExchanger extends InteractBlock {
 	}
 	
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		ArtefactExchangerTE te = (ArtefactExchangerTE) tile;
 		
 		if (main.getItem() instanceof TokenCard) {
 			if(te.hasCard()) {
 				TdBasicMethods.messagePlayer(player, "message.threedee.exchangers.has_card");
-				return 0;
+				
+				return;
 			}
 			else {
 				te.setCard(main.copy());
 				TdBasicMethods.reduceStack(main, 1);
-				return 0;
+				
+				return;
 			}
 		}
 		
-		CompoundTag nbt = main.getTag();
-		
-		if(nbt != null && nbt.contains(Threedee.MOD_ID)) {
-			CompoundTag threedee = nbt.getCompound(Threedee.MOD_ID);
-			boolean can_be_sold = threedee.getBoolean("can_be_sold");
-			boolean prices_known = threedee.getBoolean("prices_known");
-			
-			if(can_be_sold) {
-				if(prices_known) {
-					if(te.hasCard()) {
-						int balance = threedee.getInt("price");
-						te.updateCard(balance);
-						TdBasicMethods.reduceStack(main, 1);
-						
-						String message = TdBasicMethods.getTranslation("message.threedee.artefact_exchanger.exchange");
-						message = message.replace("MARKER1", balance + "");
-						
-						TdBasicMethods.messagePlayerCustom(player, message);
-						return 1;
-					}
-					else {
-						TdBasicMethods.messagePlayer(player, "message.threedee.exchangers.no_card");
-						return 0;
-					}
-				}
-				else {
-					TdBasicMethods.messagePlayer(player, "message.threedee.artefact_exchanger.no_price");
-					return 0;
-				}
-			}
-			
-			TdBasicMethods.messagePlayer(player, "message.threedee.artefact_exchanger.invalid");
-			return 0;
-		}
-		
-		TdBasicMethods.messagePlayer(player, "message.threedee.artefact_exchanger.invalid");
-		return 0;
-	}
-
-	@Override
-	public void playEffects(Level level, BlockPos pos) {
-		TdBasicMethods.playSound(level, pos, SoundEvents.TOTEM_USE);
+		te.addInput(main, player);
 	}
 
 	@Override

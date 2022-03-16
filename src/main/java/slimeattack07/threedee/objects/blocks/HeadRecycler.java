@@ -73,13 +73,13 @@ public class HeadRecycler extends InteractBlock {
 	}
 	
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		HeadRecyclerTE te = (HeadRecyclerTE) tile;
 		boolean stackmode = te.getMode();
-		HeadRecyclerRecipe recipe = getRecipe(player, main, level, te.last_recipe);
+		HeadRecyclerRecipe recipe = getRecipe(main, level, te.last_recipe);
 		
 		if(recipe == null)
-			return 0;
+			return;
 		
 		int amount_in = TdBasicMethods.getMatchingStack(recipe.getInput(), main).getCount();
 		int times = 1;
@@ -91,15 +91,10 @@ public class HeadRecycler extends InteractBlock {
 		
 		if(te.updateItemstackInLists(recipe.getResultItem(), recipe.getCorruptedOutput(), recipe.ticksNeeded(), times)) {
 			TdBasicMethods.reduceStack(main, amount_in * times);
-			return 1;
+			return;
 		}
 		
 		TdBasicMethods.messagePlayer(player, "message.threedee.machine_full");
-		return 0;
-	}
-
-	@Override
-	public void playEffects(Level level, BlockPos pos) {
 	}
 
 	@Override
@@ -137,7 +132,7 @@ public class HeadRecycler extends InteractBlock {
 	}
 	
 	@Nullable
-	private HeadRecyclerRecipe getRecipe(Player player, ItemStack stack, Level level, String last_recipe) {
+	private HeadRecyclerRecipe getRecipe(ItemStack stack, Level level, String last_recipe) {
 		if (stack == null) {
 			return null;
 		}

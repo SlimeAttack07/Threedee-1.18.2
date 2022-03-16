@@ -58,26 +58,26 @@ public class ItemExchanger extends InteractBlock {
 	}
 	
 	@Override
-	public int validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
+	public void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos) {
 		ItemExchangerTE te = (ItemExchangerTE) tile;
 		
 		if (main.getItem() instanceof TokenCard) {
 			if(te.hasCard()) {
 				TdBasicMethods.messagePlayer(player, "message.threedee.exchangers.has_card");
-				return 0;
+				return;
 			}
 			else {
 				te.setCard(main.copy());
 				TdBasicMethods.reduceStack(main, 1);
-				return 0;
+				return;
 			}
 		}
 		
-		ItemExchangerRecipe recipe = getRecipe(player, main, level, te.last_recipe);
+		ItemExchangerRecipe recipe = getRecipe(main, level, te.last_recipe);
 		
 		if(recipe == null) {
 			TdBasicMethods.messagePlayer(player, "message.threedee.item_exchanger.invalid");
-			return 0;
+			return;
 		}
 		
 		te.setLastRecipe(recipe.getId().toString());
@@ -87,7 +87,7 @@ public class ItemExchanger extends InteractBlock {
 			String message = TdBasicMethods.getTranslation("message.threedee.item_exchanger.more");
 			message = message.replace("MARKER1", recipe.getCount() + "");
 			TdBasicMethods.messagePlayerCustom(player, message);
-			return 0;
+			return;
 		}
 		
 		if(te.mininumBalance(recipe.getTokens())) {
@@ -102,21 +102,15 @@ public class ItemExchanger extends InteractBlock {
 			String message = TdBasicMethods.getTranslation("message.threedee.item_exchanger.exchange");
 			message = message.replace("MARKER1", recipe.getTokens() + "");
 			TdBasicMethods.messagePlayerCustom(player, message);
+			TdBasicMethods.playSound(level, pos, SoundEvents.ANVIL_BREAK);
 			
-			return 1;
+			return;
 		}
 		else {
 			String message = TdBasicMethods.getTranslation("message.threedee.item_exchanger.no_bal");
 			message = message.replace("MARKER1", recipe.getTokens() - te.getBalance() + "");
 			TdBasicMethods.messagePlayerCustom(player, message);
-			
-			return 0;
 		}
-	}
-
-	@Override
-	public void playEffects(Level level, BlockPos pos) {
-		TdBasicMethods.playSound(level, pos, SoundEvents.TOTEM_USE);
 	}
 
 	@Override
@@ -146,7 +140,7 @@ public class ItemExchanger extends InteractBlock {
 	
 
 	@Nullable
-	private ItemExchangerRecipe getRecipe(Player player, ItemStack stack, Level level, String last_recipe) {
+	private ItemExchangerRecipe getRecipe(ItemStack stack, Level level, String last_recipe) {
 		if (stack == null) {
 			return null;
 		}
