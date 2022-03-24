@@ -41,6 +41,7 @@ import slimeattack07.threedee.datagen.DataBlockTags;
 import slimeattack07.threedee.datagen.DataItemModels;
 import slimeattack07.threedee.datagen.DataItemTags;
 import slimeattack07.threedee.datagen.DataLootTables;
+import slimeattack07.threedee.datagen.DataRecipes;
 import slimeattack07.threedee.init.TDBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.TDRecipeSerializer;
@@ -272,6 +273,7 @@ public class Threedee {
 		DataGenerator generator = event.getGenerator();
 
 		if(event.includeServer()){
+			generator.addProvider(new DataRecipes(generator));
 			generator.addProvider(new DataLootTables(generator));
 			DataBlockTags block_tags = new DataBlockTags(generator, event.getExistingFileHelper());
 			generator.addProvider(block_tags);
