@@ -10,9 +10,17 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 import slimeattack07.threedee.Threedee;
-import slimeattack07.threedee.init.TDBlocks;
+import slimeattack07.threedee.init.AncientModelBlocks;
+import slimeattack07.threedee.init.CommonModelBlocks;
+import slimeattack07.threedee.init.EpicModelBlocks;
+import slimeattack07.threedee.init.LegendaryModelBlocks;
+import slimeattack07.threedee.init.RareModelBlocks;
 import slimeattack07.threedee.init.TDItems;
+import slimeattack07.threedee.init.UncommonModelBlocks;
 import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
 
 public class DataRecipes extends RecipeProvider{
@@ -22,9 +30,21 @@ public class DataRecipes extends RecipeProvider{
 	
 	@Override
 	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-		consumer.accept(new ModelAssembler(TDBlocks.MORTAR_AND_PESTLE_ANDESITE.getId(), "common", TDItems.CATALYST_COMMON.get(), 2));
+		registerAll(CommonModelBlocks.COMMON, consumer, "common", TDItems.CATALYST_COMMON.get(), 2);
+		registerAll(UncommonModelBlocks.UNCOMMON, consumer, "common", TDItems.CATALYST_UNCOMMON.get(), 4);
+		registerAll(RareModelBlocks.RARE, consumer, "common", TDItems.CATALYST_RARE.get(), 6);
+		registerAll(EpicModelBlocks.EPIC, consumer, "common", TDItems.CATALYST_EPIC.get(), 8);
+		registerAll(LegendaryModelBlocks.LEGENDARY, consumer, "common", TDItems.CATALYST_LEGENDARY.get(), 10);
+		registerAll(AncientModelBlocks.ANCIENT, consumer, "common", TDItems.CATALYST_ANCIENT.get(), 12);
 	}
     
+	private void registerAll(DeferredRegister<Block> reg, Consumer<FinishedRecipe> consumer, String rarity, Item catalyst, int amount) {
+		reg.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			consumer.accept(new ModelAssembler(block.getRegistryName(), rarity, catalyst, amount));
+		});
+	}
+	
     @Override
     public String getName() {
     	return Threedee.MOD_ID + " recipes";

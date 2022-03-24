@@ -20,8 +20,15 @@ import net.minecraft.world.level.storage.loot.LootTables;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 import slimeattack07.threedee.Threedee;
-import slimeattack07.threedee.init.TDBlocks;
+import slimeattack07.threedee.init.AncientModelBlocks;
+import slimeattack07.threedee.init.CommonModelBlocks;
+import slimeattack07.threedee.init.EpicModelBlocks;
+import slimeattack07.threedee.init.LegendaryModelBlocks;
+import slimeattack07.threedee.init.RareModelBlocks;
+import slimeattack07.threedee.init.UncommonModelBlocks;
 
 // Credit goes to McJty's data gen tutorials
 public class DataLootTables extends LootTableProvider{
@@ -35,8 +42,19 @@ public class DataLootTables extends LootTableProvider{
 	}
 	
 	private void addTables() {
-		loot_tables.put(TDBlocks.MORTAR_AND_PESTLE_ANDESITE.get(), createSimpleTable(TDBlocks.MORTAR_AND_PESTLE_ANDESITE.getId().getPath(), 
-				TDBlocks.MORTAR_AND_PESTLE_ANDESITE.get()));
+		registerAll(CommonModelBlocks.COMMON);
+		registerAll(UncommonModelBlocks.UNCOMMON);
+		registerAll(RareModelBlocks.RARE);
+		registerAll(EpicModelBlocks.EPIC);
+		registerAll(LegendaryModelBlocks.LEGENDARY);
+		registerAll(AncientModelBlocks.ANCIENT);
+	}
+	
+	private void registerAll(DeferredRegister<Block> reg) {
+		reg.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			loot_tables.put(block, createSimpleTable(block.getRegistryName().getPath(), block));
+		});
 	}
 
 	private LootTable.Builder createSimpleTable(String name, Block block) {

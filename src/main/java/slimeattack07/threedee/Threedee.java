@@ -42,6 +42,7 @@ import slimeattack07.threedee.datagen.DataItemModels;
 import slimeattack07.threedee.datagen.DataItemTags;
 import slimeattack07.threedee.datagen.DataLootTables;
 import slimeattack07.threedee.datagen.DataRecipes;
+import slimeattack07.threedee.init.CommonModelBlocks;
 import slimeattack07.threedee.init.TDBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.TDRecipeSerializer;
@@ -339,6 +340,11 @@ public class Threedee {
 					registry.register(blockItem);
 				});
 
+		CommonModelBlocks.COMMON.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new BlockItem(block, new Item.Properties().tab(TD_COMMON_HEADS)).setRegistryName(block.getRegistryName()));
+		});
+		
 		Block block = TDBlocks.HEAD_FABRICATOR.get();
 		registry.register(new HeadFabricatorItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
 
