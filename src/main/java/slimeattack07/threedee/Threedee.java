@@ -9,6 +9,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.NonNullList;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.BlockItem;
@@ -32,8 +33,14 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
+import slimeattack07.threedee.datagen.DataBlockStates;
+import slimeattack07.threedee.datagen.DataBlockTags;
+import slimeattack07.threedee.datagen.DataItemModels;
+import slimeattack07.threedee.datagen.DataItemTags;
+import slimeattack07.threedee.datagen.DataLootTables;
 import slimeattack07.threedee.init.TDBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.TDRecipeSerializer;
@@ -131,7 +138,7 @@ public class Threedee {
 		}
 	};
 
-	public static final CreativeModeTab TD_COMMON_HEADS = new CreativeModeTab("threedee_common_heads") {
+	public static final CreativeModeTab TD_COMMON_HEADS = new CreativeModeTab("threedee_common_models") {
 		@Override
 		public ItemStack makeIcon() {
 			return new ItemStack(TDBlocks.COMMON_HEADS.get(0).get().asItem());
@@ -146,7 +153,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_UNCOMMON_HEADS = new CreativeModeTab("threedee_uncommon_heads") {
+	public static final CreativeModeTab TD_UNCOMMON_HEADS = new CreativeModeTab("threedee_uncommon_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.GREEN + super.getDisplayName().getString());
@@ -165,7 +172,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_RARE_HEADS = new CreativeModeTab("threedee_rare_heads") {
+	public static final CreativeModeTab TD_RARE_HEADS = new CreativeModeTab("threedee_rare_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.AQUA + super.getDisplayName().getString());
@@ -184,7 +191,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_EPIC_HEADS = new CreativeModeTab("threedee_epic_heads") {
+	public static final CreativeModeTab TD_EPIC_HEADS = new CreativeModeTab("threedee_epic_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.DARK_PURPLE + super.getDisplayName().getString());
@@ -203,7 +210,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_LEGENDARY_HEADS = new CreativeModeTab("threedee_legendary_heads") {
+	public static final CreativeModeTab TD_LEGENDARY_HEADS = new CreativeModeTab("threedee_legendary_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.GOLD + super.getDisplayName().getString());
@@ -222,7 +229,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_ANCIENT_HEADS = new CreativeModeTab("threedee_ancient_heads") {
+	public static final CreativeModeTab TD_ANCIENT_HEADS = new CreativeModeTab("threedee_ancient_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.RED + super.getDisplayName().getString());
@@ -260,6 +267,23 @@ public class Threedee {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
+	@SubscribeEvent
+	public static void gatherData(GatherDataEvent event){
+		DataGenerator generator = event.getGenerator();
+
+		if(event.includeServer()){
+			generator.addProvider(new DataLootTables(generator));
+			DataBlockTags block_tags = new DataBlockTags(generator, event.getExistingFileHelper());
+			generator.addProvider(block_tags);
+			generator.addProvider(new DataItemTags(generator, block_tags, event.getExistingFileHelper()));
+		}
+
+		if(event.includeClient()){
+			generator.addProvider(new DataBlockStates(generator, event.getExistingFileHelper()));
+			generator.addProvider(new DataItemModels(generator, event.getExistingFileHelper()));
+		}
+	}
+	
 	@SubscribeEvent
 	public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
 		final IForgeRegistry<Item> registry = event.getRegistry();
@@ -333,8 +357,6 @@ public class Threedee {
 
 		block = TDBlocks.ITEM_EXCHANGER.get();
 		registry.register(new ItemExchangerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
-
-		LOGGER.info("blockitems registered"); // remove in final version
 	}
 	
 	public static boolean noCustomItem(Block block) {
