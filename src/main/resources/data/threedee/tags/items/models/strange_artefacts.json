@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/cores",
+	"threedee:head_ancient_37",
+	"threedee:head_ancient_43",
+	"threedee:head_ancient_53",
+	"threedee:head_ancient_64",
+	"threedee:head_ancient_78"
+  ]
+}

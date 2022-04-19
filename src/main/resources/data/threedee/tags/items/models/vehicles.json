@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/emergency_vehicles",
+	"#threedee:models/cars",
+	"threedee:head_legendary_13",
+	"threedee:head_legendary_19"
+  ]
+}

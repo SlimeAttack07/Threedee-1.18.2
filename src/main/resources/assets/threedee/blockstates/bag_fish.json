@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/bag_fish"
+    },
+    "facing=south": {
+      "model": "threedee:block/bag_fish",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/bag_fish",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/bag_fish",
+      "y": 90
+    }
+  }
+}

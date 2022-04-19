@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_plum",
+	"textures": {
+		"0": "block/purple_concrete",
+		"2": "block/magenta_concrete"
+	}
+}

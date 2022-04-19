@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/candle"
+    },
+    "facing=south": {
+      "model": "threedee:block/candle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/candle",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/candle",
+      "y": 90
+    }
+  }
+}

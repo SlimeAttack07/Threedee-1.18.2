@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:bag_fish",
+	"threedee:bag_flour",
+	"threedee:bag_flower",
+	"threedee:bag_sugar",
+	"threedee:head_uncommon_1",
+	"threedee:head_uncommon_9",
+	"threedee:head_uncommon_55"
+  ]
+}

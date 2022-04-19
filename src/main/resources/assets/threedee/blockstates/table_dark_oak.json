@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/table_dark_oak"
+    },
+    "facing=south": {
+      "model": "threedee:block/table_dark_oak",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/table_dark_oak",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/table_dark_oak",
+      "y": 90
+    }
+  }
+}

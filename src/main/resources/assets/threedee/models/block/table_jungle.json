@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_table",
+	"textures": {
+		"0": "block/jungle_log",
+		"1": "block/jungle_planks"
+	}
+}

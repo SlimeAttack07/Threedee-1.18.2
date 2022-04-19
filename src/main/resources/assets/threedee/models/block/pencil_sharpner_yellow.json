@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_pencil_sharpner",
+	"textures": {
+		"0": "block/yellow_concrete"
+	}
+}

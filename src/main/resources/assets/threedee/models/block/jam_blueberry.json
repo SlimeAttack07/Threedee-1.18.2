@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_jam",
+	"textures": {
+		"0": "block/blue_stained_glass",
+		"1": "block/blue_concrete_powder"
+    }
+}

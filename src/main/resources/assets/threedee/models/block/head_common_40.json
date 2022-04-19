@@ -1,7 +1,0 @@
-{
-	"parent": "threedee:block/template_head",
-	"credit_texture": "https://minecraft-heads.com/custom-heads/blocks/41245-acacia-wood",
-	"textures": {
-		"head": "threedee:heads/head_common_40"
-	}
-}

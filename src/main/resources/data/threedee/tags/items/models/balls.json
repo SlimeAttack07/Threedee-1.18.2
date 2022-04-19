@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/sports_balls",
+	"threedee:cannonball",
+	"threedee:snow_ball",
+	"threedee:clay_ball"
+  ]
+}

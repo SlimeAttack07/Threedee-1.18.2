@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/chunk_pewter"
+    },
+    "facing=south": {
+      "model": "threedee:block/chunk_pewter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/chunk_pewter",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/chunk_pewter",
+      "y": 90
+    }
+  }
+}

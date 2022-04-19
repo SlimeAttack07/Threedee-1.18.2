@@ -31,11 +31,11 @@ public class DataRecipes extends RecipeProvider{
 	@Override
 	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 		registerAll(CommonModelBlocks.COMMON, consumer, "common", TDItems.CATALYST_COMMON.get(), 2);
-		registerAll(UncommonModelBlocks.UNCOMMON, consumer, "common", TDItems.CATALYST_UNCOMMON.get(), 4);
-		registerAll(RareModelBlocks.RARE, consumer, "common", TDItems.CATALYST_RARE.get(), 6);
-		registerAll(EpicModelBlocks.EPIC, consumer, "common", TDItems.CATALYST_EPIC.get(), 8);
-		registerAll(LegendaryModelBlocks.LEGENDARY, consumer, "common", TDItems.CATALYST_LEGENDARY.get(), 10);
-		registerAll(AncientModelBlocks.ANCIENT, consumer, "common", TDItems.CATALYST_ANCIENT.get(), 12);
+		registerAll(UncommonModelBlocks.UNCOMMON, consumer, "uncommon", TDItems.CATALYST_UNCOMMON.get(), 4);
+		registerAll(RareModelBlocks.RARE, consumer, "rare", TDItems.CATALYST_RARE.get(), 6);
+		registerAll(EpicModelBlocks.EPIC, consumer, "epic", TDItems.CATALYST_EPIC.get(), 8);
+		registerAll(LegendaryModelBlocks.LEGENDARY, consumer, "legendary", TDItems.CATALYST_LEGENDARY.get(), 10);
+		registerAll(AncientModelBlocks.ANCIENT, consumer, "ancient", TDItems.CATALYST_ANCIENT.get(), 12);
 	}
     
 	private void registerAll(DeferredRegister<Block> reg, Consumer<FinishedRecipe> consumer, String rarity, Item catalyst, int amount) {

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/peppers",
+	"#threedee:models/berries",
+	"threedee:tomato",
+	"threedee:coconut",
+	"threedee:plum",
+	"threedee:lemon",
+	"threedee:pear",
+	"threedee:apple",
+	"threedee:corn",
+	"threedee:apple_1",
+	"threedee:head_uncommon_11",
+	"threedee:head_uncommon_80",
+	"threedee:head_uncommon_81",
+	"threedee:head_uncommon_82",
+	"threedee:head_uncommon_83",
+	"threedee:head_uncommon_96",
+	"threedee:head_uncommon_97",
+	"threedee:head_uncommon_103",
+	"threedee:head_uncommon_104",
+	"threedee:head_uncommon_105"
+  ]
+}

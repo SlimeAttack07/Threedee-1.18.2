@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/paint",
+	"threedee:head_uncommon_60",
+	"threedee:head_rare_8"
+  ]
+}

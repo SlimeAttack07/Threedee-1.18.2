@@ -162,7 +162,6 @@ public class TDBlocks {
 	public static final RegistryObject<Block> HOPPER_ANCIENT = TD_BLOCKS.register("hopper_ancient", () -> new HopperRarity(DropRarity.ANCIENT));
 	
 	// Heads
-	public static final List<RegistryObject<Block>> COMMON_HEADS = new ArrayList<>();
 	public static final List<RegistryObject<Block>> UNCOMMON_HEADS = new ArrayList<>();
 	public static final List<RegistryObject<Block>> RARE_HEADS = new ArrayList<>();
 	public static final List<RegistryObject<Block>> EPIC_HEADS = new ArrayList<>();
@@ -190,12 +189,6 @@ public class TDBlocks {
 	// This is temporary to not register heads I've removed. Once I've implemented the new registry system, I'll be able to remove this again.
 	private static boolean skip(String rarity, int i) {
 		switch(rarity) {
-		
-		case "c":{
-			Integer[] a = new Integer[] {1, 18, 23, 24, 29, 32, 33, 34, 35, 61, 62, 63, 64, 65, 66, 67, 68, 69, 113};
-			List<Integer> l = Arrays.asList(a);
-			return l.contains(i);
-		}
 		case "u":{
 			Integer[] a = new Integer[] {30, 34, 35, 61, 62, 63, 64, 65, 66};
 			List<Integer> l = Arrays.asList(a);
@@ -220,15 +213,7 @@ public class TDBlocks {
 		}
 	}
 	
-	public static void registerHeads() {
-		for(int i = 0; i < Threedee.COMMON_HEADS; i++) {
-			if(skip("c", i))
-				continue;
-			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_common_" + i, () -> new Head(0));
-			COMMON_HEADS.add(HEAD);
-		}
-		
+	public static void registerHeads() {		
 		for(int i = 0; i < Threedee.UNCOMMON_HEADS; i++) {
 			if(skip("u", i))
 				continue;
@@ -309,7 +294,7 @@ public class TDBlocks {
 	public static List<ItemStack> getCommonHeads(){
 		List<ItemStack> heads = new ArrayList<>();
 		
-		COMMON_HEADS.stream().forEach(block -> heads.add(new ItemStack(block.get())));
+		CommonModelBlocks.COMMON.getEntries().stream().forEach(block -> heads.add(new ItemStack(block.get())));
 		
 		return heads;
 	}

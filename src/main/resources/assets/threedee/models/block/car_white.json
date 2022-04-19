@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_car",
+	"textures": {
+		"3": "block/white_concrete"
+	}
+}

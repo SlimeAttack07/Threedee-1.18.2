@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_plum",
+	"textures": {
+		"0": "threedee:misc/orange1",
+		"2": "threedee:misc/pink0"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/jam_strawberry"
+    },
+    "facing=south": {
+      "model": "threedee:block/jam_strawberry",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/jam_strawberry",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/jam_strawberry",
+      "y": 90
+    }
+  }
+}

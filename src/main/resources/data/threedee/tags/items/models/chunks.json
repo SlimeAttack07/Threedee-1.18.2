@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:chunk_copper",
+	"threedee:chunk_tin",
+	"threedee:chunk_pewter",
+	"threedee:chunk_bronze",
+	"threedee:head_uncommon_56",
+	"threedee:head_uncommon_57",
+	"threedee:head_uncommon_58",
+	"threedee:head_epic_32",
+	"threedee:head_epic_33"
+  ]
+}

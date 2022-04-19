@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/fermented_spidereye"
+    },
+    "facing=south": {
+      "model": "threedee:block/fermented_spidereye",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/fermented_spidereye",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/fermented_spidereye",
+      "y": 90
+    }
+  }
+}

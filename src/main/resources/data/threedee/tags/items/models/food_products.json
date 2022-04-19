@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/sundae",
+	"#threedee:models/jam",
+	"#threedee:models/sauces",
+	"threedee:muffin",
+	"threedee:burger",
+	"threedee:bread",
+	"threedee:popcorn",
+	"threedee:can_of_soup",
+	"threedee:cheese",
+	"threedee:head_uncommon_36",
+	"threedee:head_uncommon_86",
+	"threedee:head_rare_11",
+	"threedee:head_epic_0"
+  ]
+}

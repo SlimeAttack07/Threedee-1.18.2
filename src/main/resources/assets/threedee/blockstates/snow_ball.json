@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/snow_ball"
+    },
+    "facing=south": {
+      "model": "threedee:block/snow_ball",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/snow_ball",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/snow_ball",
+      "y": 90
+    }
+  }
+}

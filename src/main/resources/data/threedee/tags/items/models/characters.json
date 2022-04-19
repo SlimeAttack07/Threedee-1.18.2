@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/scp",
+	"threedee:head_rare_25",
+	"threedee:head_epic_21",
+	"threedee:head_epic_22",
+	"threedee:head_epic_25",
+	"threedee:head_epic_26",
+	"threedee:head_epic_31",
+	"threedee:head_legendary_25",
+	"threedee:head_legendary_37",
+	"threedee:head_ancient_38",
+	"threedee:head_ancient_44",
+	"threedee:head_ancient_47"
+  ]
+}

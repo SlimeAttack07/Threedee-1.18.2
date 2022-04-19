@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/stone_creeper"
+    },
+    "facing=south": {
+      "model": "threedee:block/stone_creeper",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/stone_creeper",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/stone_creeper",
+      "y": 90
+    }
+  }
+}

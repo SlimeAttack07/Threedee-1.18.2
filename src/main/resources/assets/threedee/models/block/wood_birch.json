@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_wood",
+	"textures": {
+		"0": "block/birch_log"
+	}
+}

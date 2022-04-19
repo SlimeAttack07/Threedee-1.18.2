@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_small_ball",
+	"textures": {
+		"0": "block/clay"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/bonemeal"
+    },
+    "facing=south": {
+      "model": "threedee:block/bonemeal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/bonemeal",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/bonemeal",
+      "y": 90
+    }
+  }
+}

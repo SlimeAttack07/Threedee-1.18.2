@@ -124,7 +124,7 @@ public class HeadBlockItem extends BlockItem{
 			while(it.hasNext()) {
 				ResourceLocation loc = it.next().location();
 	
-				if(loc.toString().contains(Threedee.MOD_ID + ":" + "heads/")) {
+				if(loc.toString().contains(Threedee.MOD_ID + ":" + "models/")) {
 					if(!has_sets) {
 						has_sets = true;
 						tooltip.add(TdBasicMethods.createDGreenText("misc.threedee.has_sets"));

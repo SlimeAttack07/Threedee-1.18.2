@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/toilet_paper"
+    },
+    "facing=south": {
+      "model": "threedee:block/toilet_paper",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/toilet_paper",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/toilet_paper",
+      "y": 90
+    }
+  }
+}

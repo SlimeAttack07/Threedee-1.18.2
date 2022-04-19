@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/car_green"
+    },
+    "facing=south": {
+      "model": "threedee:block/car_green",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/car_green",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/car_green",
+      "y": 90
+    }
+  }
+}

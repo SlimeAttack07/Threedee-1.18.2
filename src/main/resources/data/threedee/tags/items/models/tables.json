@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:table_oak",
+	"threedee:table_birch",
+	"threedee:table_spruce",
+	"threedee:table_jungle",
+	"threedee:table_dark_oak",
+	"threedee:table_acacia",
+	"threedee:table_warped",
+	"threedee:table_crimson"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/frog"
+    },
+    "facing=south": {
+      "model": "threedee:block/frog",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/frog",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/frog",
+      "y": 90
+    }
+  }
+}

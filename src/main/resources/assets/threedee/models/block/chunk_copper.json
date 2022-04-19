@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_chunk",
+	"textures": {
+		"0": "threedee:misc/red0",
+		"1": "threedee:misc/orange2"
+	}
+}

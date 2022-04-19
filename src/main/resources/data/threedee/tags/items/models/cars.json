@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:car_black",
+	"threedee:car_blue",
+	"threedee:car_brown",
+	"threedee:car_cyan",
+	"threedee:car_gray",
+	"threedee:car_green",
+	"threedee:car_light_blue",
+	"threedee:car_light_gray",
+	"threedee:car_lime",
+	"threedee:car_magenta",
+	"threedee:car_orange",
+	"threedee:car_pink",
+	"threedee:car_purple",
+	"threedee:car_red",
+	"threedee:car_white",
+	"threedee:car_yellow"
+  ]
+}

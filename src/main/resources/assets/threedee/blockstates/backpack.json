@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/backpack"
+    },
+    "facing=south": {
+      "model": "threedee:block/backpack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/backpack",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/backpack",
+      "y": 90
+    }
+  }
+}

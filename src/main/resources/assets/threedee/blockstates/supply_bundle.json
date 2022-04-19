@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/supply_bundle"
+    },
+    "facing=south": {
+      "model": "threedee:block/supply_bundle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/supply_bundle",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/supply_bundle",
+      "y": 90
+    }
+  }
+}

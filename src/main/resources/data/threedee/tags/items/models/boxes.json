@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:box_open",
+	"threedee:box_closed",
+	"threedee:box_documents"
+  ]
+}

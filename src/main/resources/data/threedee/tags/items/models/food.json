@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/fish",
+	"#threedee:models/fruits",
+	"#threedee:models/vegatables",
+	"#threedee:models/food_products",
+	"threedee:egg",
+	"threedee:head_uncommon_26",
+	"threedee:head_uncommon_93",
+	"threedee:head_uncommon_98",
+	"threedee:head_uncommon_101"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/present_cyan"
+    },
+    "facing=south": {
+      "model": "threedee:block/present_cyan",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/present_cyan",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/present_cyan",
+      "y": 90
+    }
+  }
+}

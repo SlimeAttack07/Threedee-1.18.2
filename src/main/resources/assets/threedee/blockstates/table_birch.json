@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/table_birch"
+    },
+    "facing=south": {
+      "model": "threedee:block/table_birch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/table_birch",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/table_birch",
+      "y": 90
+    }
+  }
+}

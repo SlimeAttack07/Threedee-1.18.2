@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_table",
+	"textures": {
+		"0": "block/dark_oak_log",
+		"1": "block/dark_oak_planks"
+	}
+}

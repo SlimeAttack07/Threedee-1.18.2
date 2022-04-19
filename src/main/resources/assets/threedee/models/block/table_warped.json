@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_table",
+	"textures": {
+		"0": "block/warped_stem",
+		"1": "block/warped_planks"
+	}
+}

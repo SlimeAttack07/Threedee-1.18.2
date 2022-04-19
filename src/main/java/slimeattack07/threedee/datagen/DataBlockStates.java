@@ -36,4 +36,9 @@ public class DataBlockStates extends BlockStateProvider{
 			horizontalBlock(block, models().getExistingFile(block.getRegistryName()));
 		});
 	}
+	
+	@Override
+	public String getName() {
+		return Threedee.MOD_ID + " block states";
+	}
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/grapefruit"
+    },
+    "facing=south": {
+      "model": "threedee:block/grapefruit",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/grapefruit",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/grapefruit",
+      "y": 90
+    }
+  }
+}

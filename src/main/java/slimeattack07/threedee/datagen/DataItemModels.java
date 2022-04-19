@@ -39,6 +39,6 @@ public class DataItemModels extends ItemModelProvider{
 
 	@Override
 	public String getName() {
-		return Threedee.MOD_ID + "item models";
+		return Threedee.MOD_ID + " item models";
 	}
 }

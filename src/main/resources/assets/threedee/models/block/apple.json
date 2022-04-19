@@ -1,0 +1,6 @@
+{
+	"parent": "threedee:block/template_apple",
+	"textures": {
+		"0": "block/red_concrete"
+	}
+}

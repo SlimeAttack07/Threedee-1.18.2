@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/animals",
+	"#threedee:models/hostile"
+  ]
+}

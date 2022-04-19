@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "threedee:block/volleyball"
+    },
+    "facing=south": {
+      "model": "threedee:block/volleyball",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "threedee:block/volleyball",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "threedee:block/volleyball",
+      "y": 90
+    }
+  }
+}

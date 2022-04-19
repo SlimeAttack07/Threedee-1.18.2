@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+	"threedee:present_black",
+    "threedee:present_blue",
+    "threedee:present_brown",
+    "threedee:present_cyan",
+    "threedee:present_gray",
+    "threedee:present_green",
+    "threedee:present_light_blue",
+    "threedee:present_light_gray",
+    "threedee:present_lime",
+    "threedee:present_magenta",
+    "threedee:present_orange",
+    "threedee:present_pink",
+    "threedee:present_purple",
+    "threedee:present_red",
+    "threedee:present_white",
+    "threedee:present_yellow"
+  ]
+}

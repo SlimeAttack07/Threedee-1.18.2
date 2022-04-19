@@ -1,9 +1,0 @@
-{
-	"parent": "threedee:block/head_common_93",
-	"display": {
-		"firstperson_righthand": {
-			"translation": [0, 2, 0],
-			"scale": [1, 1, 1]
-		}
-	}
-}

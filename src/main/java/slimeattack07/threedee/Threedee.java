@@ -40,6 +40,7 @@ import slimeattack07.threedee.datagen.DataBlockStates;
 import slimeattack07.threedee.datagen.DataBlockTags;
 import slimeattack07.threedee.datagen.DataItemModels;
 import slimeattack07.threedee.datagen.DataItemTags;
+import slimeattack07.threedee.datagen.DataLang;
 import slimeattack07.threedee.datagen.DataLootTables;
 import slimeattack07.threedee.datagen.DataRecipes;
 import slimeattack07.threedee.init.CommonModelBlocks;
@@ -140,10 +141,10 @@ public class Threedee {
 		}
 	};
 
-	public static final CreativeModeTab TD_COMMON_HEADS = new CreativeModeTab("threedee_common_models") {
+	public static final CreativeModeTab COMMON_MODELS = new CreativeModeTab("threedee_common_models") {
 		@Override
 		public ItemStack makeIcon() {
-			return new ItemStack(TDBlocks.COMMON_HEADS.get(0).get().asItem());
+			return new ItemStack(CommonModelBlocks.APPLE.get().asItem());
 		}
 		
 		
@@ -155,7 +156,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_UNCOMMON_HEADS = new CreativeModeTab("threedee_uncommon_models") {
+	public static final CreativeModeTab UNCOMMON_MODELS = new CreativeModeTab("threedee_uncommon_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.GREEN + super.getDisplayName().getString());
@@ -174,7 +175,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_RARE_HEADS = new CreativeModeTab("threedee_rare_models") {
+	public static final CreativeModeTab RARE_MODELS = new CreativeModeTab("threedee_rare_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.AQUA + super.getDisplayName().getString());
@@ -193,7 +194,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_EPIC_HEADS = new CreativeModeTab("threedee_epic_models") {
+	public static final CreativeModeTab EPIC_MODELS = new CreativeModeTab("threedee_epic_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.DARK_PURPLE + super.getDisplayName().getString());
@@ -212,7 +213,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_LEGENDARY_HEADS = new CreativeModeTab("threedee_legendary_models") {
+	public static final CreativeModeTab LEGENDARY_MODELS = new CreativeModeTab("threedee_legendary_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.GOLD + super.getDisplayName().getString());
@@ -231,7 +232,7 @@ public class Threedee {
 		}
 	};
 	
-	public static final CreativeModeTab TD_ANCIENT_HEADS = new CreativeModeTab("threedee_ancient_models") {
+	public static final CreativeModeTab ANCIENT_MODELS = new CreativeModeTab("threedee_ancient_models") {
 		@Override
 		public Component getDisplayName() {
 			return new TextComponent(ChatFormatting.RED + super.getDisplayName().getString());
@@ -258,6 +259,7 @@ public class Threedee {
 		TDTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 		TDItems.TD_ITEMS.register(modEventBus);
 		TDBlocks.TD_BLOCKS.register(modEventBus);
+		CommonModelBlocks.COMMON.register(modEventBus);
 				
 		TDRecipeSerializer.SERIALIZERS.register(modEventBus);
 
@@ -284,6 +286,7 @@ public class Threedee {
 		if(event.includeClient()){
 			generator.addProvider(new DataBlockStates(generator, event.getExistingFileHelper()));
 			generator.addProvider(new DataItemModels(generator, event.getExistingFileHelper()));
+			generator.addProvider(new DataLang(generator, "en_us"));
 		}
 	}
 	
@@ -306,13 +309,13 @@ public class Threedee {
 
 					if (block instanceof Head) {
 						switch(((Head) block).getRarity()) {
-							case COMMON: groupIn = TD_COMMON_HEADS; break;
-							case UNCOMMON: groupIn = TD_UNCOMMON_HEADS; break;
-							case RARE: groupIn = TD_RARE_HEADS; break;
-							case EPIC: groupIn = TD_EPIC_HEADS; break;
-							case LEGENDARY: groupIn = TD_LEGENDARY_HEADS; break;
+							case COMMON: groupIn = COMMON_MODELS; break;
+							case UNCOMMON: groupIn = UNCOMMON_MODELS; break;
+							case RARE: groupIn = RARE_MODELS; break;
+							case EPIC: groupIn = EPIC_MODELS; break;
+							case LEGENDARY: groupIn = LEGENDARY_MODELS; break;
 							
-							default: groupIn = TD_ANCIENT_HEADS;
+							default: groupIn = ANCIENT_MODELS;
 						}
 					}
 
@@ -342,7 +345,7 @@ public class Threedee {
 
 		CommonModelBlocks.COMMON.getEntries().stream()
 		.map(RegistryObject::get).forEach(block -> {
-			registry.register(new BlockItem(block, new Item.Properties().tab(TD_COMMON_HEADS)).setRegistryName(block.getRegistryName()));
+			registry.register(new BlockItem(block, new Item.Properties().tab(COMMON_MODELS)).setRegistryName(block.getRegistryName()));
 		});
 		
 		Block block = TDBlocks.HEAD_FABRICATOR.get();

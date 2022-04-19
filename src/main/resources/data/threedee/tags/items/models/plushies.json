@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+	"#threedee:models/player_plushie",
+	"#threedee:models/fnaf",
+	"#threedee:models/avatar",
+	"#threedee:models/passive_plushie",
+	"#threedee:models/hostile_plushie",
+	"#threedee:models/sheep",
+	"threedee:teddy_bear",
+	"threedee:head_epic_48",
+	"threedee:head_legendary_30"
+  ]
+}
