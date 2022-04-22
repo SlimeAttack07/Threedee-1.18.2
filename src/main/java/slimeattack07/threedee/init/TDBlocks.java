@@ -19,7 +19,6 @@ import slimeattack07.threedee.objects.blocks.ArtefactAnalyzer;
 import slimeattack07.threedee.objects.blocks.ArtefactExchanger;
 import slimeattack07.threedee.objects.blocks.BlockBaseRotatable;
 import slimeattack07.threedee.objects.blocks.CatalystCrop;
-import slimeattack07.threedee.objects.blocks.CustomBlockBaseRotatable;
 import slimeattack07.threedee.objects.blocks.Handsaw;
 import slimeattack07.threedee.objects.blocks.Head;
 import slimeattack07.threedee.objects.blocks.HeadAssembler;
@@ -71,61 +70,61 @@ public class TDBlocks {
 	public static final RegistryObject<Block> CATALYST_ANCIENT_CROP = TD_BLOCKS.register("catalyst_ancient_crop", () -> new CatalystCrop(TDItems.CATALYST_SEED_ANCIENT));
 
 	// Normal Models
-	public static final RegistryObject<Block> EMPTY_BOTTLE = TD_BLOCKS.register("empty_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> EMPTY_WATER_BOTTLE = TD_BLOCKS.register("water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> WHITE_WATER_BOTTLE = TD_BLOCKS.register("white_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> ORANGE_WATER_BOTTLE = TD_BLOCKS.register("orange_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> MAGENTA_WATER_BOTTLE = TD_BLOCKS.register("magenta_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> LIGHT_BLUE_WATER_BOTTLE = TD_BLOCKS.register("light_blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> YELLOW_WATER_BOTTLE = TD_BLOCKS.register("yellow_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> LIME_WATER_BOTTLE = TD_BLOCKS.register("lime_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> PINK_WATER_BOTTLE = TD_BLOCKS.register("pink_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> GRAY_WATER_BOTTLE = TD_BLOCKS.register("gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> LIGHT_GRAY_WATER_BOTTLE = TD_BLOCKS.register("light_gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> CYAN_WATER_BOTTLE = TD_BLOCKS.register("cyan_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> PURPLE_WATER_BOTTLE = TD_BLOCKS.register("purple_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> BLUE_WATER_BOTTLE = TD_BLOCKS.register("blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> BROWN_WATER_BOTTLE = TD_BLOCKS.register("brown_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> GREEN_WATER_BOTTLE = TD_BLOCKS.register("green_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> RED_WATER_BOTTLE = TD_BLOCKS.register("red_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-	public static final RegistryObject<Block> BLACK_WATER_BOTTLE = TD_BLOCKS.register("black_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));	
-	public static final RegistryObject<Block> LAVA_BOTTLE = TD_BLOCKS.register("lava_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> EMPTY_BOTTLE = TD_BLOCKS.register("empty_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> EMPTY_WATER_BOTTLE = TD_BLOCKS.register("water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> WHITE_WATER_BOTTLE = TD_BLOCKS.register("white_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> ORANGE_WATER_BOTTLE = TD_BLOCKS.register("orange_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> MAGENTA_WATER_BOTTLE = TD_BLOCKS.register("magenta_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> LIGHT_BLUE_WATER_BOTTLE = TD_BLOCKS.register("light_blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> YELLOW_WATER_BOTTLE = TD_BLOCKS.register("yellow_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> LIME_WATER_BOTTLE = TD_BLOCKS.register("lime_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> PINK_WATER_BOTTLE = TD_BLOCKS.register("pink_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> GRAY_WATER_BOTTLE = TD_BLOCKS.register("gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> LIGHT_GRAY_WATER_BOTTLE = TD_BLOCKS.register("light_gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> CYAN_WATER_BOTTLE = TD_BLOCKS.register("cyan_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> PURPLE_WATER_BOTTLE = TD_BLOCKS.register("purple_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> BLUE_WATER_BOTTLE = TD_BLOCKS.register("blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> BROWN_WATER_BOTTLE = TD_BLOCKS.register("brown_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> GREEN_WATER_BOTTLE = TD_BLOCKS.register("green_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> RED_WATER_BOTTLE = TD_BLOCKS.register("red_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
+//	public static final RegistryObject<Block> BLACK_WATER_BOTTLE = TD_BLOCKS.register("black_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));	
+//	public static final RegistryObject<Block> LAVA_BOTTLE = TD_BLOCKS.register("lava_bottle", () -> new CustomBlockBaseRotatable(0, 0));
 	
 	// Head-Based Models
-	public static final RegistryObject<Block> MODEL_COMMON_0 = TD_BLOCKS.register("model_common_0", () -> new CustomBlockBaseRotatable(7, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_2 = TD_BLOCKS.register("model_common_2", () -> new CustomBlockBaseRotatable(8, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_3 = TD_BLOCKS.register("model_common_3", () -> new CustomBlockBaseRotatable(8, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_4 = TD_BLOCKS.register("model_common_4", () -> new CustomBlockBaseRotatable(9, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_6 = TD_BLOCKS.register("model_common_6", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_7 = TD_BLOCKS.register("model_common_7", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_8 = TD_BLOCKS.register("model_common_8", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_9 = TD_BLOCKS.register("model_common_9", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_COMMON_10 = TD_BLOCKS.register("model_common_10", () -> new CustomBlockBaseRotatable(10, 1));
-	
-	public static final RegistryObject<Block> MODEL_UNCOMMON_2 = TD_BLOCKS.register("model_uncommon_2", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_UNCOMMON_6 = TD_BLOCKS.register("model_uncommon_6", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_UNCOMMON_7 = TD_BLOCKS.register("model_uncommon_7", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_UNCOMMON_8 = TD_BLOCKS.register("model_uncommon_8", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_UNCOMMON_19 = TD_BLOCKS.register("model_uncommon_19", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_UNCOMMON_31 = TD_BLOCKS.register("model_uncommon_31", () -> new CustomBlockBaseRotatable(10, 1));
-	
-	public static final RegistryObject<Block> MODEL_RARE_1 = TD_BLOCKS.register("model_rare_1", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_2 = TD_BLOCKS.register("model_rare_2", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_3 = TD_BLOCKS.register("model_rare_3", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_4 = TD_BLOCKS.register("model_rare_4", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_5 = TD_BLOCKS.register("model_rare_5", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_6 = TD_BLOCKS.register("model_rare_6", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_RARE_12 = TD_BLOCKS.register("model_rare_12", () -> new CustomBlockBaseRotatable(10, 1));
-	
-	public static final RegistryObject<Block> MODEL_EPIC_1 = TD_BLOCKS.register("model_epic_1", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_EPIC_2 = TD_BLOCKS.register("model_epic_2", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_EPIC_3 = TD_BLOCKS.register("model_epic_3", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_EPIC_4 = TD_BLOCKS.register("model_epic_4", () -> new CustomBlockBaseRotatable(10, 1));
-	
-	public static final RegistryObject<Block> MODEL_LEGENDARY_1 = TD_BLOCKS.register("model_legendary_1", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_LEGENDARY_2 = TD_BLOCKS.register("model_legendary_2", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_LEGENDARY_3 = TD_BLOCKS.register("model_legendary_3", () -> new CustomBlockBaseRotatable(10, 1));
-	public static final RegistryObject<Block> MODEL_LEGENDARY_24 = TD_BLOCKS.register("model_legendary_24", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_0 = TD_BLOCKS.register("model_common_0", () -> new CustomBlockBaseRotatable(7, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_2 = TD_BLOCKS.register("model_common_2", () -> new CustomBlockBaseRotatable(8, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_3 = TD_BLOCKS.register("model_common_3", () -> new CustomBlockBaseRotatable(8, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_4 = TD_BLOCKS.register("model_common_4", () -> new CustomBlockBaseRotatable(9, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_6 = TD_BLOCKS.register("model_common_6", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_7 = TD_BLOCKS.register("model_common_7", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_8 = TD_BLOCKS.register("model_common_8", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_9 = TD_BLOCKS.register("model_common_9", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_COMMON_10 = TD_BLOCKS.register("model_common_10", () -> new CustomBlockBaseRotatable(10, 1));
+//	
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_2 = TD_BLOCKS.register("model_uncommon_2", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_6 = TD_BLOCKS.register("model_uncommon_6", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_7 = TD_BLOCKS.register("model_uncommon_7", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_8 = TD_BLOCKS.register("model_uncommon_8", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_19 = TD_BLOCKS.register("model_uncommon_19", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_UNCOMMON_31 = TD_BLOCKS.register("model_uncommon_31", () -> new CustomBlockBaseRotatable(10, 1));
+//	
+//	public static final RegistryObject<Block> MODEL_RARE_1 = TD_BLOCKS.register("model_rare_1", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_2 = TD_BLOCKS.register("model_rare_2", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_3 = TD_BLOCKS.register("model_rare_3", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_4 = TD_BLOCKS.register("model_rare_4", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_5 = TD_BLOCKS.register("model_rare_5", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_6 = TD_BLOCKS.register("model_rare_6", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_RARE_12 = TD_BLOCKS.register("model_rare_12", () -> new CustomBlockBaseRotatable(10, 1));
+//	
+//	public static final RegistryObject<Block> MODEL_EPIC_1 = TD_BLOCKS.register("model_epic_1", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_EPIC_2 = TD_BLOCKS.register("model_epic_2", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_EPIC_3 = TD_BLOCKS.register("model_epic_3", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_EPIC_4 = TD_BLOCKS.register("model_epic_4", () -> new CustomBlockBaseRotatable(10, 1));
+//	
+//	public static final RegistryObject<Block> MODEL_LEGENDARY_1 = TD_BLOCKS.register("model_legendary_1", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_LEGENDARY_2 = TD_BLOCKS.register("model_legendary_2", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_LEGENDARY_3 = TD_BLOCKS.register("model_legendary_3", () -> new CustomBlockBaseRotatable(10, 1));
+//	public static final RegistryObject<Block> MODEL_LEGENDARY_24 = TD_BLOCKS.register("model_legendary_24", () -> new CustomBlockBaseRotatable(10, 1));
 	
 	// Functional Blocks / Models
 	public static final RegistryObject<Block> MORTAR_AND_PESTLE_DIORITE = TD_BLOCKS.register("mortar_and_pestle_diorite", () -> new MortarPestle());

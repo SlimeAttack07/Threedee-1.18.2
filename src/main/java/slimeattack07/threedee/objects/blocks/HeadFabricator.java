@@ -11,11 +11,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.tileentity.HeadFabricatorTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class HeadFabricator extends InteractBlock {
 
 	public HeadFabricator() {
-		super(5, -1);
+		super(ModShapes.W16_H20, -1);
 	}
 	
 	@Override

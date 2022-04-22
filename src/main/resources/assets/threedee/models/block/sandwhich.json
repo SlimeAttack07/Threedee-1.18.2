@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "threedee:block/wet_pulp_block",
 		"1": "block/sandstone_top",
-		"2": "block/green_concrete",
+		"2": "block/green_concrete_powder",
 		"3": "block/yellow_terracotta",
 		"4": "block/pink_terracotta",
 		"particle": "threedee:block/wet_pulp_block"

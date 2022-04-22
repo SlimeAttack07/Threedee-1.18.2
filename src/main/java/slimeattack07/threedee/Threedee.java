@@ -34,6 +34,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import slimeattack07.threedee.datagen.DataBlockStates;
@@ -43,11 +44,16 @@ import slimeattack07.threedee.datagen.DataItemTags;
 import slimeattack07.threedee.datagen.DataLang;
 import slimeattack07.threedee.datagen.DataLootTables;
 import slimeattack07.threedee.datagen.DataRecipes;
+import slimeattack07.threedee.init.AncientModelBlocks;
 import slimeattack07.threedee.init.CommonModelBlocks;
+import slimeattack07.threedee.init.EpicModelBlocks;
+import slimeattack07.threedee.init.LegendaryModelBlocks;
+import slimeattack07.threedee.init.RareModelBlocks;
 import slimeattack07.threedee.init.TDBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.TDRecipeSerializer;
 import slimeattack07.threedee.init.TDTileEntityTypes;
+import slimeattack07.threedee.init.UncommonModelBlocks;
 import slimeattack07.threedee.objects.blocks.ArtefactAnalyzer;
 import slimeattack07.threedee.objects.blocks.ArtefactExchanger;
 import slimeattack07.threedee.objects.blocks.CatalystCrop;
@@ -134,12 +140,12 @@ public class Threedee {
 		}
 	};
 
-	public static final CreativeModeTab TD_MODELS = new CreativeModeTab("threedee_models") {
-		@Override
-		public ItemStack makeIcon() {
-			return new ItemStack(TDBlocks.RED_WATER_BOTTLE.get().asItem());
-		}
-	};
+//	public static final CreativeModeTab TD_MODELS = new CreativeModeTab("threedee_models") {
+//		@Override
+//		public ItemStack makeIcon() {
+//			return new ItemStack(TDBlocks.RED_WATER_BOTTLE.get().asItem());
+//		}
+//	};
 
 	public static final CreativeModeTab COMMON_MODELS = new CreativeModeTab("threedee_common_models") {
 		@Override
@@ -301,8 +307,8 @@ public class Threedee {
 					CreativeModeTab groupIn = TD_BLOCKS;
 					BlockItem blockItem = null;
 
-					if (block instanceof CustomBlockBase)
-						groupIn = TD_MODELS;
+//					if (block instanceof CustomBlockBase)
+//						groupIn = TD_MODELS;
 					
 					if (block instanceof InteractBlock)
 						groupIn = TD_BLOCKS;
@@ -389,15 +395,25 @@ public class Threedee {
 		});
 	}
 
-	public static void setRenderLayers() {
-		TDBlocks.TD_BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-			// set translucent models
-			
-
-			// set cut-out models
-			if (block instanceof CustomBlockBase || block instanceof CatalystCrop)
+	public static void setRenderLayers(DeferredRegister<Block> reg) {
+		reg.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+			if(block instanceof CustomBlockBase) {
+				CustomBlockBase base = (CustomBlockBase) block;
+				ItemBlockRenderTypes.setRenderLayer(block, base.isTranslucent() ? RenderType.translucent() : RenderType.cutout());
+			}
+			else if(block instanceof CatalystCrop) 
 				ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
 		});
+	}
+	
+	public static void setRenderLayers() {
+		setRenderLayers(TDBlocks.TD_BLOCKS);
+		setRenderLayers(CommonModelBlocks.COMMON);
+		setRenderLayers(UncommonModelBlocks.UNCOMMON);
+		setRenderLayers(RareModelBlocks.RARE);
+		setRenderLayers(EpicModelBlocks.EPIC);
+		setRenderLayers(LegendaryModelBlocks.LEGENDARY);
+		setRenderLayers(AncientModelBlocks.ANCIENT);
 	}
 	
 	@SubscribeEvent

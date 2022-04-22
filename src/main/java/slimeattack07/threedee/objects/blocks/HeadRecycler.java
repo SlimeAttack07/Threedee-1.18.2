@@ -17,11 +17,12 @@ import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.recipes.HeadRecyclerRecipe;
 import slimeattack07.threedee.tileentity.HeadRecyclerTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class HeadRecycler extends InteractBlock {
 
 	public HeadRecycler() {
-		super(6, -1);
+		super(ModShapes.W16_H16, -1);
 	}
 
 	@Override

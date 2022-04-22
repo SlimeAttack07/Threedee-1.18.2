@@ -10,12 +10,13 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 
 public abstract class InteractBlock extends CustomBlockBase implements EntityBlock {
 	
-	public InteractBlock (int shape_type, int prop_type) {
-		super(shape_type, prop_type, true);
+	public InteractBlock (VoxelShape shape, int prop_type) {
+		super(shape, prop_type, true);
 	}
 	
 	public abstract void validateAndCraft(Player player, ItemStack main, ItemStack off, BlockEntity tile, Level level, BlockPos pos);

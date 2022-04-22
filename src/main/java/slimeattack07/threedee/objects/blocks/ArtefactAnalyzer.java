@@ -11,11 +11,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.tileentity.ArtefactAnalyzerTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class ArtefactAnalyzer extends InteractBlock {
 
 	public ArtefactAnalyzer() {
-		super(11, -1);
+		super(ModShapes.W16_H16, -1);
 	}
 	
 	@Override

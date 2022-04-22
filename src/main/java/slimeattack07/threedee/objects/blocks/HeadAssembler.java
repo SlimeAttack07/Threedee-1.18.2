@@ -22,11 +22,12 @@ import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
 import slimeattack07.threedee.tileentity.HeadAssemblerTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class HeadAssembler extends InteractBlock {
 
 	public HeadAssembler() {
-		super(6, -1);
+		super(ModShapes.W16_H16, -1);
 	}
 	
 //TODO: Check

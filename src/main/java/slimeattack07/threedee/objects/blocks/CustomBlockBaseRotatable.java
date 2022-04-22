@@ -7,18 +7,33 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CustomBlockBaseRotatable extends CustomBlockBase {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-
-	public CustomBlockBaseRotatable(int shape_type, int prop_type) {
-		super(shape_type, prop_type);
+	public final boolean TRANSLUCENT;
+	
+	public CustomBlockBaseRotatable(boolean translucent, VoxelShape shape, int prop_type) {
+		super(shape, prop_type);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+		TRANSLUCENT = translucent;
+	}
+
+	public CustomBlockBaseRotatable(VoxelShape shape, int prop_type) {
+		super(shape, prop_type);
+		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+		TRANSLUCENT = false;
 	}
 	
-	public CustomBlockBaseRotatable(int shape_type, int prop_type, boolean tool) {
-		super(shape_type, prop_type, tool);
+	public CustomBlockBaseRotatable(VoxelShape shape, int prop_type, boolean tool) {
+		super(shape, prop_type, tool);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+		TRANSLUCENT = false;
+	}
+	
+	@Override
+	public boolean isTranslucent() {
+		return TRANSLUCENT;
 	}
 	
 	@Override

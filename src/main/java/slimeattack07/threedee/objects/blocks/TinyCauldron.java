@@ -19,12 +19,13 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import slimeattack07.threedee.recipes.TinyCauldronRecipe;
 import slimeattack07.threedee.tileentity.BasicInterTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class TinyCauldron extends BasicIntBlock {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public TinyCauldron() {
-		super(3, -1);
+		super(ModShapes.W8_H8, -1);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 

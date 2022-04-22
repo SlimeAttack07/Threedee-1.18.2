@@ -17,12 +17,13 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.tileentity.NegotiatorTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class Negotiator extends InteractBlock {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public Negotiator() {
-		super(12, -1);
+		super(ModShapes.W16_H6, -1);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 	

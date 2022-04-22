@@ -2,6 +2,6 @@
 	"parent": "threedee:block/template_berries",
 	"textures": {
 		"0": "block/pink_terracotta",
-		"2": "block/white_terracotta"
+		"2": "threedee:misc/pink1"
 	}
 }

@@ -10,11 +10,12 @@ import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.objects.items.TokenCard;
 import slimeattack07.threedee.tileentity.ArtefactExchangerTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class ArtefactExchanger extends InteractBlock {
 
 	public ArtefactExchanger() {
-		super(13, -1);
+		super(ModShapes.W16_H6, -1);
 	}
 	
 	@Override

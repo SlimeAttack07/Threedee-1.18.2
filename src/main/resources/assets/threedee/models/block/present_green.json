@@ -1,9 +1,9 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "block/green_concrete",
-		"1": "block/lime_concrete",
-		"particle": "block/green_concrete"
+		"0": "block/green_concrete_powder",
+		"1": "block/lime_wool",
+		"particle": "block/green_concrete_powder"
 	},
 	"elements": [
 		{

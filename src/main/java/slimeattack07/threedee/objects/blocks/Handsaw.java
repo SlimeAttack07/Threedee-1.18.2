@@ -19,12 +19,13 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import slimeattack07.threedee.recipes.HandsawRecipe;
 import slimeattack07.threedee.tileentity.BasicInterTE;
 import slimeattack07.threedee.util.TdBasicMethods;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class Handsaw extends BasicIntBlock {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	
 	public Handsaw() {
-		super(4, -1);
+		super(ModShapes.W16_H4, -1);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 	}
 	

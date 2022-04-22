@@ -12,18 +12,19 @@ import slimeattack07.threedee.DropRarity;
 import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.tileentity.HeadBlockTE;
+import slimeattack07.threedee.util.helpers.ModShapes;
 
 public class Head extends CustomBlockBaseRotatable implements EntityBlock{
 	
 	private DropRarity rarity;
 	
 	public Head(DropRarity rar) {
-		super(1, 1);
+		super(ModShapes.W8_H8, 1);
 		rarity = rar;
 	}
 	
 	public Head(int type) {
-		super(1, 1);
+		super(ModShapes.W8_H8, 1);
 		
 		switch (type) {
 		case 0: rarity = DropRarity.COMMON; break;
