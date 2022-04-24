@@ -31,10 +31,6 @@ public abstract class CustomBlockBase extends Block {
 	public Direction getDirection(BlockState state) {
 		return Direction.NORTH;
 	}
-	
-	public boolean isBasedOnHead() {
-		return false;
-	}
 
 	@Override
 	public boolean isValidSpawn(BlockState state, BlockGetter world, BlockPos pos, Type type,

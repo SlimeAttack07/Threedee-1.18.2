@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "threedee:block/purple_water_bottle" },
-        "facing=south": { "model": "threedee:block/purple_water_bottle", "y": 180 },
-        "facing=west":  { "model": "threedee:block/purple_water_bottle", "y": 270 },
-        "facing=east":  { "model": "threedee:block/purple_water_bottle", "y": 90 }
-    }
-}

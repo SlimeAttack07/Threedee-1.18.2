@@ -59,24 +59,23 @@ import slimeattack07.threedee.objects.blocks.ArtefactExchanger;
 import slimeattack07.threedee.objects.blocks.CatalystCrop;
 import slimeattack07.threedee.objects.blocks.CustomBlockBase;
 import slimeattack07.threedee.objects.blocks.Handsaw;
-import slimeattack07.threedee.objects.blocks.Head;
-import slimeattack07.threedee.objects.blocks.HeadAssembler;
-import slimeattack07.threedee.objects.blocks.HeadFabricator;
-import slimeattack07.threedee.objects.blocks.HeadRecycler;
 import slimeattack07.threedee.objects.blocks.InteractBlock;
 import slimeattack07.threedee.objects.blocks.ItemExchanger;
+import slimeattack07.threedee.objects.blocks.Model;
+import slimeattack07.threedee.objects.blocks.ModelAssembler;
+import slimeattack07.threedee.objects.blocks.ModelFabricator;
+import slimeattack07.threedee.objects.blocks.ModelRecycler;
 import slimeattack07.threedee.objects.blocks.MortarPestle;
 import slimeattack07.threedee.objects.blocks.Negotiator;
 import slimeattack07.threedee.objects.blocks.TinyCauldron;
 import slimeattack07.threedee.objects.items.ArtefactAnalyzerItem;
 import slimeattack07.threedee.objects.items.ArtefactExchangerItem;
 import slimeattack07.threedee.objects.items.BasicInterItem;
-import slimeattack07.threedee.objects.items.HeadAssemblerItem;
-import slimeattack07.threedee.objects.items.HeadBasedModelItem;
-import slimeattack07.threedee.objects.items.HeadBlockItem;
-import slimeattack07.threedee.objects.items.HeadFabricatorItem;
-import slimeattack07.threedee.objects.items.HeadRecyclerItem;
 import slimeattack07.threedee.objects.items.ItemExchangerItem;
+import slimeattack07.threedee.objects.items.ModelAssemblerItem;
+import slimeattack07.threedee.objects.items.ModelFabricatorItem;
+import slimeattack07.threedee.objects.items.ModelItem;
+import slimeattack07.threedee.objects.items.ModelRecyclerItem;
 import slimeattack07.threedee.objects.items.NegotiatorItem;
 import slimeattack07.threedee.world.gen.OreGen;
 
@@ -84,13 +83,8 @@ import slimeattack07.threedee.world.gen.OreGen;
 @Mod.EventBusSubscriber(modid = Threedee.MOD_ID, bus = Bus.MOD)
 public class Threedee {
 /* TODO LIST: 
- * Trees & log blocks are broken
- * Sapling advancement uses normal sapling temporarily
  * Add more machines?
  * Configs
- * Catalyzed bonemeal fixes
- * Test if machines work in other dimensions since we use World.OVERWORLD in some places (I think..)
- * Test if comparator for head recycler works (prob doesnt)
  */
 	
 	public static Threedee instance;
@@ -107,23 +101,8 @@ public class Threedee {
 		// first - second
 	    @Override
 	    public int compare(ItemStack m1, ItemStack m2) {
-	    	if (m1.getItem() instanceof HeadBlockItem) {
-	    		HeadBlockItem i1 = (HeadBlockItem) m1.getItem();
-	    		
-	    		if(m2.getItem() instanceof HeadBlockItem) {
-	    			HeadBlockItem i2 = (HeadBlockItem) m2.getItem();
-	    			
-	    			return i1.getHeadNumber() - i2.getHeadNumber();
-	    		}
-	    		return 1;
-	    	}
-	    	
-	    	else if (m2.getItem() instanceof HeadBlockItem)
-	    		return -1;
-	    	
 	    	return m1.getItem().getRegistryName().compareTo(m2.getItem().getRegistryName());
 	     }
-
 	};
 
 	public static final CreativeModeTab TD_BLOCKS = new CreativeModeTab("threedee_blocks") {
@@ -139,13 +118,6 @@ public class Threedee {
 			return new ItemStack(TDItems.DYE_PASTE.get());
 		}
 	};
-
-//	public static final CreativeModeTab TD_MODELS = new CreativeModeTab("threedee_models") {
-//		@Override
-//		public ItemStack makeIcon() {
-//			return new ItemStack(TDBlocks.RED_WATER_BOTTLE.get().asItem());
-//		}
-//	};
 
 	public static final CreativeModeTab COMMON_MODELS = new CreativeModeTab("threedee_common_models") {
 		@Override
@@ -266,6 +238,11 @@ public class Threedee {
 		TDItems.TD_ITEMS.register(modEventBus);
 		TDBlocks.TD_BLOCKS.register(modEventBus);
 		CommonModelBlocks.COMMON.register(modEventBus);
+		UncommonModelBlocks.UNCOMMON.register(modEventBus);
+		RareModelBlocks.RARE.register(modEventBus);
+		EpicModelBlocks.EPIC.register(modEventBus);
+		LegendaryModelBlocks.LEGENDARY.register(modEventBus);
+		AncientModelBlocks.ANCIENT.register(modEventBus);
 				
 		TDRecipeSerializer.SERIALIZERS.register(modEventBus);
 
@@ -313,8 +290,8 @@ public class Threedee {
 					if (block instanceof InteractBlock)
 						groupIn = TD_BLOCKS;
 
-					if (block instanceof Head) {
-						switch(((Head) block).getRarity()) {
+					if (block instanceof Model) {
+						switch(((Model) block).getRarity()) {
 							case COMMON: groupIn = COMMON_MODELS; break;
 							case UNCOMMON: groupIn = UNCOMMON_MODELS; break;
 							case RARE: groupIn = RARE_MODELS; break;
@@ -327,8 +304,8 @@ public class Threedee {
 
 					final Item.Properties properties = new Item.Properties().tab(groupIn);
 
-					if (block instanceof Head)
-						blockItem = new HeadBlockItem(block, properties);
+					if (block instanceof Model)
+						blockItem = new ModelItem(block, properties);
 					else if (block instanceof MortarPestle)
 						blockItem = new BasicInterItem(block, properties, "description.threedee.mortar_and_pestle");
 					else if (block instanceof TinyCauldron)
@@ -336,10 +313,6 @@ public class Threedee {
 					else if (block instanceof Handsaw)
 						blockItem = new BasicInterItem(block, properties, "description.threedee.handsaw");
 					else if (block instanceof CustomBlockBase) {
-						CustomBlockBase cbb = (CustomBlockBase) block;
-						if (cbb.isBasedOnHead())
-							blockItem = new HeadBasedModelItem(block, properties);
-						else
 							blockItem = new BlockItem(block, properties);
 					}
 					else
@@ -351,17 +324,42 @@ public class Threedee {
 
 		CommonModelBlocks.COMMON.getEntries().stream()
 		.map(RegistryObject::get).forEach(block -> {
-			registry.register(new BlockItem(block, new Item.Properties().tab(COMMON_MODELS)).setRegistryName(block.getRegistryName()));
+			registry.register(new ModelItem(block, new Item.Properties().tab(COMMON_MODELS)).setRegistryName(block.getRegistryName()));
 		});
 		
-		Block block = TDBlocks.HEAD_FABRICATOR.get();
-		registry.register(new HeadFabricatorItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
+		UncommonModelBlocks.UNCOMMON.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new ModelItem(block, new Item.Properties().tab(UNCOMMON_MODELS)).setRegistryName(block.getRegistryName()));
+		});
+		
+		RareModelBlocks.RARE.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new ModelItem(block, new Item.Properties().tab(RARE_MODELS)).setRegistryName(block.getRegistryName()));
+		});
+		
+		EpicModelBlocks.EPIC.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new ModelItem(block, new Item.Properties().tab(EPIC_MODELS)).setRegistryName(block.getRegistryName()));
+		});
+		
+		LegendaryModelBlocks.LEGENDARY.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new ModelItem(block, new Item.Properties().tab(LEGENDARY_MODELS)).setRegistryName(block.getRegistryName()));
+		});
+		
+		AncientModelBlocks.ANCIENT.getEntries().stream()
+		.map(RegistryObject::get).forEach(block -> {
+			registry.register(new ModelItem(block, new Item.Properties().tab(ANCIENT_MODELS)).setRegistryName(block.getRegistryName()));
+		});
+		
+		Block block = TDBlocks.MODEL_FABRICATOR.get();
+		registry.register(new ModelFabricatorItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
 
-		block = TDBlocks.HEAD_ASSEMBLER.get();
-		registry.register(new HeadAssemblerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
+		block = TDBlocks.MODEL_ASSEMBLER.get();
+		registry.register(new ModelAssemblerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
 
-		block = TDBlocks.HEAD_RECYCLER.get();
-		registry.register(new HeadRecyclerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
+		block = TDBlocks.MODEL_RECYCLER.get();
+		registry.register(new ModelRecyclerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
 		
 		block = TDBlocks.ARTEFACT_ANALYZER.get();
 		registry.register(new ArtefactAnalyzerItem(block, new Item.Properties().tab(TD_BLOCKS)).setRegistryName(block.getRegistryName()));
@@ -377,8 +375,8 @@ public class Threedee {
 	}
 	
 	public static boolean noCustomItem(Block block) {
-		return !(block instanceof HeadFabricator || block instanceof HeadAssembler
-				|| block instanceof HeadRecycler || block instanceof CatalystCrop
+		return !(block instanceof ModelFabricator || block instanceof ModelAssembler
+				|| block instanceof ModelRecycler || block instanceof CatalystCrop
 				|| block instanceof ArtefactAnalyzer || block instanceof Negotiator 
 				|| block instanceof ArtefactExchanger || block instanceof ItemExchanger);
 	}

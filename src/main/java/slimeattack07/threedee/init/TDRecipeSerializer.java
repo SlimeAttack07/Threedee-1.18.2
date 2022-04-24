@@ -7,9 +7,9 @@ import net.minecraftforge.registries.RegistryObject;
 import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.recipes.ArtefactAnalyzerRecipe;
 import slimeattack07.threedee.recipes.HandsawRecipe;
-import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
-import slimeattack07.threedee.recipes.HeadFabricatorRecipe;
-import slimeattack07.threedee.recipes.HeadRecyclerRecipe;
+import slimeattack07.threedee.recipes.ModelAssemblerRecipe;
+import slimeattack07.threedee.recipes.ModelFabricatorRecipe;
+import slimeattack07.threedee.recipes.ModelRecyclerRecipe;
 import slimeattack07.threedee.recipes.ItemExchangerRecipe;
 import slimeattack07.threedee.recipes.MortarPestleRecipe;
 import slimeattack07.threedee.recipes.TinyCauldronRecipe;
@@ -24,12 +24,12 @@ public class TDRecipeSerializer {
 	            SERIALIZERS.register("tiny_cauldron", () -> TinyCauldronRecipe.Serializer.INSTANCE);
 	 public static final RegistryObject<RecipeSerializer<HandsawRecipe>> HANDSAW =
 	            SERIALIZERS.register("handsaw", () -> HandsawRecipe.Serializer.INSTANCE);
-	 public static final RegistryObject<RecipeSerializer<HeadAssemblerRecipe>> HEAD_ASSEMBLER =
-	            SERIALIZERS.register("head_assembler", () -> HeadAssemblerRecipe.Serializer.INSTANCE);
-	 public static final RegistryObject<RecipeSerializer<HeadFabricatorRecipe>> HEAD_FABRICATOR =
-	            SERIALIZERS.register("head_fabricator", () -> HeadFabricatorRecipe.Serializer.INSTANCE);
-	 public static final RegistryObject<RecipeSerializer<HeadRecyclerRecipe>> HEAD_RECYCLER =
-	            SERIALIZERS.register("head_recycler", () -> HeadRecyclerRecipe.Serializer.INSTANCE);
+	 public static final RegistryObject<RecipeSerializer<ModelAssemblerRecipe>> MODEL_ASSEMBLER =
+	            SERIALIZERS.register("model_assembler", () -> ModelAssemblerRecipe.Serializer.INSTANCE);
+	 public static final RegistryObject<RecipeSerializer<ModelFabricatorRecipe>> MODEL_FABRICATOR =
+	            SERIALIZERS.register("model_fabricator", () -> ModelFabricatorRecipe.Serializer.INSTANCE);
+	 public static final RegistryObject<RecipeSerializer<ModelRecyclerRecipe>> MODEL_RECYCLER =
+	            SERIALIZERS.register("model_recycler", () -> ModelRecyclerRecipe.Serializer.INSTANCE);
 	 public static final RegistryObject<RecipeSerializer<ArtefactAnalyzerRecipe>> ARTEFACT_ANALYZER =
 	            SERIALIZERS.register("artefact_analyzer", () -> ArtefactAnalyzerRecipe.Serializer.INSTANCE);
 	 public static final RegistryObject<RecipeSerializer<ItemExchangerRecipe>> ITEM_EXCHANGER =

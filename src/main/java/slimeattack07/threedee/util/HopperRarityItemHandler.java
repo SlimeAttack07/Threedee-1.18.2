@@ -5,7 +5,7 @@ import javax.annotation.Nonnull;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import slimeattack07.threedee.DropRarity;
-import slimeattack07.threedee.objects.items.HeadBlockItem;
+import slimeattack07.threedee.objects.items.ModelItem;
 import slimeattack07.threedee.tileentity.hoppers.HopperCommonTE;
 
 /**
@@ -24,8 +24,8 @@ public class HopperRarityItemHandler extends InvWrapper{
     }
 
     private boolean canFilter(ItemStack stack) {
-    	if(stack.getItem() instanceof HeadBlockItem) {
-    		HeadBlockItem item = (HeadBlockItem) stack.getItem();
+    	if(stack.getItem() instanceof ModelItem) {
+    		ModelItem item = (ModelItem) stack.getItem();
     		
     		return item.getRarity().equals(filter);
     	}

@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_handsaw",
+	"textures": {
+		"log": "block/warped_stem",
+		"log_top": "block/warped_stem_top"
+	}
+}

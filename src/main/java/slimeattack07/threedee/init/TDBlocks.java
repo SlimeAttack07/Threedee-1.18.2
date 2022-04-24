@@ -20,10 +20,10 @@ import slimeattack07.threedee.objects.blocks.ArtefactExchanger;
 import slimeattack07.threedee.objects.blocks.BlockBaseRotatable;
 import slimeattack07.threedee.objects.blocks.CatalystCrop;
 import slimeattack07.threedee.objects.blocks.Handsaw;
-import slimeattack07.threedee.objects.blocks.Head;
-import slimeattack07.threedee.objects.blocks.HeadAssembler;
-import slimeattack07.threedee.objects.blocks.HeadFabricator;
-import slimeattack07.threedee.objects.blocks.HeadRecycler;
+import slimeattack07.threedee.objects.blocks.Model;
+import slimeattack07.threedee.objects.blocks.ModelAssembler;
+import slimeattack07.threedee.objects.blocks.ModelFabricator;
+import slimeattack07.threedee.objects.blocks.ModelRecycler;
 import slimeattack07.threedee.objects.blocks.HopperRarity;
 import slimeattack07.threedee.objects.blocks.ItemExchanger;
 import slimeattack07.threedee.objects.blocks.MortarPestle;
@@ -68,33 +68,8 @@ public class TDBlocks {
 	public static final RegistryObject<Block> CATALYST_EPIC_CROP = TD_BLOCKS.register("catalyst_epic_crop", () -> new CatalystCrop(TDItems.CATALYST_SEED_EPIC));
 	public static final RegistryObject<Block> CATALYST_LEGENDARY_CROP = TD_BLOCKS.register("catalyst_legendary_crop", () -> new CatalystCrop(TDItems.CATALYST_SEED_LEGENDARY));
 	public static final RegistryObject<Block> CATALYST_ANCIENT_CROP = TD_BLOCKS.register("catalyst_ancient_crop", () -> new CatalystCrop(TDItems.CATALYST_SEED_ANCIENT));
-
-	// Normal Models
-//	public static final RegistryObject<Block> EMPTY_BOTTLE = TD_BLOCKS.register("empty_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> EMPTY_WATER_BOTTLE = TD_BLOCKS.register("water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> WHITE_WATER_BOTTLE = TD_BLOCKS.register("white_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> ORANGE_WATER_BOTTLE = TD_BLOCKS.register("orange_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> MAGENTA_WATER_BOTTLE = TD_BLOCKS.register("magenta_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> LIGHT_BLUE_WATER_BOTTLE = TD_BLOCKS.register("light_blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> YELLOW_WATER_BOTTLE = TD_BLOCKS.register("yellow_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> LIME_WATER_BOTTLE = TD_BLOCKS.register("lime_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> PINK_WATER_BOTTLE = TD_BLOCKS.register("pink_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> GRAY_WATER_BOTTLE = TD_BLOCKS.register("gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> LIGHT_GRAY_WATER_BOTTLE = TD_BLOCKS.register("light_gray_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> CYAN_WATER_BOTTLE = TD_BLOCKS.register("cyan_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> PURPLE_WATER_BOTTLE = TD_BLOCKS.register("purple_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> BLUE_WATER_BOTTLE = TD_BLOCKS.register("blue_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> BROWN_WATER_BOTTLE = TD_BLOCKS.register("brown_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> GREEN_WATER_BOTTLE = TD_BLOCKS.register("green_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> RED_WATER_BOTTLE = TD_BLOCKS.register("red_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));
-//	public static final RegistryObject<Block> BLACK_WATER_BOTTLE = TD_BLOCKS.register("black_water_bottle", () -> new CustomBlockBaseRotatable(0, 0));	
-//	public static final RegistryObject<Block> LAVA_BOTTLE = TD_BLOCKS.register("lava_bottle", () -> new CustomBlockBaseRotatable(0, 0));
 	
 	// Head-Based Models
-//	public static final RegistryObject<Block> MODEL_COMMON_0 = TD_BLOCKS.register("model_common_0", () -> new CustomBlockBaseRotatable(7, 1));
-//	public static final RegistryObject<Block> MODEL_COMMON_2 = TD_BLOCKS.register("model_common_2", () -> new CustomBlockBaseRotatable(8, 1));
-//	public static final RegistryObject<Block> MODEL_COMMON_3 = TD_BLOCKS.register("model_common_3", () -> new CustomBlockBaseRotatable(8, 1));
-//	public static final RegistryObject<Block> MODEL_COMMON_4 = TD_BLOCKS.register("model_common_4", () -> new CustomBlockBaseRotatable(9, 1));
 //	public static final RegistryObject<Block> MODEL_COMMON_6 = TD_BLOCKS.register("model_common_6", () -> new CustomBlockBaseRotatable(10, 1));
 //	public static final RegistryObject<Block> MODEL_COMMON_7 = TD_BLOCKS.register("model_common_7", () -> new CustomBlockBaseRotatable(10, 1));
 //	public static final RegistryObject<Block> MODEL_COMMON_8 = TD_BLOCKS.register("model_common_8", () -> new CustomBlockBaseRotatable(10, 1));
@@ -130,6 +105,10 @@ public class TDBlocks {
 	public static final RegistryObject<Block> MORTAR_AND_PESTLE_DIORITE = TD_BLOCKS.register("mortar_and_pestle_diorite", () -> new MortarPestle());
 	public static final RegistryObject<Block> MORTAR_AND_PESTLE_ANDESITE = TD_BLOCKS.register("mortar_and_pestle_andesite", () -> new MortarPestle());
 	public static final RegistryObject<Block> MORTAR_AND_PESTLE_GRANITE = TD_BLOCKS.register("mortar_and_pestle_granite", () -> new MortarPestle());
+	public static final RegistryObject<Block> MORTAR_AND_PESTLE_BASALT = TD_BLOCKS.register("mortar_and_pestle_basalt", () -> new MortarPestle());
+	public static final RegistryObject<Block> MORTAR_AND_PESTLE_BLACKSTONE = TD_BLOCKS.register("mortar_and_pestle_blackstone", () -> new MortarPestle());
+	public static final RegistryObject<Block> MORTAR_AND_PESTLE_DEEPSLATE = TD_BLOCKS.register("mortar_and_pestle_deepslate", () -> new MortarPestle());
+
 	
 	public static final RegistryObject<Block> TINY_CAULDRON_OAK = TD_BLOCKS.register("tiny_cauldron_oak", () -> new TinyCauldron());
 	public static final RegistryObject<Block> TINY_CAULDRON_BIRCH = TD_BLOCKS.register("tiny_cauldron_birch", () -> new TinyCauldron());
@@ -137,10 +116,12 @@ public class TDBlocks {
 	public static final RegistryObject<Block> TINY_CAULDRON_JUNGLE = TD_BLOCKS.register("tiny_cauldron_jungle", () -> new TinyCauldron());
 	public static final RegistryObject<Block> TINY_CAULDRON_ACACIA = TD_BLOCKS.register("tiny_cauldron_acacia", () -> new TinyCauldron());
 	public static final RegistryObject<Block> TINY_CAULDRON_DARK_OAK = TD_BLOCKS.register("tiny_cauldron_dark_oak", () -> new TinyCauldron());
+	public static final RegistryObject<Block> TINY_CAULDRON_CRIMSON = TD_BLOCKS.register("tiny_cauldron_crimson", () -> new TinyCauldron());
+	public static final RegistryObject<Block> TINY_CAULDRON_WARPED = TD_BLOCKS.register("tiny_cauldron_warped", () -> new TinyCauldron());
 	
-	public static final RegistryObject<Block> HEAD_FABRICATOR = TD_BLOCKS.register("head_fabricator", () -> new HeadFabricator());
-	public static final RegistryObject<Block> HEAD_ASSEMBLER = TD_BLOCKS.register("head_assembler", () -> new HeadAssembler());
-	public static final RegistryObject<Block> HEAD_RECYCLER = TD_BLOCKS.register("head_recycler", () -> new HeadRecycler());
+	public static final RegistryObject<Block> MODEL_FABRICATOR = TD_BLOCKS.register("model_fabricator", () -> new ModelFabricator());
+	public static final RegistryObject<Block> MODEL_ASSEMBLER = TD_BLOCKS.register("model_assembler", () -> new ModelAssembler());
+	public static final RegistryObject<Block> MODEL_RECYCLER = TD_BLOCKS.register("model_recycler", () -> new ModelRecycler());
 	public static final RegistryObject<Block> ARTEFACT_ANALYZER = TD_BLOCKS.register("artefact_analyzer", () -> new ArtefactAnalyzer());
 	public static final RegistryObject<Block> ARTEFACT_EXCHANGER = TD_BLOCKS.register("artefact_exchanger", () -> new ArtefactExchanger());
 	public static final RegistryObject<Block> ITEM_EXCHANGER = TD_BLOCKS.register("item_exchanger", () -> new ItemExchanger());
@@ -152,6 +133,8 @@ public class TDBlocks {
 	public static final RegistryObject<Block> HANDSAW_JUNGLE = TD_BLOCKS.register("handsaw_jungle", () -> new Handsaw());
 	public static final RegistryObject<Block> HANDSAW_ACACIA = TD_BLOCKS.register("handsaw_acacia", () -> new Handsaw());
 	public static final RegistryObject<Block> HANDSAW_DARK_OAK = TD_BLOCKS.register("handsaw_dark_oak", () -> new Handsaw());
+	public static final RegistryObject<Block> HANDSAW_CRIMSON = TD_BLOCKS.register("handsaw_crimson", () -> new Handsaw());
+	public static final RegistryObject<Block> HANDSAW_WARPED = TD_BLOCKS.register("handsaw_warped", () -> new Handsaw());
 	
 	public static final RegistryObject<Block> HOPPER_COMMON = TD_BLOCKS.register("hopper_common", () -> new HopperRarity(DropRarity.COMMON));
 	public static final RegistryObject<Block> HOPPER_UNCOMMON = TD_BLOCKS.register("hopper_uncommon", () -> new HopperRarity(DropRarity.UNCOMMON));
@@ -217,7 +200,7 @@ public class TDBlocks {
 			if(skip("u", i))
 				continue;
 			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_uncommon_" + i, () -> new Head(1));
+			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_uncommon_" + i, () -> new Model(1));
 			UNCOMMON_HEADS.add(HEAD);
 		}
 		
@@ -225,7 +208,7 @@ public class TDBlocks {
 			if(skip("r", i))
 				continue;
 			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_rare_" + i, () -> new Head(2));
+			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_rare_" + i, () -> new Model(2));
 			RARE_HEADS.add(HEAD);
 		}
 		
@@ -233,7 +216,7 @@ public class TDBlocks {
 			if(skip("e", i))
 				continue;
 			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_epic_" + i, () -> new Head(3));
+			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_epic_" + i, () -> new Model(3));
 			EPIC_HEADS.add(HEAD);
 		}
 		
@@ -241,7 +224,7 @@ public class TDBlocks {
 			if(skip("l", i))
 				continue;
 			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_legendary_" + i, () -> new Head(4));
+			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_legendary_" + i, () -> new Model(4));
 			LEGENDARY_HEADS.add(HEAD);
 		}
 		
@@ -249,7 +232,7 @@ public class TDBlocks {
 			if(skip("a", i))
 				continue;
 			
-			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_ancient_" + i, () -> new Head(5));
+			final RegistryObject<Block> HEAD = TD_BLOCKS.register("head_ancient_" + i, () -> new Model(5));
 			ANCIENT_HEADS.add(HEAD);
 		}
 	}

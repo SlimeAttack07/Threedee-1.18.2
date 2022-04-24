@@ -8,10 +8,10 @@ import slimeattack07.threedee.Threedee;
 import slimeattack07.threedee.tileentity.ArtefactAnalyzerTE;
 import slimeattack07.threedee.tileentity.ArtefactExchangerTE;
 import slimeattack07.threedee.tileentity.BasicInterTE;
-import slimeattack07.threedee.tileentity.HeadAssemblerTE;
-import slimeattack07.threedee.tileentity.HeadBlockTE;
-import slimeattack07.threedee.tileentity.HeadFabricatorTE;
-import slimeattack07.threedee.tileentity.HeadRecyclerTE;
+import slimeattack07.threedee.tileentity.ModelAssemblerTE;
+import slimeattack07.threedee.tileentity.ModelBlockTE;
+import slimeattack07.threedee.tileentity.ModelFabricatorTE;
+import slimeattack07.threedee.tileentity.ModelRecyclerTE;
 import slimeattack07.threedee.tileentity.ItemExchangerTE;
 import slimeattack07.threedee.tileentity.NegotiatorTE;
 import slimeattack07.threedee.tileentity.hoppers.HopperAncientTE;
@@ -22,7 +22,6 @@ import slimeattack07.threedee.tileentity.hoppers.HopperRareTE;
 import slimeattack07.threedee.tileentity.hoppers.HopperUncommonTE;
 
 public class TDTileEntityTypes {
-	// public static BlockEntityType<?> HEAD;
 	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES = DeferredRegister
 			.create(ForgeRegistries.BLOCK_ENTITIES, Threedee.MOD_ID);
 
@@ -37,25 +36,25 @@ public class TDTileEntityTypes {
 					TDBlocks.HANDSAW_JUNGLE.get(), TDBlocks.HANDSAW_ACACIA.get(),
 					TDBlocks.HANDSAW_DARK_OAK.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadAssemblerTE>> HEAD_ASSEMBLER = TILE_ENTITY_TYPES.register(
-			"head_assembler",
-			() -> BlockEntityType.Builder.of(HeadAssemblerTE::new, TDBlocks.HEAD_ASSEMBLER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<ModelAssemblerTE>> MODEL_ASSEMBLER = TILE_ENTITY_TYPES.register(
+			"model_assembler",
+			() -> BlockEntityType.Builder.of(ModelAssemblerTE::new, TDBlocks.MODEL_ASSEMBLER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadFabricatorTE>> HEAD_FABRICATOR = TILE_ENTITY_TYPES
-			.register("head_fabricator", () -> BlockEntityType.Builder
-					.of(HeadFabricatorTE::new, TDBlocks.HEAD_FABRICATOR.get()).build(null));
+	public static final RegistryObject<BlockEntityType<ModelFabricatorTE>> MODEL_FABRICATOR = TILE_ENTITY_TYPES
+			.register("model_fabricator", () -> BlockEntityType.Builder
+					.of(ModelFabricatorTE::new, TDBlocks.MODEL_FABRICATOR.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadRecyclerTE>> HEAD_RECYCLER = TILE_ENTITY_TYPES.register(
-			"head_recycler",
-			() -> BlockEntityType.Builder.of(HeadRecyclerTE::new, TDBlocks.HEAD_RECYCLER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<ModelRecyclerTE>> MODEL_RECYCLER = TILE_ENTITY_TYPES.register(
+			"model_recycler",
+			() -> BlockEntityType.Builder.of(ModelRecyclerTE::new, TDBlocks.MODEL_RECYCLER.get()).build(null));
 
 	public static final RegistryObject<BlockEntityType<ArtefactAnalyzerTE>> ARTEFACT_ANALYZER = TILE_ENTITY_TYPES
 			.register("artefact_analyzer", () -> BlockEntityType.Builder
 					.of(ArtefactAnalyzerTE::new, TDBlocks.ARTEFACT_ANALYZER.get()).build(null));
 
-	public static final RegistryObject<BlockEntityType<HeadBlockTE>> HEAD_BLOCK = TILE_ENTITY_TYPES.register(
-			"head_block",
-			() -> BlockEntityType.Builder.of(HeadBlockTE::new, TDBlocks.ANCIENT_HEADS.get(0).get()).build(null));
+	public static final RegistryObject<BlockEntityType<ModelBlockTE>> MODEL_BLOCK = TILE_ENTITY_TYPES.register(
+			"model_block",
+			() -> BlockEntityType.Builder.of(ModelBlockTE::new, TDBlocks.ANCIENT_HEADS.get(0).get()).build(null));
 
 	public static final RegistryObject<BlockEntityType<NegotiatorTE>> NEGOTIATOR = TILE_ENTITY_TYPES.register(
 			"negotiator",

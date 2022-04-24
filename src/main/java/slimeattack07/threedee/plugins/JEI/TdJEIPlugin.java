@@ -19,13 +19,13 @@ import slimeattack07.threedee.init.TDBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.recipes.ArtefactAnalyzerRecipe;
 import slimeattack07.threedee.recipes.HandsawRecipe;
-import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
-import slimeattack07.threedee.recipes.HeadFabricatorRecipe;
-import slimeattack07.threedee.recipes.HeadRecyclerRecipe;
+import slimeattack07.threedee.recipes.ModelAssemblerRecipe;
+import slimeattack07.threedee.recipes.ModelFabricatorRecipe;
+import slimeattack07.threedee.recipes.ModelRecyclerRecipe;
 import slimeattack07.threedee.recipes.ItemExchangerRecipe;
 import slimeattack07.threedee.recipes.MortarPestleRecipe;
 import slimeattack07.threedee.recipes.TinyCauldronRecipe;
-import slimeattack07.threedee.tileentity.HeadRecyclerTE;
+import slimeattack07.threedee.tileentity.ModelRecyclerTE;
 import slimeattack07.threedee.util.TdBasicMethods;
 
 @JeiPlugin
@@ -40,8 +40,8 @@ public class TdJEIPlugin implements IModPlugin {
 	public void registerCategories(IRecipeCategoryRegistration registration) {
 		IGuiHelper guihelper = registration.getJeiHelpers().getGuiHelper();
 		registration.addRecipeCategories(new MortarPestleCategory(guihelper), new TinyCauldronCategory(guihelper),
-				new HandsawCategory(guihelper), new HeadRecyclerCategory(guihelper), new HeadAssemblerCategory(guihelper),
-				new ArtefactAnalyzerCategory(guihelper), new HeadFabricatorCategory(guihelper), new ItemExchangerCategory(guihelper));
+				new HandsawCategory(guihelper), new ModelRecyclerCategory(guihelper), new ModelAssemblerCategory(guihelper),
+				new ArtefactAnalyzerCategory(guihelper), new ModelFabricatorCategory(guihelper), new ItemExchangerCategory(guihelper));
 	}
 	
 	@Override
@@ -57,12 +57,12 @@ public class TdJEIPlugin implements IModPlugin {
 				new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
 		registration.addRecipes(TdBasicMethods.findRecipesByType(HandsawRecipe.Type.INSTANCE, manager), 
 				new ResourceLocation(Threedee.MOD_ID, "handsaw"));
-		registration.addRecipes(TdBasicMethods.findRecipesByType(HeadRecyclerRecipe.Type.INSTANCE, manager), 
-				new ResourceLocation(Threedee.MOD_ID, "head_recycler"));
-		registration.addRecipes(TdBasicMethods.findRecipesByType(HeadAssemblerRecipe.Type.INSTANCE, manager), 
-				new ResourceLocation(Threedee.MOD_ID, "head_assembler"));
-		registration.addRecipes(TdBasicMethods.findRecipesByType(HeadFabricatorRecipe.Type.INSTANCE, manager), 
-				new ResourceLocation(Threedee.MOD_ID, "head_fabricator"));
+		registration.addRecipes(TdBasicMethods.findRecipesByType(ModelRecyclerRecipe.Type.INSTANCE, manager), 
+				new ResourceLocation(Threedee.MOD_ID, "model_recycler"));
+		registration.addRecipes(TdBasicMethods.findRecipesByType(ModelAssemblerRecipe.Type.INSTANCE, manager), 
+				new ResourceLocation(Threedee.MOD_ID, "model_assembler"));
+		registration.addRecipes(TdBasicMethods.findRecipesByType(ModelFabricatorRecipe.Type.INSTANCE, manager), 
+				new ResourceLocation(Threedee.MOD_ID, "model_fabricator"));
 		registration.addRecipes(TdBasicMethods.findRecipesByType(ItemExchangerRecipe.Type.INSTANCE, manager), 
 				new ResourceLocation(Threedee.MOD_ID, "item_exchanger"));
 		registration.addRecipes(TdBasicMethods.findRecipesByType(ArtefactAnalyzerRecipe.Type.INSTANCE, manager), 
@@ -70,35 +70,35 @@ public class TdJEIPlugin implements IModPlugin {
 		
 		// Preparation work for adding item descriptions
 		String head_rec_limit = TdBasicMethods.getTranslation("instruction.threedee.head_recycler.limit").
-				replace("MARKER1", HeadRecyclerTE.BUFFER_SIZE + "");
+				replace("MARKER1", ModelRecyclerTE.BUFFER_SIZE + "");
 		
 		// Adding item descriptions
-		registration.addIngredientInfo(new ItemStack(TDBlocks.HEAD_RECYCLER.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.head_recycler"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_recycler.rightclick"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_recycler.order"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_recycler.rightclick_empty"),
+		registration.addIngredientInfo(new ItemStack(TDBlocks.MODEL_RECYCLER.get()), VanillaTypes.ITEM, 
+				TdBasicMethods.createBlueText("description.threedee.model_recycler"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_recycler.rightclick"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_recycler.order"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_recycler.rightclick_empty"),
 				new TextComponent(ChatFormatting.BLUE + head_rec_limit),
 				TdBasicMethods.createBlueText("instruction.threedee.general.leftclick"),
-				TdBasicMethods.createRedText("instruction.threedee.head_recycler.broken"));
+				TdBasicMethods.createRedText("instruction.threedee.model_recycler.broken"));
 		
-		registration.addIngredientInfo(new ItemStack(TDBlocks.HEAD_ASSEMBLER.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.head_assembler"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_assembler.rightclick_paste"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_assembler.rightclick_empty"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_assembler.head_top"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_assembler.rightclick_catalyst"),
+		registration.addIngredientInfo(new ItemStack(TDBlocks.MODEL_ASSEMBLER.get()), VanillaTypes.ITEM, 
+				TdBasicMethods.createBlueText("description.threedee.model_assembler"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_assembler.rightclick_paste"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_assembler.rightclick_empty"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_assembler.head_top"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_assembler.rightclick_catalyst"),
 				TdBasicMethods.createBlueText("instruction.threedee.general.leftclick"),
-				TdBasicMethods.createRedText("instruction.threedee.head_assembler.broken"));
+				TdBasicMethods.createRedText("instruction.threedee.model_assembler.broken"));
 		
-		registration.addIngredientInfo(new ItemStack(TDBlocks.HEAD_FABRICATOR.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.head_fabricator"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_fabricator.rightclick_catalyst"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_fabricator.rightclick_empty"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_fabricator.limit"),
+		registration.addIngredientInfo(new ItemStack(TDBlocks.MODEL_FABRICATOR.get()), VanillaTypes.ITEM, 
+				TdBasicMethods.createBlueText("description.threedee.model_fabricator"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_fabricator.rightclick_catalyst"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_fabricator.rightclick_empty"),
+				TdBasicMethods.createBlueText("instruction.threedee.model_fabricator.limit"),
 				TdBasicMethods.createBlueText("instruction.threedee.general.leftclick"),
-				TdBasicMethods.createBlueText("instruction.threedee.head_fabricator.leftclick_shift"),
-				TdBasicMethods.createRedText("instruction.threedee.head_fabricator.broken"));
+				TdBasicMethods.createBlueText("instruction.threedee.model_fabricator.leftclick_shift"),
+				TdBasicMethods.createRedText("instruction.threedee.model_fabricator.broken"));
 		
 		registration.addIngredientInfo(new ItemStack(TDBlocks.ARTEFACT_ANALYZER.get()), VanillaTypes.ITEM, 
 				TdBasicMethods.createBlueText("description.threedee.artefact_analyzer"),
@@ -140,8 +140,7 @@ public class TdJEIPlugin implements IModPlugin {
 				TdBasicMethods.createBlueText("description.threedee.handsaw"));
 		
 		registration.addIngredientInfo(new ItemStack(TDItems.CATALYZED_BONE_MEAL.get()), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("description.threedee.cat_bone_meal"),
-				TdBasicMethods.createRedText("description.threedee.cat_bone_meal_issues"));
+				TdBasicMethods.createBlueText("description.threedee.cat_bone_meal"));
 		
 		registration.addIngredientInfo(new ItemStack(TDItems.CATALYST_CORRUPTED.get()), VanillaTypes.ITEM, 
 				TdBasicMethods.createBlueText("jei.threedee.descriptions.catalyst_corrupted"));
@@ -153,19 +152,19 @@ public class TdJEIPlugin implements IModPlugin {
 				TdBasicMethods.createBlueText("jei.threedee.descriptions.catalyst"));
 		
 		registration.addIngredientInfo(TDBlocks.getCommonHeads(), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("jei.threedee.descriptions.heads_fab"));
+				TdBasicMethods.createBlueText("jei.threedee.descriptions.model_fab"));
 		
 		registration.addIngredientInfo(TDBlocks.getUncommonHeads(), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("jei.threedee.descriptions.heads_fab"));
+				TdBasicMethods.createBlueText("jei.threedee.descriptions.model_fab"));
 		
 		registration.addIngredientInfo(TDBlocks.getRareHeads(), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("jei.threedee.descriptions.heads_fab"));
+				TdBasicMethods.createBlueText("jei.threedee.descriptions.model_fab"));
 		
 		registration.addIngredientInfo(TDBlocks.getEpicHeads(), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("jei.threedee.descriptions.heads_fab"));
+				TdBasicMethods.createBlueText("jei.threedee.descriptions.model_fab"));
 		
 		registration.addIngredientInfo(TDBlocks.getLegendaryHeads(), VanillaTypes.ITEM, 
-				TdBasicMethods.createBlueText("jei.threedee.descriptions.heads_fab"));
+				TdBasicMethods.createBlueText("jei.threedee.descriptions.model_fab"));
 		
 		registration.addIngredientInfo(TDBlocks.getAncientHeads(), VanillaTypes.ITEM, 
 				TdBasicMethods.createBlueText("jei.threedee.descriptions.artefact_an"));
@@ -193,9 +192,9 @@ public class TdJEIPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_SPRUCE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_DARK_OAK.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		
-		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HEAD_RECYCLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "head_recycler"));
-		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HEAD_ASSEMBLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "head_assembler"));
-		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HEAD_FABRICATOR.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "head_fabricator"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MODEL_RECYCLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "model_recycler"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MODEL_ASSEMBLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "model_assembler"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MODEL_FABRICATOR.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "model_fabricator"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.ARTEFACT_ANALYZER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "artefact_analyzer"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.ITEM_EXCHANGER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "item_exchanger"));
 	}

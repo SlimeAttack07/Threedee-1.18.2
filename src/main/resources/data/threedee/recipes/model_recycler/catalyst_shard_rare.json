@@ -1,0 +1,15 @@
+{
+	"type": "threedee:model_recycler",
+	"input": {
+		"tag": "threedee:rare_models"
+	},
+	"output": {
+		"item": "threedee:catalyst_shard_rare",
+		"count": 1
+	},
+	"corrupted_output": {
+		"item": "threedee:catalyst_corrupted",
+		"count": 3
+	},
+	"ticks_needed": 40
+}

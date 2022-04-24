@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "weight": 5,
+          "name": "threedee:common_models",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 10,
+          "name": "threedee:uncommon_models",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 15,
+          "name": "threedee:rare_models",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 30,
+          "name": "threedee:epic_models",
+          "expand": true
+        },
+        {
+          "type": "minecraft:tag",
+          "weight": 40,
+          "name": "threedee:legendary_models",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

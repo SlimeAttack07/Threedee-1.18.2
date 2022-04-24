@@ -1,0 +1,8 @@
+{
+  "type": "threedee:model_assembler",
+  "input": {
+    "item": "threedee:catalyst_epic"
+  },
+  "amount": 8,
+  "block_on_top": "threedee:bottle_lava"
+}

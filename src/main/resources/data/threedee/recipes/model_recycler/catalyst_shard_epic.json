@@ -1,0 +1,15 @@
+{
+	"type": "threedee:model_recycler",
+	"input": {
+		"tag": "threedee:epic_models"
+	},
+	"output": {
+		"item": "threedee:catalyst_shard_epic",
+		"count": 1
+	},
+	"corrupted_output": {
+		"item": "threedee:catalyst_corrupted",
+		"count": 4
+	},
+	"ticks_needed": 50
+}

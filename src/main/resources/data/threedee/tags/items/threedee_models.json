@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#threedee:common_models",
+	"#threedee:uncommon_models",
+	"#threedee:rare_models",
+	"#threedee:epic_models",
+	"#threedee:legendary_models",
+	"#threedee:ancient_models"
+  ]
+}

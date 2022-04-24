@@ -1,7 +1,0 @@
-{
-	"type": "threedee:head_fabricator",
-	"input": {
-		"item": "threedee:catalyst_uncommon"
-	},
-	"loot_table": "threedee:head_fabricator/catalyst_uncommon"
-}

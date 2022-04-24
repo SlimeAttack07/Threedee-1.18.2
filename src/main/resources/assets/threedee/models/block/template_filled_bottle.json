@@ -3,7 +3,7 @@
 	"parent": "block/block",
 	"textures": {
 		"0": "block/orange_terracotta",
-		"1": "block/glass",
+		"1": "block/white_stained_glass",
 		"particle": "#fluid"
 	},
 	"elements": [

@@ -1,0 +1,8 @@
+{
+  "type": "threedee:model_assembler",
+  "input": {
+    "item": "threedee:catalyst_uncommon"
+  },
+  "amount": 4,
+  "block_on_top": "threedee:bottle_white_water"
+}

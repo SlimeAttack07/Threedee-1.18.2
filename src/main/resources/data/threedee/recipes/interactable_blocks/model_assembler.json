@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern": [
+		"HWR",
+		"ADA",
+		"AAA"
+	],
+
+	"key": {
+		"H": {
+			"tag": "threedee:threedee_models"
+		},
+		"W": {
+			"item": "minecraft:red_wool"
+		},
+		"R": {
+			"tag": "forge:dusts/redstone"
+		},
+		"A": {
+			"item": "threedee:smooth_asphalt"
+		},
+		"D": {
+			"tag": "forge:gems/diamond"
+		}
+	},
+	
+	"result": {
+			"item": "threedee:model_assembler",
+			"count": 1
+	}
+}

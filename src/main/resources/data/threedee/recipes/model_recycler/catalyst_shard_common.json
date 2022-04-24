@@ -1,0 +1,15 @@
+{
+	"type": "threedee:model_recycler",
+	"input": {
+		"tag": "threedee:common_models"
+	},
+	"output": {
+		"item": "threedee:catalyst_shard_common",
+		"count": 1
+	},
+	"corrupted_output": {
+		"item": "threedee:catalyst_corrupted",
+		"count": 1
+	},
+	"ticks_needed": 20
+}

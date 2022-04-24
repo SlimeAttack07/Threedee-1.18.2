@@ -21,7 +21,7 @@ import slimeattack07.threedee.init.LegendaryModelBlocks;
 import slimeattack07.threedee.init.RareModelBlocks;
 import slimeattack07.threedee.init.TDItems;
 import slimeattack07.threedee.init.UncommonModelBlocks;
-import slimeattack07.threedee.recipes.HeadAssemblerRecipe;
+import slimeattack07.threedee.recipes.ModelAssemblerRecipe;
 
 public class DataRecipes extends RecipeProvider{
 	public DataRecipes(DataGenerator gen) {
@@ -75,12 +75,12 @@ public class DataRecipes extends RecipeProvider{
 
 		@Override
 		public ResourceLocation getId() {
-			return new ResourceLocation(Threedee.MOD_ID, "head_assembler/" + FOLDER + ID.getPath());
+			return new ResourceLocation(Threedee.MOD_ID, "model_assembler/" + FOLDER + ID.getPath());
 		}
 
 		@Override
 		public RecipeSerializer<?> getType() {
-			return HeadAssemblerRecipe.Serializer.INSTANCE;
+			return ModelAssemblerRecipe.Serializer.INSTANCE;
 		}
 
 		@Override

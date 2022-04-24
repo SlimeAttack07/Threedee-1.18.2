@@ -1,0 +1,8 @@
+{
+	"parent": "threedee:block/template_ass_rec",
+	"textures": {
+		"bottem": "threedee:block/model_recycler_bottom",
+		"side": "threedee:block/model_recycler_side",
+		"top": "threedee:block/model_recycler_top"
+	}
+}

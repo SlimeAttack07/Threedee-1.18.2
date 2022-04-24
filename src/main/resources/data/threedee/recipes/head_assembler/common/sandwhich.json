@@ -1,8 +1,0 @@
-{
-  "type": "threedee:head_assembler",
-  "input": {
-    "item": "threedee:catalyst_common"
-  },
-  "amount": 2,
-  "block_on_top": "threedee:sandwhich"
-}

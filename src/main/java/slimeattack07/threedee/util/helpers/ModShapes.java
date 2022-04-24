@@ -14,6 +14,7 @@ public class ModShapes {
 	public static final VoxelShape W8_H4 = Block.box(4, 0, 4, 12, 4, 12);
 	public static final VoxelShape W8_H6 = Block.box(4, 0, 4, 12, 6, 12);
 	public static final VoxelShape W8_H8 = Block.box(4, 0, 4, 12, 8, 12);
+	public static final VoxelShape W8_H12 = Block.box(4, 0, 4, 12, 12, 12);
 	public static final VoxelShape W8_H16 = Block.box(4, 0, 4, 12, 16, 12);
 //	public static final VoxelShape W8_H24 = Block.box(4, 0, 4, 12, 24, 12);
 	public static final VoxelShape W12_H8 = Block.box(2, 0, 2, 14, 8, 14);

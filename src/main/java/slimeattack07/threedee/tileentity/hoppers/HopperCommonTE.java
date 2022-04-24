@@ -42,7 +42,7 @@ import net.minecraftforge.items.IItemHandler;
 import slimeattack07.threedee.DropRarity;
 import slimeattack07.threedee.init.TDTileEntityTypes;
 import slimeattack07.threedee.objects.blocks.HopperRarity;
-import slimeattack07.threedee.objects.items.HeadBlockItem;
+import slimeattack07.threedee.objects.items.ModelItem;
 import slimeattack07.threedee.util.HopperRarityItemHandler;
 
 /**
@@ -254,8 +254,8 @@ public class HopperCommonTE extends RandomizableContainerBlockEntity implements 
    }
    
    public boolean canFilter(ItemStack stack) {
-	   if(stack.getItem() instanceof HeadBlockItem) {
-		   HeadBlockItem item = (HeadBlockItem) stack.getItem();
+	   if(stack.getItem() instanceof ModelItem) {
+		   ModelItem item = (ModelItem) stack.getItem();
 			  
 		   return item.getRarity().equals(getFilter());
 	   }

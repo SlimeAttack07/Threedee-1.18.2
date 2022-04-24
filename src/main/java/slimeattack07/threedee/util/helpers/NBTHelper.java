@@ -12,10 +12,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import slimeattack07.threedee.tileentity.ArtefactAnalyzerTE;
 import slimeattack07.threedee.tileentity.ArtefactExchangerTE;
 import slimeattack07.threedee.tileentity.BasicInterTE;
-import slimeattack07.threedee.tileentity.HeadAssemblerTE;
-import slimeattack07.threedee.tileentity.HeadBlockTE;
-import slimeattack07.threedee.tileentity.HeadFabricatorTE;
-import slimeattack07.threedee.tileentity.HeadRecyclerTE;
+import slimeattack07.threedee.tileentity.ModelAssemblerTE;
+import slimeattack07.threedee.tileentity.ModelBlockTE;
+import slimeattack07.threedee.tileentity.ModelFabricatorTE;
+import slimeattack07.threedee.tileentity.ModelRecyclerTE;
 import slimeattack07.threedee.tileentity.ItemExchangerTE;
 import slimeattack07.threedee.tileentity.NegotiatorTE;
 
@@ -26,16 +26,16 @@ public class NBTHelper {
 			return writeItemStack((ItemStack) o);
 		}
 		
-		if (o instanceof HeadAssemblerTE) {
-			return writeHeadAssembler((HeadAssemblerTE) o);
+		if (o instanceof ModelAssemblerTE) {
+			return writeModelAssembler((ModelAssemblerTE) o);
 		}
 		
-		if (o instanceof HeadFabricatorTE) {
-			return writeHeadFabricator((HeadFabricatorTE) o);
+		if (o instanceof ModelFabricatorTE) {
+			return writeModelFabricator((ModelFabricatorTE) o);
 		}
 		
-		if (o instanceof HeadRecyclerTE) {
-			return writeHeadRecycler((HeadRecyclerTE) o);
+		if (o instanceof ModelRecyclerTE) {
+			return writeModelRecycler((ModelRecyclerTE) o);
 		}
 		
 		if (o instanceof BasicInterTE) {
@@ -46,8 +46,8 @@ public class NBTHelper {
 			return writeArtefactAnalyzer((ArtefactAnalyzerTE) o);
 		}
 		
-		if (o instanceof HeadBlockTE) {
-			return writeHeadBlock((HeadBlockTE) o);
+		if (o instanceof ModelBlockTE) {
+			return writeModelBlock((ModelBlockTE) o);
 		}
 		
 		if (o instanceof NegotiatorTE) {
@@ -74,7 +74,7 @@ public class NBTHelper {
 		return compound;
 	}
 	
-	private static CompoundTag writeHeadAssembler(HeadAssemblerTE o) {
+	private static CompoundTag writeModelAssembler(ModelAssemblerTE o) {
 		CompoundTag compound = new CompoundTag();
 		
 		compound = safePutBoolean("stackmode", o.stackmode, compound);
@@ -84,7 +84,7 @@ public class NBTHelper {
 		return compound;
 	}
 	
-	private static CompoundTag writeHeadFabricator(HeadFabricatorTE o) {
+	private static CompoundTag writeModelFabricator(ModelFabricatorTE o) {
 		CompoundTag compound = new CompoundTag();
 		
 		compound = safePutBoolean("stackmode", o.stackmode, compound);
@@ -98,7 +98,7 @@ public class NBTHelper {
 		return compound;
 	}
 	
-	private static CompoundTag writeHeadRecycler(HeadRecyclerTE o) {
+	private static CompoundTag writeModelRecycler(ModelRecyclerTE o) {
 		CompoundTag compound = new CompoundTag();
 		
 		compound = safePutBoolean("stackmode", o.stackmode, compound);
@@ -143,7 +143,7 @@ public class NBTHelper {
 		return compound;
 	}
 	
-	private static CompoundTag writeHeadBlock(HeadBlockTE o) {
+	private static CompoundTag writeModelBlock(ModelBlockTE o) {
 		CompoundTag compound = new CompoundTag();
 		
 		compound = safePutBoolean("can_be_sold", o.can_be_sold, compound);
