@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_jam",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/blue"
+		},
+		{
+			"tag": "threedee:models/jam"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:jam_blueberry",
+			"count": 1
+	}
+}

@@ -73,6 +73,11 @@ public class CommonModelBlocks {
 	public static final RegistryObject<Block> GRAPEFRUIT = COMMON.register("grapefruit", () -> model(ModShapes.W8_H8, 5));
 	public static final RegistryObject<Block> HAYBALE = COMMON.register("haybale", () -> model(ModShapes.W16_H16, 5));
 	public static final RegistryObject<Block> HEDGEHOG = COMMON.register("hedgehog", () -> model(ModShapes.W8_H8, 5));
+	public static final RegistryObject<Block> INGOT_CARBON = COMMON.register("ingot_carbon", () -> model(ModShapes.W8_H8, 4));
+	public static final RegistryObject<Block> INGOT_MAGNESIUM = COMMON.register("ingot_magnesium", () -> model(ModShapes.W8_H8, 4));
+	public static final RegistryObject<Block> INGOT_POTASSIUM = COMMON.register("ingot_potassium", () -> model(ModShapes.W8_H8, 4));
+	public static final RegistryObject<Block> INGOT_SODIUM = COMMON.register("ingot_sodium", () -> model(ModShapes.W8_H8, 4));
+	public static final RegistryObject<Block> INGOT_SULFER = COMMON.register("ingot_sulfer", () -> model(ModShapes.W8_H8, 4));
 	public static final RegistryObject<Block> JAM_APRICOT = COMMON.register("jam_apricot", () -> model(true, ModShapes.W8_H8, 0));
 	public static final RegistryObject<Block> JAM_BLUEBERRY = COMMON.register("jam_blueberry", () -> model(true, ModShapes.W8_H8, 0));
 	public static final RegistryObject<Block> JAM_LEMON_CURD = COMMON.register("jam_lemon_curd", () -> model(true, ModShapes.W8_H8, 0));

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_logs",
+	"ingredients": [
+		{
+			"tag": "minecraft:oak_logs"
+		},
+		{
+			"tag": "threedee:models/logs"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:wood_oak",
+			"count": 1
+	}
+}

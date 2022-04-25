@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_apples",
+	"ingredients": [
+		{
+			"item": "threedee:apple"
+		},
+		{
+			"tag": "forge:dyes/green"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:apple_1",
+			"count": 1
+	}
+}

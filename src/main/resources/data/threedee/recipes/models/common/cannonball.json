@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_balls",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/black"
+		},
+		{
+			"tag": "threedee:models/balls"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:cannonball",
+			"count": 1
+	}
+}

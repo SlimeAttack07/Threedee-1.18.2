@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_presents",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/pink"
+		},
+		{
+			"tag": "threedee:models/presents"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:present_pink",
+			"count": 1
+	}
+}

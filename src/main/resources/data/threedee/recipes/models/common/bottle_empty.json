@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",	
+	"group": "threedee_bottles",
+	"ingredients": [
+		{
+			"tag": "threedee:models/bottles"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bottle_empty",
+			"count": 1
+	}
+}

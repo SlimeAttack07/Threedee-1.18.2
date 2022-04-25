@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_bags",
+	"ingredients": [
+		{
+			"item": "minecraft:wheat"
+		},
+		{
+			"tag": "threedee:models/bags"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bag_flour",
+			"count": 1
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_chunks",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/brown"
+		},
+		{
+			"tag": "threedee:models/chunks"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:chunk_bronze",
+			"count": 1
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_presents",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/orange"
+		},
+		{
+			"tag": "threedee:models/presents"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:present_orange",
+			"count": 1
+	}
+}

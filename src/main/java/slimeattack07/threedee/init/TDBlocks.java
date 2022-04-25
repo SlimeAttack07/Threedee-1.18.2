@@ -243,6 +243,9 @@ public class TDBlocks {
 		blocks.add(new ItemStack(MORTAR_AND_PESTLE_ANDESITE.get()));
 		blocks.add(new ItemStack(MORTAR_AND_PESTLE_DIORITE.get()));
 		blocks.add(new ItemStack(MORTAR_AND_PESTLE_GRANITE.get()));
+		blocks.add(new ItemStack(MORTAR_AND_PESTLE_BASALT.get()));
+		blocks.add(new ItemStack(MORTAR_AND_PESTLE_BLACKSTONE.get()));
+		blocks.add(new ItemStack(MORTAR_AND_PESTLE_DEEPSLATE.get()));
 		
 		return blocks;
 	}
@@ -256,6 +259,8 @@ public class TDBlocks {
 		blocks.add(new ItemStack(TINY_CAULDRON_JUNGLE.get()));
 		blocks.add(new ItemStack(TINY_CAULDRON_OAK.get()));
 		blocks.add(new ItemStack(TINY_CAULDRON_SPRUCE.get()));
+		blocks.add(new ItemStack(TINY_CAULDRON_CRIMSON.get()));
+		blocks.add(new ItemStack(TINY_CAULDRON_WARPED.get()));
 		
 		return blocks;
 	}
@@ -269,6 +274,8 @@ public class TDBlocks {
 		blocks.add(new ItemStack(HANDSAW_JUNGLE.get()));
 		blocks.add(new ItemStack(HANDSAW_OAK.get()));
 		blocks.add(new ItemStack(HANDSAW_SPRUCE.get()));
+		blocks.add(new ItemStack(HANDSAW_CRIMSON.get()));
+		blocks.add(new ItemStack(HANDSAW_WARPED.get()));
 		
 		return blocks;
 	}

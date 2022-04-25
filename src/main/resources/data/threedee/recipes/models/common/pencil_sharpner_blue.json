@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_pencil_sharpners",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/blue"
+		},
+		{
+			"tag": "threedee:models/pencil_sharpners"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:pencil_sharpner_blue",
+			"count": 1
+	}
+}

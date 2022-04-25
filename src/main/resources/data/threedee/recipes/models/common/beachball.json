@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_ball",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/red"
+		},
+		{
+			"tag": "threedee:models/balls"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:beachball",
+			"count": 1
+	}
+}

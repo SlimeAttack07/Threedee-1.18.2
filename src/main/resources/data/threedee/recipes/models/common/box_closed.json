@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_boxes",
+	"ingredients": [
+		{
+			"item": "threedee:wood_pulp"
+		},
+		{
+			"tag": "threedee:models/boxes"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:box_closed",
+			"count": 1
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_logs",
+	"ingredients": [
+		{
+			"tag": "minecraft:warped_stems"
+		},
+		{
+			"tag": "threedee:models/logs"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:wood_warped",
+			"count": 1
+	}
+}

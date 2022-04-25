@@ -2,6 +2,25 @@
   "replace": false,
   "values": [
 	"threedee:head_uncommon_26",
-	"threedee:head_epic_5"
+	"threedee:head_epic_5",
+	"threedee:bottle_black_water",
+	"threedee:bottle_blue_water",
+	"threedee:bottle_brown_water",
+	"threedee:bottle_cyan_water",
+	"threedee:bottle_gray_water",
+	"threedee:bottle_green_water",
+	"threedee:bottle_light_blue_water",
+	"threedee:bottle_light_gray_water",
+	"threedee:bottle_lime_water",
+	"threedee:bottle_magenta_water",
+	"threedee:bottle_orange_water",
+	"threedee:bottle_pink_water",
+	"threedee:bottle_purple_water",
+	"threedee:bottle_red_water",
+	"threedee:bottle_white_water",
+	"threedee:bottle_yellow_water",
+	"threedee:bottle_empty",
+	"threedee:bottle_water",
+	"threedee:bottle_lava"
   ]
 }

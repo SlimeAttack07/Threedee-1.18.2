@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_bottles",
+	"ingredients": [
+		{
+			"item": "minecraft:lava_bucket"
+		},
+		{
+			"tag": "threedee:models/bottles"
+		},
+		{
+			"item": "threedee:catalyst_epic"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bottle_lava",
+			"count": 1
+	}
+}

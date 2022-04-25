@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_berries",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/pink"
+		},
+		{
+			"tag": "threedee:models/berries"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:raspberries",
+			"count": 1
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_bottles",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/light_gray"
+		},
+		{
+			"tag": "threedee:models/bottles"
+		},
+		{
+			"item": "threedee:catalyst_uncommon"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bottle_light_gray_water",
+			"count": 1
+	}
+}

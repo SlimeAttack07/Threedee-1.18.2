@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_bottles",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/lime"
+		},
+		{
+			"tag": "threedee:models/bottles"
+		},
+		{
+			"item": "threedee:catalyst_uncommon"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bottle_lime_water",
+			"count": 1
+	}
+}

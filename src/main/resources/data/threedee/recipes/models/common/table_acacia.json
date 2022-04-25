@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_tables",
+	"ingredients": [
+		{
+			"item": "minecraft:acacia_planks"
+		},
+		{
+			"tag": "threedee:models/tables"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:table_acacia",
+			"count": 1
+	}
+}

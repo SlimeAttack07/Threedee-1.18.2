@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_jam",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/yellow"
+		},
+		{
+			"tag": "threedee:models/jam"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:jam_lemon_curd",
+			"count": 1
+	}
+}

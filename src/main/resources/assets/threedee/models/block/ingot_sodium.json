@@ -1,0 +1,7 @@
+{
+	"parent": "threedee:block/template_ingots",
+	"textures": {
+		"top": "threedee:misc/gray2",
+		"side": "threedee:misc/gray1"
+	}
+}

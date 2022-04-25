@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_logs",
+	"ingredients": [
+		{
+			"tag": "minecraft:crimson_stems"
+		},
+		{
+			"tag": "threedee:models/logs"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:wood_crimson",
+			"count": 1
+	}
+}

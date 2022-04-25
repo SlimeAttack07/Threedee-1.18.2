@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_cars",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/green"
+		},
+		{
+			"tag": "threedee:models/cars"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:car_green",
+			"count": 1
+	}
+}

@@ -1,6 +1,0 @@
-{
-	"parent": "threedee:block/template_ingots",
-	"textures": {
-		"ingots": "threedee:heads/head_common_6"
-	}
-}

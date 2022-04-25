@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_barrels",
+	"ingredients": [
+		{
+			"tag": "threedee:models/barrels"
+		},
+		{
+			"item": "threedee:catalyst_common"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:barrel",
+			"count": 1
+	}
+}

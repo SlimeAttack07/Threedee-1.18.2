@@ -207,7 +207,7 @@
 	"block.threedee.raspberries": "Raspberries",
 	"block.threedee.salmon": "Salmon",
 	"block.threedee.sandwhich": "Sandwhich",
-	"block.threedee.snow_ball": "Snow Ball",
+	"block.threedee.snow_ball": "Snowball",
 	"block.threedee.soccerball": "Soccerball",
 	"block.threedee.stone_creeper": "Stone Creeper",
 	"block.threedee.supply_bundle": "Supply Bundle",
@@ -236,7 +236,7 @@
 
 	"block.threedee.bottle_black_water": "Black Water Bottle",
 	"block.threedee.bottle_blue_water": "Blue Water Bottle",
-	"block.threedee.bottle_bottle_green_water": "Green Water Bottle",
+	"block.threedee.bottle_green_water": "Green Water Bottle",
 	"block.threedee.bottle_brown_water": "Brown Water Bottle",
 	"block.threedee.bottle_cyan_water": "Cyan Water Bottle",
 	"block.threedee.bottle_gray_water": "Gray Water Bottle",
@@ -1372,6 +1372,8 @@
 	"tags.threedee.models.barrels": "Barrels",
 	"tags.threedee.models.player_plushie": "Player Plushies",
 	"tags.threedee.models.passive_plushie": "Passive Plushies",
+	"tags.threedee.models.cars": "Cars",
+	"tags.threedee.models.tables": "Tables",
 
 
 	"_JEI": "_JEI STUFF_",
@@ -1392,7 +1394,7 @@
 	"jei.threedee.consumed": "Consumed:",
 
 	"jei.threedee.descriptions.ancient_rock": "Dropped when breaking Ancient Stone.",
-	"jei.threedee.descriptions.catalyst": "Found in dungeons.",
+	"jei.threedee.descriptions.catalyst": "Found in dungeons or harvested from mature Catalyst Seeds.",
 	"jei.threedee.descriptions.catalyst_corrupted": "Created if the Model Recycler is broken when it still has models inside.",
 	"jei.threedee.descriptions.model_fab": "Obtained from the Model Fabricator.",
 	"jei.threedee.descriptions.artefact_an": "Obtained from the Artefact Analyzer."

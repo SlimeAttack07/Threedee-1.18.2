@@ -175,6 +175,9 @@ public class TdJEIPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_ANDESITE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_DIORITE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_GRANITE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_BASALT.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_BLACKSTONE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MORTAR_AND_PESTLE_DEEPSLATE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "mortar_and_pestle"));
 		
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_ACACIA.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_BIRCH.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
@@ -183,6 +186,8 @@ public class TdJEIPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_OAK.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_SPRUCE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_DARK_OAK.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_CRIMSON.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.TINY_CAULDRON_WARPED.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "tiny_cauldron"));
 		
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_ACACIA.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_BIRCH.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
@@ -191,6 +196,8 @@ public class TdJEIPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_OAK.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_SPRUCE.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_DARK_OAK.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_CRIMSON.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
+		registration.addRecipeCatalyst(new ItemStack(TDBlocks.HANDSAW_WARPED.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "handsaw"));
 		
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MODEL_RECYCLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "model_recycler"));
 		registration.addRecipeCatalyst(new ItemStack(TDBlocks.MODEL_ASSEMBLER.get().asItem()), new ResourceLocation(Threedee.MOD_ID, "model_assembler"));

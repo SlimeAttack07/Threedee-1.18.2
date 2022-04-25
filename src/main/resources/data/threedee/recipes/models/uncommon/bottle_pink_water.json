@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "threedee_bottles",
+	"ingredients": [
+		{
+			"tag": "forge:dyes/pink"
+		},
+		{
+			"tag": "threedee:models/bottles"
+		},
+		{
+			"item": "threedee:catalyst_uncommon"
+		}
+	],
+	
+	"result": {
+			"item": "threedee:bottle_pink_water",
+			"count": 1
+	}
+}
